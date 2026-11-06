@@ -420,7 +420,9 @@ akademik-rehber/
   - Araç sayfaları: "Akademik kimlik" (8) ve "Kaynak bulma" (8) grupları yazıldı. Bilgiler 6 Kasım 2026'da web'de doğrulandı, `tools.ts`'te ilgili araçlara `info` eklendi. İkisi de yayında.
   - "Zotero mu Mendeley mi?", "Not alma" (Notion, Obsidian) ve "Yazım" (Word + Zotero, Overleaf ve LaTeX, Grammarly, QuillBot) sayfaları yazıldı; bilgiler 6 Kasım 2026'da web'de doğrulandı. `tools.ts`'e QuillBot eklendi. Not: Grammarly artık Türkçe metinlerde de öneri veriyor (kaynak README eskimiş). Karar 7'deki KOÜ notu Word + Zotero sayfasında.
   - MDX dosyalarına toplu `prettier --write` uygulama: metni yeniden sarar. Yalnız `.ts`/`.tsx` dosyalarını biçimlendir.
-- **Sıradaki:** Faz 3 devam: Yapay zekâ araçları (Elicit, Consensus, NotebookLM, AI ile yazım; AI sayfasına karar 6'daki KOÜ kutusu). Sonra Başlangıç ve Ek sayfaları (Faz 4 ile birlikte).
+  - "Yapay zekâ araçları" (Elicit, Consensus, Gemini Notebook, AI ile yazım) yazıldı. NotebookLM'in adı 16 Temmuz 2026'da Gemini Notebook oldu; sayfa yolu `/yapay-zeka/notebooklm/` olarak kaldı. AI ile yazım sayfası YÖK'ün Mayıs 2024 etik rehberinin metnine dayanıyor ve karar 6'daki KOÜ kutusunu içeriyor.
+- **Faz 3'te kalan:** Başlangıç sayfaları (Kurulum yol haritası, İlk dönem kontrol listesi, İlk 30 gün planı) ve Ek sayfaları (Tüm araçlar, Kaynaklar, Hakkında). Bunlar Faz 4'teki etkileşimli özelliklerle birlikte yapılacak.
+- **Sıradaki:** Faz 4 (Ensar'ın onayıyla).
 
 ## 9. Çalışma kuralları (Claude için)
 

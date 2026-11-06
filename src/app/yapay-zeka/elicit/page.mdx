@@ -1,0 +1,68 @@
+export const metadata = {
+  title: "Elicit",
+  description:
+    "Araştırma sorusundan makale bulan ve makalelerden bilgiyi tabloya çıkaran yapay zekâ aracı Elicit: ne zaman kullanılır, nasıl kullanılır, nelere dikkat edilir.",
+};
+
+# Elicit
+
+Elicit, bir araştırma sorusu yazdığında ilgili makaleleri bulan ve bu makalelerden istediğin bilgileri (yöntem, veri seti, örneklem, sonuç gibi) bir tabloya çıkaran yapay zekâ destekli bir araştırma asistanı. Literatür taramasının başında, çok sayıda makaleyi hızlıca gözden geçirip karşılaştırmak için kullanılır.
+
+<ToolInfoBox slug="elicit" />
+
+## Ne zaman kullanılır?
+
+- **Literatür taramasının başında:** Bir sorunun çevresinde hangi çalışmaların olduğunu görmek için.
+- **Makaleleri karşılaştırırken:** Onlarca makalenin yöntemini ve veri setini tek tabloda yan yana görmek için.
+- **Okuma listesini daraltırken:** Hangi makalelerin tam metnini okuman gerektiğine karar vermek için.
+
+Elicit okumanın yerini tutmaz; neyi okuyacağını seçmene yardım eder.
+
+## Uygulamalı kullanım: bir soru için makale tablosu çıkarmak
+
+<Steps>
+  <Step title="Hesap aç">
+    [elicit.com](https://elicit.com) üzerinden ücretsiz hesap aç. Ücretsiz plan; makale aramayı, makale özetlerini ve makalelerle sohbeti sınırsız, araştırma ajanını ve raporları sınırlı kullanım hakkıyla içeriyor.
+  </Step>
+  <Step title="Soruyu İngilizce ve net yaz">
+    Anahtar kelime değil, bir soru yaz. Örneğin "Which deep learning methods are used for multimodal price prediction from images and text?" Makalelerin büyük çoğunluğu İngilizce olduğu için İngilizce sorular daha iyi sonuç verir.
+  </Step>
+  <Step title="Makaleleri bul">
+    Ana sayfadan araştırma ajanına makale bulmasını söyle (Find Papers). Sonuçlar bir tabloda listelenir.
+  </Step>
+  <Step title="Sütun ekle">
+    Tabloya merak ettiğin bilgiler için sütun ekle: "Model", "Veri seti", "Metrik ve sonuç", "Sınırlılıklar" gibi. Bunu ajana yazarak ya da tablonun üstündeki **Add Column** düğmesiyle yaparsın. Elicit her makale için bu sütunları doldurur.
+  </Step>
+  <Step title="Seç ve doğrula">
+    Tablodan işine yarayacak makaleleri seç. Her birinin özetini ve gerekirse tam metnini aç; tablodaki bilginin makalede gerçekten yazdığını kontrol et.
+  </Step>
+  <Step title="Zotero'ya aktar">
+    Seçtiğin makalelerin künyelerini RIS ya da BIB dosyası olarak dışa aktar ve Zotero'ya al. Kaynakçan Elicit'ten değil Zotero'dan gelir.
+  </Step>
+</Steps>
+
+<Callout type="tip" title="İpuçları">
+- Sütun adlarını açık yaz. "Sonuç" yerine "Test kümesindeki doğruluk ve F1" gibi neyi istediğini söyle.
+- Elicit'in tablosunu bir başlangıç taslağı say. Doğruladığın bilgileri kendi literatür tablona (Notion ya da Excel) kendin taşı: [Notion'da literatür takip veritabanı](/not-alma/notion/).
+- Çok yeni ön baskıları (arXiv) ve konferans bildirilerini kaçırmamak için aramayı Google Scholar ya da Semantic Scholar'da da tekrarla.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+- **Tablodaki bilgiyi doğrulamadan kullanmak:** Yapay zekâ bir sayıyı yanlış okuyabilir ya da makalede olmayan bir bilgi yazabilir. Teze girecek her bilgiyi makalenin aslından kontrol et.
+- **Özeti okuyup makaleyi okumuş saymak:** Tezde atıf yaptığın makaleyi okumuş olman gerekir.
+- **Elicit'in ürettiği metni teze koymak:** Elicit'in özetleri ve raporları senin metnin değil. Yapay zekâyı yazımda nasıl kullanacağın: [AI ile tez ve makale yazmak](/yapay-zeka/ai-ile-yazim/).
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["consensus", "researchrabbit", "semantic-scholar", "zotero"]} />
+
+Sonraki adım: Seçtiğin makaleleri okurken sorularını kendi kaynaklarına sormak için [Gemini Notebook (NotebookLM)](/yapay-zeka/notebooklm/).
+
+## Kaynaklar
+
+- [Elicit: Fiyatlandırma](https://elicit.com/pricing) (ücretsiz Basic planın kapsamı, ücretli planlar)
+- [Elicit Help: Find Papers, Extract Data ve Chat with Papers nereye gitti?](https://support.elicit.com/en/articles/17220397-where-did-find-papers-extract-data-and-chat-with-papers-go) (araştırma ajanı ve sütun ekleme)
+- [Elicit Help: Export your data](https://support.elicit.com/en/articles/1153857) (RIS ve BIB dışa aktarma)

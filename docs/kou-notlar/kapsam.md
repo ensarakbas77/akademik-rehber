@@ -5,7 +5,7 @@ Bu dosya üç not dosyasındaki her maddeyi bir site sayfasına bağlar. Sonunda
 - **Notlar:** `yonetmelik.md` (Yön), `uygulama-esaslari.md` (UE), `tez-yazim-kilavuzu.md` (TYK)
 - **Sayfa listesi:** `src/content/navigation.ts`, "Kocaeli Üniversitesi FBE" grubu. Orada "taslak liste" olarak duruyor; bu harita kesinleştirmek için hazırlandı.
 - **Durum:** **Onaylandı (Ensar, 6 Kasım 2026).** §5'teki tüm öneriler kabul edildi. "Öneri" diye geçen sayfalar ve kapsam dışı maddeler artık kesin. Sayfalar yazılırken her madde bu dosyada işaretlenecek.
-- **Yazım durumu (6 Kasım 2026):** 14 sayfanın hepsi yazıldı. §1–3 tablolarındaki "Durum" sütunu her maddenin karşılığını gösterir. Bekleyenler: `/kaynaklar/` (KAY) sayfası ile karar 6'daki çapraz not (AI sayfası yazılınca eklenecek). Karar 7'deki not Word + Zotero sayfasına eklendi.
+- **Yazım durumu (6 Kasım 2026):** 14 sayfanın hepsi yazıldı. §1–3 tablolarındaki "Durum" sütunu her maddenin karşılığını gösterir. Bekleyen: `/kaynaklar/` (KAY) sayfası. Karar 6'daki kutu AI ile yazım sayfasına, karar 7'deki not Word + Zotero sayfasına eklendi.
 
 ## Belge künyeleri (her KOÜ sayfasında gösterilecek)
 
@@ -163,7 +163,7 @@ Bu dosya üç not dosyasındaki her maddeyi bir site sayfasına bağlar. Sonunda
 | 1. Genel ilkeler | Eski tezler ya da kılavuz şablon olarak kullanılmaz | YK; SSS | Yazıldı |
 | 2. Tez düzeni | Zorunlu ve isteğe bağlı bölümler tablosu | YK; KL | Yazıldı |
 | 2.1.1–2.1.2 | Dış kapak, onay sayfası | YK | Yazıldı |
-| 2.1.3 | Etik / fon / YZ beyanı | YK; SSS; **ayrıca** "Yapay zekâ araçları > AI ile tez ve makale yazmak" sayfasına KOÜ kutusu (bkz. karar 6) | Yazıldı; AI sayfasındaki KOÜ kutusu bekliyor |
+| 2.1.3 | Etik / fon / YZ beyanı | YK; SSS; **ayrıca** "Yapay zekâ araçları > AI ile tez ve makale yazmak" sayfasına KOÜ kutusu (bkz. karar 6) | Yazıldı; KOÜ kutusu AI ile yazım sayfasında |
 | 2.1.4 | Yayımlama hakları | YK; MEZ | Yazıldı |
 | 2.1.5–2.1.9 | Önsöz, içindekiler, dizinler | YK | Yazıldı |
 | 2.1.10–2.1.11 | Özet ve abstract (250 kelime, 5 anahtar kelime, etik onay no.) | YK; KL | Yazıldı |

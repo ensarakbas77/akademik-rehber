@@ -1,0 +1,66 @@
+export const metadata = {
+  title: "Consensus",
+  description:
+    "Bilimsel bir soruyu hakemli makalelerde tarayıp bulguları kaynaklarıyla özetleyen Consensus: Consensus Meter, ücretsiz planın sınırları ve dikkat edilecekler.",
+};
+
+# Consensus
+
+Consensus, bilimsel bir soru sorduğunda hakemli makalelerde arama yapan ve bulguları kaynaklarıyla birlikte özetleyen yapay zekâ destekli bir arama motoru. "Bu konuda araştırmalar ne diyor?" sorusuna hızlı bir ilk cevap almak için kullanılır.
+
+<ToolInfoBox slug="consensus" />
+
+## Ne zaman kullanılır?
+
+- **Bir iddianın literatürde ne kadar desteklendiğini görmek için:** "X, Y'yi etkiler mi?" gibi sorularda.
+- **Yeni bir konuya girerken:** Konunun ana bulgularını ve bunları destekleyen çalışmaları görmek için.
+- **Okuyacağın makaleleri seçerken:** Cevabın altında listelenen makalelerden başlamak için.
+
+## Consensus Meter
+
+Evet ya da hayır ile cevaplanabilen bir soru sorduğunda Consensus, ilk sonuçlardaki makalelerin soruya hangi yönde cevap verdiğini bir gösterge (Consensus Meter) ile özetler: kaç makalenin "evet", "muhtemelen", "karışık" ya da "hayır" yönünde olduğunu gösterir. Göstergenin altında bu makaleler, makalelerden alınmış cümlelerle birlikte listelenir.
+
+<Callout type="warning" title="Gösterge bir oylama değil">
+Consensus Meter, araştırmanın tamamını değil yalnızca ilk sonuçlardaki bir grup makaleyi özetler. Her çalışma aynı kalitede değildir: küçük bir örneklemli tek bir çalışma ile büyük bir derleme aynı ağırlıkta görünebilir. Göstergeyi bir başlangıç noktası say, makaleleri kendin değerlendir: [Kaliteli kaynak ve eleştirel okuma](/yapilmasi-gerekenler/elestirel-okuma/).
+</Callout>
+
+## Uygulamalı kullanım
+
+<Steps>
+  <Step title="Hesap aç">
+    [consensus.app](https://consensus.app) üzerinden ücretsiz hesap aç. Ücretsiz plan temel makale aramasını, ayda 10 yapay zekâ destekli analiz mesajını (Pro messages) ve ayda en fazla 3 ayrıntılı literatür incelemesini (Deep reviews) içeriyor.
+  </Step>
+  <Step title="Soruyu İngilizce ve açık yaz">
+    Anahtar kelime yerine tam bir soru yaz. Örneğin "Does data augmentation improve deep learning performance on small medical image datasets?"
+  </Step>
+  <Step title="Cevabı ve kaynakları oku">
+    Özetin altında listelenen makalelere bak. Her iddianın hangi makaleden geldiğini aç ve makalenin özetini oku.
+  </Step>
+  <Step title="İşine yarayanları kaydet">
+    Okumaya değer makaleleri Zotero'ya kaydet ve tam metinlerini oku. Consensus'un özetini değil, makalenin kendisini kaynak göster.
+  </Step>
+</Steps>
+
+<Callout type="tip" title="Ücretli plan">
+Pro planı aylık 12 $ (yıllık ödemede yıllık 144 $). Geçerli okul e-postası olan öğrenciler ve öğretim elemanları abonelikte %40'a varan indirim alabiliyor. Ara sıra kullanacaksan ücretsiz plan yeterli.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+- **Özeti kaynak olarak kullanmak:** Consensus'un ürettiği özet bir kaynak değil. Atıfı, okuduğun makaleye yap.
+- **Karmaşık bulguları basitleştirmek:** Bir soru "evet" ya da "hayır" ile cevaplanamayacak kadar koşullu olabilir. Makalelerin hangi koşullarda ne bulduğuna bak.
+- **Yalnız Consensus'ta aramak:** Çok yeni ön baskılar (arXiv) ve konferans bildirileri eksik kalabilir. Google Scholar ve Semantic Scholar'da da ara.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["elicit", "semantic-scholar", "google-scholar", "zotero"]} />
+
+Sonraki adım: Bulduğun makaleleri karşılaştırmalı bir tabloya dökmek için [Elicit](/yapay-zeka/elicit/).
+
+## Kaynaklar
+
+- [Consensus: Fiyatlandırma](https://consensus.app/pricing/) (ücretsiz ve ücretli planlar, öğrenci indirimi)
+- [Consensus Help: Nasıl aranır?](https://help.consensus.app/en/articles/9922660-how-to-search-best-practices) (Consensus Meter, soru yazma önerileri)
+- [Consensus: Consensus Meter'in sınırları](https://consensus.app/home/blog/consensus-meter/) (ilk sonuçlar, sınıflandırma, sınırlılıklar)

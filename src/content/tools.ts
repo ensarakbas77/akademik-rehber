@@ -267,6 +267,57 @@ export const tools: Tool[] = [
     },
   },
   {
+    slug: "elicit",
+    name: "Elicit",
+    category: "Yapay zekâ araçları",
+    short:
+      "Araştırma sorusundan makale bulur, makalelerden bilgiyi tabloya çıkarır.",
+    url: "https://elicit.com",
+    href: "/yapay-zeka/elicit/",
+    info: {
+      pricing:
+        "Ücretsiz Basic plan var (makale arama ve özetler sınırsız; araştırma ajanı ve raporlar sınırlı). Pro yıllık ödemede aylık 49 $.",
+      platform: "Web (tarayıcı).",
+      account: "Gerekir (ücretsiz).",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
+  },
+  {
+    slug: "consensus",
+    name: "Consensus",
+    category: "Yapay zekâ araçları",
+    short:
+      "Bilimsel bir soruyu hakemli makalelerde arar, bulguları kaynaklarıyla özetler.",
+    url: "https://consensus.app",
+    href: "/yapay-zeka/consensus/",
+    info: {
+      pricing:
+        "Ücretsiz plan var (temel arama, ayda 10 analiz mesajı, ayda 3 ayrıntılı inceleme). Pro aylık 12 $; öğrencilere %40'a varan indirim.",
+      platform: "Web (tarayıcı).",
+      account: "Gerekir (ücretsiz).",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
+  },
+  {
+    slug: "notebooklm",
+    name: "Gemini Notebook (NotebookLM)",
+    category: "Yapay zekâ araçları",
+    short:
+      "Yüklediğin kaynaklara dayanarak, kaynak göstererek cevap veren not defteri.",
+    url: "https://notebooklm.google",
+    href: "/yapay-zeka/notebooklm/",
+    info: {
+      pricing:
+        "Ücretsiz (100 defter, defter başına 50 kaynak). Daha yüksek sınırlar Google AI planlarıyla.",
+      platform: "Web (tarayıcı). Notlar Gemini uygulamasıyla da eşitlenir.",
+      account: "Gerekir (Google hesabı).",
+      turkish: "80'den fazla dili destekliyor",
+      lastChecked: "2026-11",
+    },
+  },
+  {
     slug: "orcid",
     name: "ORCID",
     category: "Akademik kimlik",

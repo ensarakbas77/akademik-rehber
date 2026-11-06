@@ -119,10 +119,10 @@ export const navigation: NavGroup[] = [
   {
     title: "Yapay zekâ araçları",
     pages: [
-      p("Elicit", "/yapay-zeka/elicit/"),
-      p("Consensus", "/yapay-zeka/consensus/"),
-      p("NotebookLM", "/yapay-zeka/notebooklm/"),
-      p("AI ile tez ve makale yazmak", "/yapay-zeka/ai-ile-yazim/"),
+      p("Elicit", "/yapay-zeka/elicit/", true),
+      p("Consensus", "/yapay-zeka/consensus/", true),
+      p("Gemini Notebook (NotebookLM)", "/yapay-zeka/notebooklm/", true),
+      p("AI ile tez ve makale yazmak", "/yapay-zeka/ai-ile-yazim/", true),
     ],
   },
   {

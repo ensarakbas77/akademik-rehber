@@ -1,0 +1,68 @@
+export const metadata = {
+  title: "Gemini Notebook (NotebookLM)",
+  description:
+    "Google'ın eski adı NotebookLM olan aracı Gemini Notebook: kendi yüklediğin makalelere kaynak göstererek cevap veren not defteri, ücretsiz sınırlar ve gizlilik.",
+};
+
+# Gemini Notebook (NotebookLM)
+
+Gemini Notebook, Google'ın senin eklediğin kaynaklar (PDF'ler, notlar, web sayfaları) üzerinde çalışan yapay zekâ destekli not defteri. Sorularını genel internetten değil bu kaynaklardan cevaplar ve cevabın hangi belgenin hangi kısmından geldiğini satır içi kaynak göstererek belirtir. Aracın adı 16 Temmuz 2026'ya kadar **NotebookLM** idi; Google aracı aynı ürün olarak yeniden adlandırdı.
+
+<ToolInfoBox slug="notebooklm" />
+
+## Ne zaman kullanılır?
+
+- **Okuduğun makaleleri birlikte sorgulamak için:** Örneğin "Bu çalışmalar hangi veri setlerini kullanmış? Hangi noktalarda birbirinden ayrılıyorlar?"
+- **Uzun bir belgede bir şeyi bulmak için:** Bir yönetmelikte, ders kitabında ya da tez yazım kılavuzunda bir kuralın nerede geçtiğini bulmak için.
+- **Ders notlarıyla sınava hazırlanırken:** Kendi notlarından çalışma kılavuzu, bilgi kartı ya da soru üretmek için.
+
+Cevaplar yalnız senin eklediğin kaynaklara dayandığı için genel sohbet botlarına göre kaynağı kontrol etmek kolay. Yine de araç yanlış özetleyebilir ya da bir cümleyi bağlamından koparabilir.
+
+## Uygulamalı kullanım: okuduğun makalelerle bir defter kurmak
+
+<Steps>
+  <Step title="Giriş yap">
+    [notebooklm.google](https://notebooklm.google) adresine Google hesabınla gir. Bu adres Gemini Notebook'a yönlenir.
+  </Step>
+  <Step title="Bir defter (notebook) aç">
+    Her konu ya da tez bölümü için ayrı bir defter aç: örneğin "Literatür: çok kipli fiyat tahmini".
+  </Step>
+  <Step title="Kaynakları ekle">
+    Okuduğun makalelerin PDF'lerini, ilgili web sayfalarını ya da kendi notlarını ekle. Ücretsiz planda bir deftere en fazla 50 kaynak eklenebilir; her kaynak en fazla 500.000 kelime ya da 200 MB olabilir.
+  </Step>
+  <Step title="Soru sor ve kaynağa git">
+    Sohbete sorunu yaz. Cevaptaki kaynak numaralarına tıklayarak cümlenin geldiği yeri aç ve aslından oku.
+  </Step>
+  <Step title="Notlarını kendin yaz">
+    Öğrendiklerini kendi cümlelerinle not defterine ya da literatür tablona yaz. Araçtan aldığın cevabı olduğu gibi kopyalama.
+  </Step>
+</Steps>
+
+Kaynaklardan ayrıca çalışma kılavuzu, özet belge, sesli özet (Audio Overview) ve zihin haritası gibi çıktılar da üretebilirsin. Bunlar konuyu tekrar etmek için kullanışlı, ama tezine giren bilginin kaynağı makalenin kendisi olmalı.
+
+<Callout type="warning" title="Gizlilik">
+Kişisel hesapta, eklediğin dosyaların ve sohbetlerinin Google'ın temel modellerini eğitmek için doğrudan kullanılmadığı belirtiliyor; ama geri bildirim verirsen (beğen/beğenme) o etkileşim insanlar tarafından incelenebiliyor. Üniversitenin Google Workspace hesabıyla kullanırsan koşullar daha sıkı. Her durumda yayımlanmamış verilerini, katılımcılara ait kişisel verileri ve gizli belgeleri yükleme. YÖK rehberi de kişisel verilerin anonimleştirilmeden yapay zekâ sistemlerine girilmemesini istiyor.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+- **Makaleyi okumadan yalnız araca sormak:** Araç neyi sorduysan onu cevaplar; sormadığın önemli bir ayrıntıyı (bir sınırlılık, bir varsayım) göstermez.
+- **Sesli özeti ya da özet belgeyi kaynak saymak:** Atıf yaptığın her bilgiyi makalenin aslında kontrol et.
+- **Bütün makaleleri tek deftere koymak:** Konular karışınca cevaplar da karışır. Her konu için ayrı defter aç.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["elicit", "zotero", "notion", "obsidian"]} />
+
+Sonraki adım: Yapay zekâyı yazım sürecinde nerede kullanabileceğini ve nasıl beyan edeceğini oku: [AI ile tez ve makale yazmak](/yapay-zeka/ai-ile-yazim/).
+
+## Kaynaklar
+
+- [Google: NotebookLM artık Gemini Notebook (16 Temmuz 2026)](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/)
+- [Gemini Notebook Help: Learn about Gemini Notebook](https://support.google.com/gemininotebook/answer/16164461?hl=en) (satır içi kaynak gösterme, çıktı türleri, hesap koşulları)
+- [Gemini Notebook Help: Planlar](https://support.google.com/notebooklm/answer/16213268?hl=en) (ücretsiz planda 100 defter, defter başına 50 kaynak)
+- [Gemini Notebook Help: Kaynak ekleme](https://support.google.com/notebooklm/answer/16215270?hl=en) (kaynak türleri, kaynak başına 500.000 kelime ya da 200 MB)
+- [Gemini Notebook Help: Gizlilik ve kullanım koşulları](https://support.google.com/gemininotebook/answer/17004255?hl=en)
+- [YÖK: Üretken Yapay Zekâ Kullanımına Dair Etik Rehber (Mayıs 2024)](https://proje.yok.gov.tr/documentFiles/17539645334.Y%C3%BCksek%C3%B6%C4%9Fretimde%20%C3%BCretken%20yapay%20zeka%20kullan%C4%B1m%C4%B1-tr.pdf)
