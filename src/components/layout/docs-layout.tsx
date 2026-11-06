@@ -2,6 +2,7 @@ import { Container } from "./container";
 import { PrevNext } from "./prev-next";
 import { SectionTheme } from "./section-theme";
 import { SidebarNav } from "./sidebar";
+import { SidebarScroll } from "./sidebar-scroll";
 import { Toc } from "./toc";
 
 /**
@@ -16,9 +17,9 @@ export function DocsLayout({ children }: { children: React.ReactNode }) {
     <SectionTheme>
       <Container className="flex gap-8 xl:gap-12">
         <aside className="hidden w-72 shrink-0 border-r border-border lg:block">
-          <div className="sticky top-14 max-h-[calc(100dvh-3.5rem)] overflow-y-auto py-8 pr-4">
+          <SidebarScroll>
             <SidebarNav />
-          </div>
+          </SidebarScroll>
         </aside>
 
         <div className="min-w-0 flex-1 py-8 lg:py-10">

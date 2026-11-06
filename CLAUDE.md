@@ -424,6 +424,7 @@ akademik-rehber/
   - "İlk 30 gün planı" ve "İlk dönem kontrol listesi" sayfaları, tavsiye ve akademik yazım sayfalarındaki kontrol listeleri, `AdviceChecklist`, `IlkDonemListesi` ve `checklist.ts` kaldırıldı. KOÜ teslim öncesi kontrol listesi kaldı.
   - Alt bilgideki "Kaynak kodu GitHub'da" kaldırıldı; üst çubuktaki GitHub bağlantısına logo eklendi (`src/components/icons/github.tsx`, lucide marka ikonlarını kaldırdığı için SVG).
   - Tam genişlik düzen, bölüm renkleri ve ikonları, belirgin sol menü başlıkları (Bölüm 3.1). Ana sayfa yeniden düzenlendi: "İlk hafta" kutusu ve renkli bölüm kartları.
+  - Rehber sayfaları tek ortak düzene taşındı: `src/app/(rehber)/` rota grubu, tek `layout.tsx` (adresler değişmedi). Eskiden her bölümün kendi `layout.tsx`'i vardı; bölümler arasında geçince sol menü yeniden çiziliyor ve en üste kayıyordu. Yeni bölüm klasörü `(rehber)` içine açılır, kendi `layout.tsx`'i olmaz. `SidebarScroll`, sayfa ilk açıldığında menüyü geçerli sayfaya kaydırır.
 - **Bekleyen:** Yok.
 
 ## 9. Çalışma kuralları (Claude için)
