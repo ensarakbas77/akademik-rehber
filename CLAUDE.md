@@ -412,8 +412,11 @@ akademik-rehber/
   - Tavsiye kontrol listeleri tek anahtarı (`checklist:ilk-donem`) paylaşır; "Temizle" yalnız o sayfanın maddelerini siler.
   - MDX'te henüz yazılmamış sayfaya giden link düz metin + "(yakında)" olarak görünür, sayfa `ready` olunca kendiliğinden link olur.
   - Zotero bilgileri 6 Kasım 2026'da web'de doğrulandı (Zotero 10, 300 MB ücretsiz depolama).
-  - Çekilecek ekran görüntüleri listesi: `docs/ekran-goruntuleri.md`. Commit edilmedi.
-- **Sıradaki:** Ensar'ın iki pilot sayfayı kontrol etmesi ve ekran görüntülerini çekmesi; sonra Faz 3 (içerik). *(Claude Code: her faz bitince bu satırı güncelle.)*
+  - Çekilecek ekran görüntüleri listesi: `docs/ekran-goruntuleri.md`. Commit edildi ve yayında.
+- **Faz 3 (içerik) başladı:**
+  - "Yüksek lisansta yapılması gerekenler" bölümünün 9 sayfasının hepsi yazıldı (kaynak: `docs/kaynak-README.md` Gönderi 2 ve 4, Bölüm 6 ve 8). Maddeleri `checklist.ts`'te, sayfa sonunda `DerlemeNotu`.
+  - `tools.ts`'e ORCID, Scopus/WoS, TÜBİTAK ARBİS, YÖK Tez Merkezi eklendi (yalnız ad, açıklama, resmî site; ücret bilgisi yok).
+- **Sıradaki:** Faz 3 devam: Akademik yazım bölümü, sonra araç sayfaları. Zotero ekran görüntüleri Ensar'dan bekleniyor. *(Claude Code: her faz bitince bu satırı güncelle.)*
 
 ## 9. Çalışma kuralları (Claude için)
 

@@ -32,20 +32,31 @@ export const navigation: NavGroup[] = [
       p(
         "Kaynaklarını ve notlarını düzenli tut",
         "/yapilmasi-gerekenler/duzenli-tut/",
+        true,
       ),
       p(
         "Danışmanınla çalışmak",
         "/yapilmasi-gerekenler/danismaninla-calismak/",
+        true,
       ),
-      p("Konu seçimi", "/yapilmasi-gerekenler/konu-secimi/"),
+      p("Konu seçimi", "/yapilmasi-gerekenler/konu-secimi/", true),
       p(
         "Kaliteli kaynak ve eleştirel okuma",
         "/yapilmasi-gerekenler/elestirel-okuma/",
+        true,
       ),
-      p("Makale ve tez farkı", "/yapilmasi-gerekenler/makale-ve-tez-farki/"),
-      p("Yazma alışkanlığı", "/yapilmasi-gerekenler/yazma-aliskanligi/"),
-      p("Takvimi önceden planla", "/yapilmasi-gerekenler/takvimi-planla/"),
-      p("Kendini kıyaslama", "/yapilmasi-gerekenler/kendini-kiyaslama/"),
+      p(
+        "Makale ve tez farkı",
+        "/yapilmasi-gerekenler/makale-ve-tez-farki/",
+        true,
+      ),
+      p("Yazma alışkanlığı", "/yapilmasi-gerekenler/yazma-aliskanligi/", true),
+      p(
+        "Takvimi önceden planla",
+        "/yapilmasi-gerekenler/takvimi-planla/",
+        true,
+      ),
+      p("Kendini kıyaslama", "/yapilmasi-gerekenler/kendini-kiyaslama/", true),
     ],
   },
   {

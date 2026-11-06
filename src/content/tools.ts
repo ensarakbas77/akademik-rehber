@@ -130,6 +130,42 @@ export const tools: Tool[] = [
     url: "https://www.overleaf.com",
     href: "/yazim/overleaf-ve-latex/",
   },
+  {
+    slug: "orcid",
+    name: "ORCID",
+    category: "Akademik kimlik",
+    short:
+      "Araştırmacılara verilen kalıcı kimlik numarası; isim karışıklığını önler.",
+    url: "https://orcid.org",
+    href: "/akademik-kimlik/orcid/",
+  },
+  {
+    slug: "scopus-wos",
+    name: "Scopus ve Web of Science",
+    category: "Kaynak bulma",
+    short:
+      "Atıf veri tabanları; dergi metrikleri ve Q değerleri burada görülür.",
+    url: "https://www.webofscience.com",
+    href: "/kaynak-bulma/scopus-ve-wos/",
+  },
+  {
+    slug: "tubitak-arbis",
+    name: "TÜBİTAK ARBİS",
+    category: "Akademik kimlik",
+    short:
+      "TÜBİTAK'ın araştırmacı bilgi sistemi; burs ve proje başvurularında kullanılır.",
+    url: "https://arbis.tubitak.gov.tr",
+    href: "/akademik-kimlik/tubitak-arbis/",
+  },
+  {
+    slug: "yok-tez-merkezi",
+    name: "YÖK Ulusal Tez Merkezi",
+    category: "Akademik kimlik",
+    short:
+      "Türkiye'deki lisansüstü tezlerin arandığı ve tezlerin teslim edildiği sistem.",
+    url: "https://tez.yok.gov.tr",
+    href: "/akademik-kimlik/yok-tez-merkezi/",
+  },
 ];
 
 export const toolBySlug = (slug: string) => {

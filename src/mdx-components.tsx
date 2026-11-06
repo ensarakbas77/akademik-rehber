@@ -3,6 +3,7 @@ import Link from "next/link";
 import { isValidElement, type ReactNode } from "react";
 import { KouBelgeler } from "@/components/kou/kou-belgeler";
 import { AdviceChecklist } from "@/components/tools/advice-checklist";
+import { DerlemeNotu } from "@/components/tools/derleme-notu";
 import { ToolInfoBox } from "@/components/tools/tool-info-box";
 import { ToolLinkCard, ToolLinks } from "@/components/tools/tool-link-card";
 import { Callout } from "@/components/ui/callout";
@@ -126,6 +127,7 @@ const components: MDXComponents = {
   AdviceChecklist,
   Callout,
   Checklist,
+  DerlemeNotu,
   Kaynak,
   KouBelgeler,
   LastChecked,
