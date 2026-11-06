@@ -1,9 +1,9 @@
 import { cn } from "@/lib/cn";
 
 /**
- * Sitenin ortak dış genişliği. Üst çubuk, alt bilgi ve rehber sayfaları
- * aynı genişliği kullanır, böylece kenarlar hizalı kalır (CLAUDE.md 3.1).
- * Tek sütunlu sayfalar içeriği bunun içinde max-w-5xl / max-w-3xl ile daraltır.
+ * Sitenin ortak dış genişliği: ekranın tamamı, yalnız kenar payıyla
+ * (Ensar'ın isteği: sağda solda boşluk kalmasın). Üst çubuk, alt bilgi ve
+ * rehber sayfaları aynı payı kullanır, böylece kenarlar hizalı kalır.
  */
 export function Container({
   className,
@@ -13,7 +13,7 @@ export function Container({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("mx-auto w-full max-w-[88rem] px-4 sm:px-6", className)}>
+    <div className={cn("w-full px-4 sm:px-6 lg:px-8", className)}>
       {children}
     </div>
   );

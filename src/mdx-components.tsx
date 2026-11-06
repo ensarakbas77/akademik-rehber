@@ -2,9 +2,7 @@ import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
 import { isValidElement, type ReactNode } from "react";
 import { KouBelgeler } from "@/components/kou/kou-belgeler";
-import { AdviceChecklist } from "@/components/tools/advice-checklist";
 import { DerlemeNotu } from "@/components/tools/derleme-notu";
-import { IlkDonemListesi } from "@/components/tools/ilk-donem-listesi";
 import { ToolInfoBox } from "@/components/tools/tool-info-box";
 import { ToolLinkCard, ToolLinks } from "@/components/tools/tool-link-card";
 import { ToolTable } from "@/components/tools/tool-table";
@@ -12,7 +10,6 @@ import { Callout } from "@/components/ui/callout";
 import { Checklist } from "@/components/ui/checklist";
 import { Kaynak } from "@/components/ui/kaynak";
 import { LastChecked } from "@/components/ui/last-checked";
-import { Screenshot } from "@/components/ui/screenshot";
 import { Step, Steps } from "@/components/ui/steps";
 import { isReadyPath } from "@/content/navigation";
 import { slugify } from "@/lib/slugify";
@@ -26,7 +23,7 @@ function textOf(node: ReactNode): string {
   return "";
 }
 
-const prose = "max-w-prose text-base leading-7 text-pretty";
+const prose = "leading-7 text-pretty";
 const link =
   "font-medium text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent";
 
@@ -41,7 +38,7 @@ const components: MDXComponents = {
   h2: ({ children, ...props }) => (
     <h2
       id={slugify(textOf(children))}
-      className="mt-14 mb-4 max-w-prose scroll-mt-20 text-2xl font-semibold tracking-tight text-balance sm:text-3xl"
+      className="relative mt-14 mb-5 scroll-mt-20 border-b border-border pb-3 pl-4 text-2xl font-semibold tracking-tight text-balance before:absolute before:top-[0.2em] before:left-0 before:h-[0.85em] before:w-1.5 before:rounded-full before:bg-accent sm:text-3xl"
       {...props}
     >
       {children}
@@ -50,7 +47,7 @@ const components: MDXComponents = {
   h3: ({ children, ...props }) => (
     <h3
       id={slugify(textOf(children))}
-      className="mt-10 mb-3 max-w-prose scroll-mt-20 text-lg font-semibold sm:text-xl"
+      className="mt-10 mb-3 scroll-mt-20 text-lg font-semibold text-accent sm:text-xl"
       {...props}
     >
       {children}
@@ -63,7 +60,7 @@ const components: MDXComponents = {
   ol: (props) => (
     <ol className={`my-5 list-decimal space-y-2 pl-6 ${prose}`} {...props} />
   ),
-  li: (props) => <li className="pl-1 marker:text-muted" {...props} />,
+  li: (props) => <li className="pl-1 marker:text-accent" {...props} />,
   strong: (props) => <strong className="font-semibold" {...props} />,
   // Site içi linkler next/link'e gider, böylece basePath önekini otomatik alır.
   // Henüz yazılmamış sayfaya giden link düz metin olarak, "(yakında)" notuyla
@@ -89,7 +86,7 @@ const components: MDXComponents = {
   },
   blockquote: (props) => (
     <blockquote
-      className="my-6 max-w-prose border-l-2 border-border pl-4 text-muted [&>p]:my-2"
+      className="my-6 rounded-r-lg border-l-4 border-accent/60 bg-accent/5 py-1 pr-4 pl-4 text-muted [&>p]:my-2"
       {...props}
     />
   ),
@@ -103,7 +100,7 @@ const components: MDXComponents = {
       />
     </div>
   ),
-  thead: (props) => <thead className="bg-surface" {...props} />,
+  thead: (props) => <thead className="bg-accent/8" {...props} />,
   th: (props) => (
     <th
       className="border-b border-border px-4 py-2.5 font-semibold whitespace-nowrap"
@@ -126,15 +123,12 @@ const components: MDXComponents = {
     />
   ),
   // MDX'te import etmeden kullanılabilen proje bileşenleri.
-  AdviceChecklist,
   Callout,
   Checklist,
   DerlemeNotu,
-  IlkDonemListesi,
   Kaynak,
   KouBelgeler,
   LastChecked,
-  Screenshot,
   Step,
   Steps,
   ToolInfoBox,

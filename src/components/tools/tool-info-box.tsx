@@ -16,9 +16,9 @@ export function ToolInfoBox({ slug }: { slug: string }) {
   return (
     <section
       aria-label="Bir bakışta"
-      className="my-8 max-w-prose rounded-xl border border-border bg-surface p-5"
+      className="my-8 rounded-xl border border-accent/25 bg-accent/5 p-5"
     >
-      <p className="mb-3 text-sm font-semibold">Bir bakışta</p>
+      <p className="mb-3 text-sm font-semibold text-accent">Bir bakışta</p>
       <dl className="grid gap-x-6 gap-y-3 text-sm sm:grid-cols-[10rem_1fr]">
         {rows.map(([term, value]) => (
           <div key={term} className="contents">
@@ -27,7 +27,7 @@ export function ToolInfoBox({ slug }: { slug: string }) {
           </div>
         ))}
       </dl>
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-3">
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-accent/20 pt-3">
         <a
           href={tool.url}
           className="inline-flex items-center gap-1.5 text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"

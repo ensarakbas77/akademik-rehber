@@ -20,12 +20,15 @@ export function Step({ title, children }: StepProps) {
 export function Steps({ children }: { children: React.ReactNode }) {
   const steps = Children.toArray(children).filter(isValidElement);
   return (
-    <ol className="my-8 max-w-prose space-y-6">
+    <ol className="my-8 space-y-6">
       {steps.map((step, i) => (
-        <li key={i} className="relative pl-11">
+        <li
+          key={i}
+          className="relative pl-12 before:absolute before:top-9 before:bottom-[-1.25rem] before:left-[0.9375rem] before:w-px before:bg-accent/25 last:before:hidden"
+        >
           <span
             aria-hidden
-            className="absolute top-0 left-0 flex size-7 items-center justify-center rounded-full border border-border bg-surface text-sm font-medium"
+            className="absolute top-0 left-0 flex size-8 items-center justify-center rounded-full bg-accent text-sm font-semibold text-accent-fg"
           >
             {i + 1}
           </span>

@@ -68,7 +68,7 @@ export function Checklist({
   }
 
   return (
-    <div className="my-6 max-w-prose rounded-xl border border-border">
+    <div className="my-6 rounded-xl border border-border">
       <ul className="divide-y divide-border">
         {items.map((item) => {
           const inputId = `${id}-${item.id}`;

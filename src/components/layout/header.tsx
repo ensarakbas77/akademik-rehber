@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GithubIcon } from "@/components/icons/github";
 import { site } from "@/content/site";
 import { Container } from "./container";
 import { MobileNav } from "./mobile-nav";
@@ -18,8 +19,9 @@ export function Header() {
         <div className="ml-auto flex items-center gap-1">
           <a
             href={site.github}
-            className="rounded-lg px-3 py-2 text-sm text-muted transition-colors hover:bg-surface hover:text-fg motion-reduce:transition-none"
+            className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-muted transition-colors hover:bg-surface hover:text-fg motion-reduce:transition-none"
           >
+            <GithubIcon className="size-4" />
             GitHub
           </a>
           <ThemeToggle />

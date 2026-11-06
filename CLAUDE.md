@@ -25,7 +25,7 @@ Skill ile bu dosya arasında başka bir çelişki görürsen skill'e uy ve Ensar
 Yüksek lisans ve doktora öğrencileri için **Türkçe, uygulamalı bir akademik araçlar rehberi**. Bir dokümantasyon sitesi gibi çalışacak.
 
 - **Amaç (dört ayak):**
-  1. **Araçlar:** Her aracın **ne işe yaradığını**, **ne zaman kullanılacağını** ve **adım adım nasıl kullanılacağını** gerçek ekran görüntüleriyle anlatmak. Örnek: Zotero'yu kurulumdan Word'de APA kaynakçası üretmeye kadar uygulamalı göstermek.
+  1. **Araçlar:** Her aracın **ne işe yaradığını**, **ne zaman kullanılacağını** ve **adım adım nasıl kullanılacağını** anlatmak. Örnek: Zotero'yu kurulumdan Word'de APA kaynakçası üretmeye kadar uygulamalı göstermek.
   2. **Alışkanlıklar ve tavsiyeler:** Yüksek lisansta **ne yapılması gerektiğini** anlatmak (okumaya erken başla, kaynaklarını düzenli tut, danışmanına hazırlıklı git, yazma alışkanlığı edin…). Her tavsiye **somut adımlara** ve onu uygulamayı sağlayan **araç sayfalarına** bağlanır. Tavsiye "ne ve neden"i, araç sayfası "nasıl"ı anlatır.
   3. **Akademik yazım:** Literatür taramasının ve makale yazımının adım adım nasıl yapıldığı.
   4. **Kocaeli Üniversitesi FBE:** Enstitünün yüksek lisans yönetmeliği, uygulama esasları ve tez yazım kılavuzunun **eksiksiz ve sade** anlatımı. Ensar bu bölümü **kendisi için** istiyor: PDF'leri okumak yerine kuralları buradan öğrenecek. Bu yüzden bu bölümde **doğruluk ve eksiksizlik, tasarımdan önce gelir** (bkz. Bölüm 4.1).
@@ -78,7 +78,6 @@ export default withMDX(nextConfig);
 
 ### Görseller ve linkler (skill'e ek)
 - İç linkler her zaman `next/link`.
-- **Ekran görüntüleri:** MDX sayfasının yanındaki klasörden **statik import** (`import shot from "./img/zotero-01.png"`). Bu yol `/_next/static/...` altına gider, `basePath`'i otomatik alır, boyutlar da gelir.
 - `public/` içindeki dosyalara string yolla erişilecekse skill'deki **`asset()`** yardımcısı kullanılır.
 
 ### Yayın: `.github/workflows/deploy.yml`
@@ -129,9 +128,9 @@ jobs:
 
 Ana kurallar skill'de: tek vurgu rengi, nötr renkler, gradyan ve süs yok, `shadow-sm`'den büyük gölge yok, sakin geçişler, `rounded-lg` / `rounded-xl` / `rounded-full`, Inter + JetBrains Mono (`latin-ext` ile), anlamsal renk sınıfları (`bg-bg`, `text-muted`, `border-border`, `text-accent`…). Ham renk sınıfları (`text-gray-500`, `bg-blue-600`) kullanılmaz.
 
-- **Vurgu rengi:** Skill'in varsayılan mavisiyle başla. Ensar farklı bir renk isterse sadece iki `--accent` değeri değişir (açık ve koyu tema, AA kontrastıyla).
+- **Vurgu rengi:** Genel vurgu skill'in mavisi. Rehber sayfalarında her bölümün kendi rengi var (Bölüm 3.1).
 - **Arayüzde emoji yok.** Gerekli yerlerde `lucide-react` ikonları.
-- **Gerçek ekran görüntüleri** kullanılır (skill izin veriyor). Stok görsel yok.
+- **Ekran görüntüsü kullanılmaz** (Ensar'ın kararı, 6 Kasım 2026). Araçlar metin ve `Steps` ile anlatılır. Stok görsel de yok.
 - **Pazarlama dili yok.** ("Akademik potansiyelini keşfet!" gibi cümleler yerine somut, sade Türkçe.)
 - **"İkon + başlık + açıklama" üçlü kart ızgarası** her bölümde tekrarlanmaz. Kart, gerçekten listelenecek öğeler (araçlar, tavsiyeler) için kullanılır.
 
@@ -141,13 +140,13 @@ Ana kurallar skill'de: tek vurgu rengi, nötr renkler, gradyan ve süs yok, `sha
 
 | Ekran | Yerleşim |
 |---|---|
-| `xl` ve üstü (≥1280px) | **Sol kenar çubuğu** (~`w-64`, bölümler ve sayfalar) · **içerik** (metin `max-w-prose`, geniş tablolar ve ekran görüntüleri bu sınırı aşabilir) · **sağda "Bu sayfada"** (~`w-56`, sayfa içi başlıklar) |
+| `xl` ve üstü (≥1280px) | **Sol kenar çubuğu** (~`w-64`, bölümler ve sayfalar) · **içerik** (ortadaki alanda, en fazla `54rem`, `2xl`'de `64rem`) · **sağda "Bu sayfada"** (~`w-56`, sayfa içi başlıklar) |
 | `lg` (1024–1279px) | Sol kenar çubuğu + içerik. Sağ sütun gizlenir |
 | `md` ve altı | Tek sütun. Sol menü, üst çubuktaki düğmeyle açılan bir çekmeceye dönüşür (skill'deki `MobileNav` erişilebilirlik kurallarıyla) |
 
-- Rehber sayfalarının dış kapsayıcısı: `mx-auto w-full max-w-[88rem] px-4 sm:px-6`. Üst çubuk ve alt bilgi de aynı genişliği kullanır, böylece kenarlar hizalı kalır.
-- Metin okunabilirliği korunur: **metin satırları ~65 karakter** (`max-w-prose`). Ekranın genişliğini metin değil, kenar çubukları doldurur.
-- Ana sayfa ve tek sütunlu sayfalar (ör. "Hakkında") skill'deki `max-w-5xl` / `max-w-3xl` kurallarını izler, ama üst çubukla hizalı kalır.
+- **Dış kapsayıcı tam genişlik** (`Container`: `w-full px-4 sm:px-6 lg:px-8`, en büyük genişlik yok). Ensar `max-w-[88rem]` ile de kenarların boş kaldığını söyledi (6 Kasım 2026). Üst çubuk, alt bilgi, ana sayfa ve rehber sayfaları aynı payı kullanır.
+- Kenar sütunları ekranın kenarına yaslanır (sol `w-72`, sağ `w-60`). İçerik ortadaki alanda ortalanır; metin, kutular ve tablolar aynı genişlikte (`max-w-[54rem]`, `2xl`'de `64rem` ve 17px yazı).
+- **Bölüm renkleri ve ikonları** (Ensar'ın isteği, "tasarım çok sade"): her `navigation.ts` grubunun bir `key`'i (`globals.css`'te `--sec-<key>`, açık ve koyu tema için ayrı, açıkta AA) ve bir `lucide-react` ikonu var. `SectionTheme`, rehber sayfalarında `--accent`'i o bölümün rengine çevirir: linkler, h2 çizgisi, adım numaraları, kutular, "Bu sayfada" o renkte. Sol menüde her grup başlığı kendi renginde ikonla, sayfalar altında girintili. Ana sayfadaki bölüm kartları ve "Tüm araçlar" kartları da bölüm renginde.
 
 **Başlık kimlikleri ve "Bu sayfada":** `src/mdx-components.tsx` içinde `h2`/`h3` bileşenleri, skill'deki **`slugify`** ile ASCII kimlik üretir (ek rehype eklentisi gerekmez). "Bu sayfada" bir istemci bileşenidir. Sayfa yüklenince makaledeki `h2`/`h3` başlıklarını okur, okunan bölümü vurgular. Başlıklara `scroll-mt-20` verilir (yapışkan üst çubuk başlığı örtmesin).
 
@@ -161,10 +160,9 @@ Skill'deki temel bileşenlere ek olarak:
 | `Toc` | "Bu sayfada" listesi |
 | `PrevNext` | Sayfa sonunda önceki/sonraki sayfa bağlantıları (sıra `navigation.ts`'ten) |
 | `Steps` | Numaralı adımlar (araç kullanımı ve tavsiyeler için) |
-| `Screenshot` | Ekran görüntüsü + açıklama (`figure`/`figcaption`), çerçeve `rounded-xl border border-border` |
 | `ToolInfoBox` | Araç sayfasındaki "Bir bakışta" künye kutusu |
 | `ToolLinkCard` | Tavsiye sayfasında ilgili araca giden kart. Sayfa henüz yoksa "Yakında" rozeti |
-| `Checklist` | İşaretlenebilir maddeler (`localStorage`, skill kurallarıyla `try/catch` içinde) |
+| `Checklist` | İşaretlenebilir maddeler (`localStorage`, `try/catch` içinde). **Yalnız KOÜ teslim öncesi kontrol listesinde** kullanılır |
 | `ToolTable` | Tüm araçlar tablosu ve filtresi |
 | `LastChecked` | "Son kontrol: Kasım 2026" (tarih `Intl.DateTimeFormat("tr-TR")` ile) |
 
@@ -172,7 +170,7 @@ Skill'deki temel bileşenlere ek olarak:
 
 | Bölüm | Sayfalar |
 |---|---|
-| **Başlangıç** | Ana sayfa (ne, kimin için, nereden başlanmalı) · Kurulum yol haritası (hangi araç hangi sırayla) · **İlk dönem kontrol listesi** (tüm tavsiyelerin maddeleri, etkileşimli) · İlk 30 gün planı (etkileşimli) |
+| **Başlangıç** | Ana sayfa (ne, kimin için, nereden başlanmalı) · Kurulum yol haritası (hangi araç hangi sırayla) |
 | **Yüksek lisansta yapılması gerekenler** | Okumaya erken başla · Kaynaklarını ve notlarını düzenli tut · Danışmanınla çalışmak · Konu seçimi · Kaliteli kaynak ve eleştirel okuma · Makale ve tez farkı · Yazma alışkanlığı · Takvimi önceden planla (sınavlar, başvurular) · Kendini kıyaslama |
 | **Akademik kimlik** | ORCID · Google Scholar profili · DergiPark · Semantic Scholar · IEEE hesabı · ResearchGate · TÜBİTAK ARBİS · YÖK Ulusal Tez Merkezi |
 | **Kaynak bulma** | Google Scholar ile arama · Semantic Scholar · IEEE Xplore · ResearchRabbit · Connected Papers · Unpaywall · Scopus ve Web of Science · Bir derginin Q değerini bulma |
@@ -258,7 +256,7 @@ Bu bölümün sayfaları da `src/content/navigation.ts`'e ayrı bir grup olarak 
   - **Gönderim ve hakem süreci:** kapak mektubu, editör ön değerlendirmesi, hakem değerlendirmesi, kararlar (kabul, küçük/büyük düzeltme, ret)
   - **Hakem yorumlarına yanıt:** madde madde yanıt mektubu, değişikliklerin gösterilmesi
   - **Atıf ve akademik etik:** intihal ve kendi kendinden intihal, yazarlık sırası, yapay zekâ beyanı (mevcut "AI ile tez/makale yazmak" sayfasına bağlanır)
-- Bu sayfalar tavsiye sayfası şablonunu (Bölüm 4) izler: kısa özet, neden önemli, adımlar, ilgili araçlar (Zotero, Overleaf, Grammarly, Q değeri bulma), kontrol listesi.
+- Bu sayfalar tavsiye sayfası şablonunu (Bölüm 4) izler: kısa özet, neden önemli, adımlar, ilgili araçlar (Zotero, Overleaf, Grammarly, Q değeri bulma).
 
 ### "Yüksek lisansta yapılması gerekenler" bölümünün içeriği
 
@@ -282,8 +280,9 @@ Kaynak: `docs/kaynak-README.md` → Gönderi 2 (ilk dönemde yapılmaması gerek
 2. **Neden önemli?** 1–2 kısa paragraf
 3. **Ne yapmalısın?** `Steps` ile numaralı, uygulanabilir adımlar
 4. **Hangi araçlarla?** `ToolLinkCard` kartları (araç sayfası "nasıl"ı anlatır, burada tekrar edilmez)
-5. **Mini kontrol listesi:** `Checklist`, 3–5 madde. Aynı maddeler "İlk dönem kontrol listesi" sayfasında da görünür
-6. `PrevNext`
+5. `PrevNext`
+
+Tavsiye ve akademik yazım sayfalarında işaretlenebilir kontrol listesi **yok** (Ensar'ın kararı, 6 Kasım 2026: site bir to-do listesi değil, "nasıl yapılır" rehberi). "İlk 30 gün planı" ve "İlk dönem kontrol listesi" sayfaları da bu yüzden kaldırıldı.
 
 ```ts
 export const meta = {
@@ -291,11 +290,8 @@ export const meta = {
   description: "Tez dönemine okuma alışkanlığıyla gir: haftada iki makale, katman katman okuma, düzenli notlar.",
   category: "yapilmasi-gerekenler",
   relatedTools: ["google-scholar", "zotero", "notion", "researchrabbit"],
-  checklist: ["okuma-haftada-2", "okuma-kavram-notu"],
 };
 ```
-
-Kontrol listesi maddeleri tek bir kaynaktan beslenir: **`src/content/checklist.ts`** (id, metin, ait olduğu tavsiye sayfası, ilgili araç). İşaretlenen maddeler `localStorage`'da tutulur, bir sayfada işaretlenen madde diğer sayfada da işaretli görünür.
 
 ## 5. Araç sayfası şablonu
 
@@ -303,7 +299,7 @@ Kontrol listesi maddeleri tek bir kaynaktan beslenir: **`src/content/checklist.t
 2. **Bir bakışta:** `ToolInfoBox` → Kategori · Ücret/erişim · Platform · Hesap gerekli mi · Türkçe arayüz var mı · `LastChecked`
 3. **Ne zaman kullanılır?** Hangi akademik iş için
 4. **Kurulum:** `Steps`
-5. **Uygulamalı kullanım:** gerçek bir senaryo (ör. "Bir makaleyi kaydedip Word'de APA ile atıf yapmak"), `Steps` + `Screenshot`
+5. **Uygulamalı kullanım:** gerçek bir senaryo (ör. "Bir makaleyi kaydedip Word'de APA ile atıf yapmak"), `Steps`
 6. **İpuçları:** `Callout` (tip)
 7. **Sık yapılan hatalar:** `Callout` (warning)
 8. **İlgili araçlar ve sonraki adım** + `PrevNext`
@@ -333,12 +329,7 @@ Araç listesi tek bir kaynaktan beslenir: **`src/content/tools.ts`** (ad, slug, 
 - **Yapay zekâ ve etik:** Rehber, üretken yapay zekânın akademik yazımda **yazarın yerine geçmemesi** gerektiğini ve kurum/hoca kurallarına uyulmasını vurgular (YÖK 2024 etik rehberi).
 
 ### Ekran görüntüleri
-- Ensar kendi bilgisayarında çeker. Konum: ilgili MDX sayfasının yanında `img/` klasörü (ör. `src/app/kaynak-yonetimi/zotero/img/`)
-- Adlandırma: `zotero-01-koleksiyon.png`, `zotero-02-connector.png`… (ASCII)
-- Kişisel bilgiler (e-posta, kullanıcı adı, kişisel kütüphane içeriği) **bulanıklaştırılır** ya da örnek verilerle çekilir
-- Aynı pencere boyutu, gereksiz kenarlar kırpılmış. Uygulamanın açık temasıyla çekilmesi tercih edilir
-- Görseldeki adımlar numaralı işaretlerle gösterilir, metindeki `Steps` numaralarıyla eşleşir
-- Her görselin anlamlı Türkçe `alt` metni olur
+Kullanılmaz (Ensar'ın kararı, 6 Kasım 2026).
 
 ## 7. Klasör yapısı (hedef)
 
@@ -361,7 +352,7 @@ akademik-rehber/
 │   │   ├── yapilmasi-gerekenler/okumaya-erken-basla/page.mdx …
 │   │   ├── akademik-kimlik/orcid/page.mdx …
 │   │   ├── kaynak-bulma/…
-│   │   ├── kaynak-yonetimi/zotero/{page.mdx, img/}
+│   │   ├── kaynak-yonetimi/zotero/page.mdx
 │   │   ├── not-alma/…
 │   │   ├── yazim/…
 │   │   ├── yapay-zeka/…
@@ -372,12 +363,11 @@ akademik-rehber/
 │   │   ├── layout/                # Skill: Header, Footer, Container, Section, ThemeToggle, ThemeScript, MobileNav
 │   │   │                          # Proje: DocsLayout, Sidebar, Toc, PrevNext
 │   │   └── ui/                    # Skill: Button, Card, Badge, Callout, CodeBlock
-│   │                              # Proje: Steps, Screenshot, ToolInfoBox, ToolLinkCard, Checklist, ToolTable, LastChecked
+│   │                              # Proje: Steps, ToolInfoBox, ToolLinkCard, Checklist, ToolTable, LastChecked
 │   ├── content/
 │   │   ├── site.ts                # Site adı, açıklama, GitHub linki (skill)
 │   │   ├── navigation.ts          # Kenar çubuğu ve sayfa sırası
 │   │   ├── tools.ts
-│   │   └── checklist.ts
 │   ├── lib/                       # asset.ts, cn.ts, slugify.ts (skill)
 │   └── mdx-components.tsx
 ├── next.config.ts
@@ -390,10 +380,10 @@ akademik-rehber/
 |---|---|---|
 | **0. Altyapı** | Skill'deki `create-next-app` komutu → `next.config.ts` (statik dışa aktarma + MDX) → `public/.nojekyll` → `deploy.yml` → boş bir ana sayfa ve bir deneme MDX sayfası | `npm run build` hatasız, `out/` içinde her rota için `index.html` ve `404.html` var. Push sonrası site `ensarakbas77.github.io/akademik-rehber/` adresinde açılıyor |
 | **1. Kabuk ve tasarım sistemi** | Skill iş akışının 3. adımı: `globals.css` değişkenleri, yazı tipleri, `ThemeScript`/`ThemeToggle`, Header, Footer, MobileNav → proje bileşenleri: `DocsLayout`, `Sidebar`, `Toc`, `PrevNext` → `mdx-components.tsx` | Deneme MDX sayfası üç sütunlu düzende, açık ve koyu temada, 375px ve 1280px genişlikte düzgün |
-| **2. Pilot sayfalar** | **Zotero** (araç kalıbı) + **Okumaya erken başla** (tavsiye kalıbı) ve gerektirdikleri bileşenler (`Steps`, `Screenshot`, `ToolInfoBox`, `ToolLinkCard`, `Checklist`, `Callout`) | İki sayfa uçtan uca bitti, diğer sayfalar için iki kalıp hazır |
+| **2. Pilot sayfalar** | **Zotero** (araç kalıbı) + **Okumaya erken başla** (tavsiye kalıbı) ve gerektirdikleri bileşenler (`Steps`, `ToolInfoBox`, `ToolLinkCard`, `Checklist`, `Callout`) | İki sayfa uçtan uca bitti, diğer sayfalar için iki kalıp hazır |
 | **KOÜ çıkarımı** (kod gerektirmez, Faz 0'dan bağımsız, istenen anda yapılabilir) | Bölüm 4.1 çalışma sırasının 1–3. adımları: üç PDF'ten `docs/kou-notlar/` notları + `kapsam.md` → Ensar'ın onayı | Notlar ve kapsam haritası hazır, Ensar onayladı |
 | **3. İçerik** | Öncelik sırası: **1) Kocaeli Üniversitesi FBE** (Ensar'ın kendi kullanımı için en acil bölüm, KOÜ çıkarımı onaylandıysa) · 2) Yüksek lisansta yapılması gerekenler · 3) Akademik yazım · 4) Araç sayfaları (Bölüm 4 sırasıyla). Henüz yazılmamış araç sayfaları `ToolLinkCard`'da "Yakında" | Site haritasındaki tüm sayfalar dolu, kırık bağlantı yok, `kapsam.md`'deki her madde işaretli |
-| **4. Etkileşim ve SEO** | İlk dönem kontrol listesi ve 30 gün planı · araç filtresi · arama (Pagefind, isteğe bağlı) · skill'deki `metadata` kuralları (`metadataBase: https://ensarakbas77.github.io/akademik-rehber/`), `sitemap.ts`, `robots.ts`, Open Graph görseli | Özellikler çalışıyor |
+| **4. Etkileşim ve SEO** | Araç filtresi · arama (Pagefind, isteğe bağlı) · skill'deki `metadata` kuralları (`metadataBase: https://ensarakbas77.github.io/akademik-rehber/`), `sitemap.ts`, `robots.ts`, Open Graph görseli | Özellikler çalışıyor |
 | **5. Kontrol** | Skill Bölüm 5'teki doğrulama listesinin tamamı + Lighthouse (performans, erişilebilirlik) + kırık link taraması | Yayına hazır |
 
 **Şu anki durum (6 Kasım 2026):**
@@ -406,13 +396,12 @@ akademik-rehber/
   - Bekleyenler: `/kaynaklar/` sayfası; karar 6 (AI sayfasında KOÜ kutusu) ve karar 7 (Zotero sayfasında KOÜ notu); YÖK Tez Merkezi sayfasına bağlantı. Bunlar o sayfalar yazılınca eklenecek.
   - Build, önekli build, tsc, lint ve iç link/çapa kontrolü temiz. Commit edilmedi.
   - KOÜ bölümü commit edildi ve yayında.
-- **Faz 2 (pilot sayfalar) yazıldı, ekran görüntüleri bekleniyor:**
+- **Faz 2 (pilot sayfalar) yazıldı:**
   - Sayfalar: `/kaynak-yonetimi/zotero/` (araç kalıbı) ve `/yapilmasi-gerekenler/okumaya-erken-basla/` (tavsiye kalıbı).
   - Bileşenler: `Steps`/`Step`, `Screenshot`, `ToolInfoBox`, `ToolLinkCard`/`ToolLinks`, `AdviceChecklist`, `LastChecked`. Veri: `src/content/tools.ts`, `src/content/checklist.ts`.
   - Tavsiye kontrol listeleri tek anahtarı (`checklist:ilk-donem`) paylaşır; "Temizle" yalnız o sayfanın maddelerini siler.
   - MDX'te henüz yazılmamış sayfaya giden link düz metin + "(yakında)" olarak görünür, sayfa `ready` olunca kendiliğinden link olur.
   - Zotero bilgileri 6 Kasım 2026'da web'de doğrulandı (Zotero 10, 300 MB ücretsiz depolama).
-  - Çekilecek ekran görüntüleri listesi: `docs/ekran-goruntuleri.md`. Commit edildi ve yayında.
 - **Faz 3 (içerik) başladı:**
   - "Yüksek lisansta yapılması gerekenler" bölümünün 9 sayfasının hepsi yazıldı (kaynak: `docs/kaynak-README.md` Gönderi 2 ve 4, Bölüm 6 ve 8). Maddeleri `checklist.ts`'te, sayfa sonunda `DerlemeNotu`.
   - `tools.ts`'e ORCID, Scopus/WoS, TÜBİTAK ARBİS, YÖK Tez Merkezi eklendi (yalnız ad, açıklama, resmî site; ücret bilgisi yok).
@@ -430,7 +419,12 @@ akademik-rehber/
 - **Faz 5 (kontrol) yapıldı:** build, önekli build ve önek taraması, tsc, lint, iç link/çapa kontrolü (68 sayfa) temiz; yeni sayfalarda 375px'te taşma yok. Lighthouse (yerel, masaüstü değil varsayılan mobil): ana sayfa, Zotero ve Tüm araçlar için performans 99-100, erişilebilirlik 100, SEO 100, en iyi uygulamalar 96-100.
   - Bilinen sorun: Next 16 statik dışa aktarmada sayfa önden yüklemesi `__next.<yol>.__PAGE__.txt` dosyasını istiyor, dosya ise iç içe klasörde (`__next.<bölüm>/<sayfa>/__PAGE__.txt`). İstek 404 veriyor ve konsola hata düşüyor; sayfa geçişi yine çalışıyor. Next güncellemesinde tekrar kontrol et.
   - Açık ve koyu temanın göze dayalı kontrolü bu oturumda yapılamadı (önizleme paneli gizliydi); yalnız ham renk sınıfı taraması temiz.
-- **Bekleyen:** Ensar'ın çekeceği ekran görüntüleri (`docs/ekran-goruntuleri.md`).
+- **Ensar'ın geri bildirimiyle yapılanlar (6 Kasım 2026):**
+  - Ekran görüntüleri kaldırıldı (`Screenshot` bileşeni, `docs/ekran-goruntuleri.md`).
+  - "İlk 30 gün planı" ve "İlk dönem kontrol listesi" sayfaları, tavsiye ve akademik yazım sayfalarındaki kontrol listeleri, `AdviceChecklist`, `IlkDonemListesi` ve `checklist.ts` kaldırıldı. KOÜ teslim öncesi kontrol listesi kaldı.
+  - Alt bilgideki "Kaynak kodu GitHub'da" kaldırıldı; üst çubuktaki GitHub bağlantısına logo eklendi (`src/components/icons/github.tsx`, lucide marka ikonlarını kaldırdığı için SVG).
+  - Tam genişlik düzen, bölüm renkleri ve ikonları, belirgin sol menü başlıkları (Bölüm 3.1). Ana sayfa yeniden düzenlendi: "İlk hafta" kutusu ve renkli bölüm kartları.
+- **Bekleyen:** Yok.
 
 ## 9. Çalışma kuralları (Claude için)
 

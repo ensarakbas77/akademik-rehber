@@ -4,12 +4,17 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { LastChecked } from "@/components/ui/last-checked";
-import { isReadyPath } from "@/content/navigation";
+import { isReadyPath, navigation } from "@/content/navigation";
 import { tools } from "@/content/tools";
 import { cn } from "@/lib/cn";
 
 const ALL = "Tümü";
 const categories = [ALL, ...new Set(tools.map((t) => t.category))];
+
+// Araç kategorileri kenar çubuğundaki bölüm adlarıyla aynı; kart o bölümün
+// renginde ve ikonuyla görünür.
+const groupOf = (category: string) =>
+  navigation.find((g) => g.title === category);
 
 /** "Tüm araçlar": kategoriye göre süzülebilen araç listesi (tools.ts'ten). */
 export function ToolTable() {
@@ -44,13 +49,19 @@ export function ToolTable() {
       <p aria-live="polite" className="mt-4 text-sm text-muted">
         {shown.length} araç
       </p>
-      <ul className="mt-4 grid gap-4 lg:grid-cols-2">
+      <ul className="mt-4 grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
         {shown.map((tool) => {
           const ready = !!tool.href && isReadyPath(tool.href);
+          const group = groupOf(tool.category);
+          const Icon = group?.icon;
+          const style = group
+            ? ({ "--accent": `var(--sec-${group.key})` } as React.CSSProperties)
+            : undefined;
           return (
             <li
               key={tool.slug}
-              className="flex flex-col gap-3 rounded-xl border border-border bg-surface p-5"
+              style={style}
+              className="flex flex-col gap-3 rounded-xl border border-t-4 border-border border-t-accent bg-surface p-5"
             >
               <div className="flex flex-wrap items-start justify-between gap-2">
                 <h2 className="text-lg font-semibold">
@@ -60,13 +71,14 @@ export function ToolTable() {
                       className="inline-flex items-center gap-1.5 hover:text-accent"
                     >
                       {tool.name}
-                      <ArrowRight className="size-4 text-muted" aria-hidden />
+                      <ArrowRight className="size-4 text-accent" aria-hidden />
                     </Link>
                   ) : (
                     tool.name
                   )}
                 </h2>
-                <span className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
+                  {Icon && <Icon className="size-3.5" aria-hidden />}
                   {tool.category}
                 </span>
               </div>

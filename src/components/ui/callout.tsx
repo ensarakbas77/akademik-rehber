@@ -5,20 +5,20 @@ const types = {
   info: {
     label: "Bilgi",
     icon: Info,
-    border: "border-l-accent",
+    border: "border-accent/25 border-l-accent bg-accent/5",
     tone: "text-accent",
   },
   tip: {
     label: "İpucu",
     icon: Lightbulb,
-    border: "border-l-accent",
+    border: "border-accent/25 border-l-accent bg-accent/5",
     tone: "text-accent",
   },
   // Uyarı, vurgu renginden ayrı görünmesi gereken tek renk (skill kuralı).
   warning: {
     label: "Dikkat",
     icon: TriangleAlert,
-    border: "border-l-amber-500",
+    border: "border-amber-500/30 border-l-amber-500 bg-amber-500/5",
     tone: "text-amber-700 dark:text-amber-400",
   },
 } as const;
@@ -35,10 +35,7 @@ export function Callout({ type = "info", title, children }: CalloutProps) {
   return (
     <div
       role="note"
-      className={cn(
-        "my-6 max-w-prose rounded-lg border border-l-2 border-border bg-surface p-4",
-        border,
-      )}
+      className={cn("my-6 rounded-lg border border-l-4 p-4", border)}
     >
       <p className={cn("flex items-center gap-2 text-sm font-semibold", tone)}>
         <Icon className="size-4 shrink-0" aria-hidden />

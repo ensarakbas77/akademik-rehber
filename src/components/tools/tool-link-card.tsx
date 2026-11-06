@@ -14,7 +14,7 @@ export function ToolLinkCard({ slug }: { slug: string }) {
       <span className="flex items-center justify-between gap-2">
         <span className="font-medium">{tool.name}</span>
         {ready ? (
-          <ArrowRight className="size-4 text-muted" aria-hidden />
+          <ArrowRight className="size-4 text-accent" aria-hidden />
         ) : (
           <span className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted">
             Yakında
@@ -29,7 +29,7 @@ export function ToolLinkCard({ slug }: { slug: string }) {
   return ready && tool.href ? (
     <Link
       href={tool.href}
-      className={`${base} transition-colors hover:border-accent/50 motion-reduce:transition-none`}
+      className={`${base} transition-colors hover:border-accent/60 hover:bg-accent/5 motion-reduce:transition-none`}
     >
       {body}
     </Link>
@@ -41,7 +41,7 @@ export function ToolLinkCard({ slug }: { slug: string }) {
 /** Kart ızgarası: <ToolLinks slugs={["zotero", "notion"]} /> */
 export function ToolLinks({ slugs }: { slugs: string[] }) {
   return (
-    <div className="my-6 grid max-w-prose gap-4 sm:grid-cols-2">
+    <div className="my-6 grid gap-4 sm:grid-cols-2 2xl:grid-cols-3">
       {slugs.map((slug) => (
         <ToolLinkCard key={slug} slug={slug} />
       ))}

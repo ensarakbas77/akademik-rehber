@@ -2,8 +2,29 @@
 // ready: false olan sayfalar henüz yazılmadı: kenar çubuğunda soluk ve
 // link olmadan görünür, PrevNext'te atlanır. Sayfa yazılınca true yap.
 
+import {
+  BookMarked,
+  Compass,
+  FileText,
+  GraduationCap,
+  IdCard,
+  Library,
+  Lightbulb,
+  NotebookPen,
+  PenLine,
+  Search,
+  Sparkles,
+  type LucideIcon,
+} from "lucide-react";
+
 export type NavPage = { title: string; href: string; ready: boolean };
-export type NavGroup = { title: string; pages: NavPage[] };
+/** key: globals.css'teki bölüm rengi (--sec-<key>). */
+export type NavGroup = {
+  title: string;
+  key: string;
+  icon: LucideIcon;
+  pages: NavPage[];
+};
 
 const p = (title: string, href: string, ready = false): NavPage => ({
   title,
@@ -14,19 +35,17 @@ const p = (title: string, href: string, ready = false): NavPage => ({
 export const navigation: NavGroup[] = [
   {
     title: "Başlangıç",
+    key: "baslangic",
+    icon: Compass,
     pages: [
       p("Ana sayfa", "/", true),
       p("Kurulum yol haritası", "/baslangic/kurulum-yol-haritasi/", true),
-      p(
-        "İlk dönem kontrol listesi",
-        "/baslangic/ilk-donem-kontrol-listesi/",
-        true,
-      ),
-      p("İlk 30 gün planı", "/baslangic/ilk-30-gun-plani/", true),
     ],
   },
   {
     title: "Yüksek lisansta yapılması gerekenler",
+    key: "gerekenler",
+    icon: Lightbulb,
     pages: [
       p(
         "Okumaya erken başla",
@@ -65,6 +84,8 @@ export const navigation: NavGroup[] = [
   },
   {
     title: "Akademik kimlik",
+    key: "kimlik",
+    icon: IdCard,
     pages: [
       p("ORCID", "/akademik-kimlik/orcid/", true),
       p(
@@ -82,6 +103,8 @@ export const navigation: NavGroup[] = [
   },
   {
     title: "Kaynak bulma",
+    key: "bulma",
+    icon: Search,
     pages: [
       p("Google Scholar ile arama", "/kaynak-bulma/google-scholar/", true),
       p("Semantic Scholar", "/kaynak-bulma/semantic-scholar/", true),
@@ -95,6 +118,8 @@ export const navigation: NavGroup[] = [
   },
   {
     title: "Kaynak yönetimi",
+    key: "yonetim",
+    icon: Library,
     pages: [
       p("Zotero", "/kaynak-yonetimi/zotero/", true),
       p(
@@ -106,6 +131,8 @@ export const navigation: NavGroup[] = [
   },
   {
     title: "Not alma ve takip",
+    key: "not",
+    icon: NotebookPen,
     pages: [
       p("Notion'da literatür takibi", "/not-alma/notion/", true),
       p("Obsidian ile bağlantılı notlar", "/not-alma/obsidian/", true),
@@ -113,6 +140,8 @@ export const navigation: NavGroup[] = [
   },
   {
     title: "Yazım",
+    key: "yazim",
+    icon: PenLine,
     pages: [
       p("Word + Zotero ile atıf", "/yazim/word-ve-zotero/", true),
       p("Overleaf ve LaTeX'e giriş", "/yazim/overleaf-ve-latex/", true),
@@ -122,6 +151,8 @@ export const navigation: NavGroup[] = [
   },
   {
     title: "Yapay zekâ araçları",
+    key: "yz",
+    icon: Sparkles,
     pages: [
       p("Elicit", "/yapay-zeka/elicit/", true),
       p("Consensus", "/yapay-zeka/consensus/", true),
@@ -131,6 +162,8 @@ export const navigation: NavGroup[] = [
   },
   {
     title: "Akademik yazım",
+    key: "akyazim",
+    icon: FileText,
     pages: [
       p(
         "Literatür taraması adım adım",
@@ -157,6 +190,8 @@ export const navigation: NavGroup[] = [
   {
     // Kesin liste: docs/kou-notlar/kapsam.md §5 (Ensar onayladı, 6 Kasım 2026).
     title: "Kocaeli Üniversitesi FBE",
+    key: "kou",
+    icon: GraduationCap,
     pages: [
       p("Genel bakış ve süreç haritası", "/kou-fbe/genel-bakis/", true),
       p("Önemli süreler ve sayılar", "/kou-fbe/sureler-ve-sayilar/", true),
@@ -184,6 +219,8 @@ export const navigation: NavGroup[] = [
   },
   {
     title: "Ek",
+    key: "ek",
+    icon: BookMarked,
     pages: [
       p("Tüm araçlar", "/araclar/", true),
       p("Kaynaklar", "/kaynaklar/", true),
@@ -205,4 +242,10 @@ export const readyPages = navigation.flatMap((g) =>
 export const isReadyPath = (href: string) =>
   readyPages.some(
     (p) => normalizePath(p.href) === normalizePath(href.split("#")[0]),
+  );
+
+/** Yolun ait olduğu bölüm (ilk eşleşen sayfanın grubu). */
+export const groupForPath = (href: string) =>
+  navigation.find((g) =>
+    g.pages.some((p) => normalizePath(p.href) === normalizePath(href)),
   );

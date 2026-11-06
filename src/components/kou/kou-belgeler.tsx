@@ -3,7 +3,7 @@ import { fbeSite, kouBelgeler } from "@/content/kou";
 /** KOÜ sayfalarının sonundaki kaynak belgeler ve uyarı kutusu. */
 export function KouBelgeler() {
   return (
-    <section className="mt-16 max-w-prose rounded-xl border border-border p-5">
+    <section className="mt-16 rounded-xl border border-border p-5">
       <h2 id="kaynak-belgeler" className="scroll-mt-20 text-base font-semibold">
         Kaynak belgeler
       </h2>

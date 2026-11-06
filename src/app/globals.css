@@ -12,6 +12,21 @@
   --muted: #52525b; /* ikincil metin (bg üzerinde AA) */
   --accent: #2563eb; /* tek vurgu rengi */
   --accent-fg: #ffffff; /* vurgu üzerindeki metin */
+
+  /* Bölüm renkleri (Ensar'ın isteği: her bölümün kendi rengi ve ikonu).
+     Rehber sayfalarında --accent bölümün rengine çevrilir (SectionTheme).
+     Açık temada hepsi beyaz zemin üzerinde AA (≥4.5:1). */
+  --sec-baslangic: #2563eb;
+  --sec-gerekenler: #0f766e;
+  --sec-kimlik: #7c3aed;
+  --sec-bulma: #0e7490;
+  --sec-yonetim: #c2410c;
+  --sec-not: #be185d;
+  --sec-yazim: #4338ca;
+  --sec-yz: #a21caf;
+  --sec-akyazim: #be123c;
+  --sec-kou: #15803d;
+  --sec-ek: #475569;
 }
 
 .dark {
@@ -23,6 +38,18 @@
   --muted: #a1a1aa;
   --accent: #60a5fa;
   --accent-fg: #09090b;
+
+  --sec-baslangic: #60a5fa;
+  --sec-gerekenler: #2dd4bf;
+  --sec-kimlik: #a78bfa;
+  --sec-bulma: #22d3ee;
+  --sec-yonetim: #fb923c;
+  --sec-not: #f472b6;
+  --sec-yazim: #818cf8;
+  --sec-yz: #e879f9;
+  --sec-akyazim: #fb7185;
+  --sec-kou: #4ade80;
+  --sec-ek: #94a3b8;
 }
 
 @theme inline {

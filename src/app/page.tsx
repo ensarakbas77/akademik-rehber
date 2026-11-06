@@ -1,173 +1,152 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/container";
-import { navigation } from "@/content/navigation";
+import { navigation, type NavGroup } from "@/content/navigation";
 import { site } from "@/content/site";
 
 // Ana sayfa: ne, kimin için, nereden başlanmalı (CLAUDE.md Bölüm 4).
-
-const baslangic = [
-  {
-    href: "/baslangic/kurulum-yol-haritasi/",
-    title: "Kurulum yol haritası",
-    text: "Hangi aracı hangi sırayla kuracağını gösterir. İlk hafta yalnız dört şey yeterli.",
-  },
-  {
-    href: "/baslangic/ilk-30-gun-plani/",
-    title: "İlk 30 gün planı",
-    text: "İlk ayı dört haftaya bölen, işaretlenebilir bir plan.",
-  },
-  {
-    href: "/baslangic/ilk-donem-kontrol-listesi/",
-    title: "İlk dönem kontrol listesi",
-    text: "Yüksek lisansta yapılması gerekenlerin bütün maddeleri tek listede.",
-  },
-];
 
 const bolumAciklamalari: Record<string, string> = {
   "Yüksek lisansta yapılması gerekenler":
     "Okuma, not tutma, danışmanla çalışma, konu seçimi ve yazma alışkanlığı üzerine tavsiyeler.",
   "Akademik kimlik":
-    "ORCID, Google Scholar profili, DergiPark ve diğer akademik hesaplar.",
+    "ORCID, Google Scholar profili, DergiPark ve diğer akademik hesapları açmak.",
   "Kaynak bulma":
-    "Google Scholar, Semantic Scholar, IEEE Xplore, ResearchRabbit ve derginin Q değerini bulma.",
+    "Google Scholar, Semantic Scholar, IEEE Xplore, ResearchRabbit ve bir derginin Q değerini bulmak.",
   "Kaynak yönetimi":
-    "Zotero ile kaynakları kaydetmek, düzenlemek ve atıf yapmak.",
-  "Not alma ve takip": "Notion ve Obsidian ile literatür takibi.",
-  Yazım: "Word ve Zotero, Overleaf ve LaTeX, Grammarly, QuillBot.",
+    "Zotero ile kaynakları kaydetmek, düzenlemek ve Word'de atıf yapmak.",
+  "Not alma ve takip": "Notion ve Obsidian ile literatür takip sistemi kurmak.",
+  Yazım: "Word ve Zotero, Overleaf ve LaTeX, Grammarly ve QuillBot.",
   "Yapay zekâ araçları":
-    "Elicit, Consensus, Gemini Notebook ve yapay zekâyı etik kullanmak.",
+    "Elicit, Consensus, Gemini Notebook ve yapay zekâyı etik kurallara uygun kullanmak.",
   "Akademik yazım":
     "Literatür taraması adım adım, makalenin yapısı, dergi seçimi ve hakem süreci.",
+  "Kocaeli Üniversitesi FBE":
+    "Yönetmelik, uygulama esasları ve tez yazım kılavuzu; her kural kaynağıyla.",
 };
 
-const bolumler = navigation
-  .filter((g) => g.title in bolumAciklamalari)
-  .map((g) => ({
-    title: g.title,
-    text: bolumAciklamalari[g.title],
-    href: g.pages.find((p) => p.ready)?.href ?? "/",
-    count: g.pages.filter((p) => p.ready).length,
-  }));
+// Kurulum yol haritasının ilk haftası (sayfadaki sırayla).
+const ilkAdimlar = [
+  { title: "ORCID numarası al", href: "/akademik-kimlik/orcid/" },
+  { title: "Google Scholar'ı kur", href: "/kaynak-bulma/google-scholar/" },
+  { title: "Zotero, Connector ve Unpaywall", href: "/kaynak-yonetimi/zotero/" },
+  {
+    title: "Kütüphanenin uzaktan erişimini öğren",
+    href: "/kaynak-bulma/scopus-ve-wos/",
+  },
+];
 
-const kou = navigation.find((g) => g.title === "Kocaeli Üniversitesi FBE");
+const bolumler = navigation.filter((g) => g.title in bolumAciklamalari);
 
-const link =
-  "underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent motion-reduce:transition-none";
+const sec = (g: NavGroup) =>
+  ({ "--accent": `var(--sec-${g.key})` }) as React.CSSProperties;
 
 export default function Home() {
   return (
     <Container>
-      <div className="mx-auto max-w-5xl">
-        <section className="py-16 sm:py-24">
-          <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+      <section className="grid gap-10 py-14 sm:py-20 lg:grid-cols-[minmax(0,3fr)_minmax(24rem,2fr)] lg:items-center xl:gap-16">
+        <div>
+          <p className="text-sm font-medium text-accent">
+            Yüksek lisans ve doktora öğrencileri için
+          </p>
+          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-6xl xl:text-7xl">
             {site.name}
           </h1>
-          <p className="mt-4 max-w-prose text-lg text-pretty text-muted">
-            Yüksek lisansa ve doktoraya yeni başlayanlar için Türkçe, uygulamalı
-            bir rehber. Akademik araçların ne işe yaradığını ve adım adım nasıl
-            kullanıldığını, ilk dönemde nelere dikkat etmek gerektiğini ve
-            literatür taramasından hakem sürecine kadar akademik yazımı anlatır.
+          <p className="mt-5 max-w-4xl text-lg leading-8 text-pretty text-muted sm:text-xl">
+            Akademik araçların ne işe yaradığını ve adım adım nasıl
+            kullanıldığını, yüksek lisansta nelere dikkat etmek gerektiğini ve
+            literatür taramasından hakem sürecine kadar akademik yazımı Türkçe
+            ve uygulamalı olarak anlatan bir rehber.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/baslangic/kurulum-yol-haritasi/"
-              className="inline-flex h-10 items-center gap-2 rounded-lg bg-accent px-4 text-sm font-medium text-accent-fg transition-colors hover:bg-accent/90 motion-reduce:transition-none"
+              className="inline-flex h-11 items-center gap-2 rounded-lg bg-accent px-5 text-sm font-medium text-accent-fg transition-colors hover:bg-accent/90 motion-reduce:transition-none"
             >
               Nereden başlamalıyım?
               <ArrowRight className="size-4" aria-hidden />
             </Link>
             <Link
               href="/araclar/"
-              className="inline-flex h-10 items-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-medium transition-colors hover:bg-border/40 motion-reduce:transition-none"
+              className="inline-flex h-11 items-center gap-2 rounded-lg border border-border bg-surface px-5 text-sm font-medium transition-colors hover:bg-border/40 motion-reduce:transition-none"
             >
               Tüm araçlar
             </Link>
           </div>
-        </section>
+        </div>
 
-        <section aria-labelledby="baslangic" className="pb-16">
-          <h2
-            id="baslangic"
-            className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl"
-          >
-            Yeni başladıysan
-          </h2>
-          <p className="mt-2 max-w-prose leading-7 text-pretty text-muted">
-            Akademik araçları henüz bilmiyorsan bu üç sayfayla başla.
-            İşaretlerin bu tarayıcıda saklanır.
+        <div className="rounded-2xl border border-accent/25 bg-accent/5 p-6">
+          <p className="text-sm font-semibold text-accent">İlk hafta</p>
+          <p className="mt-1 text-sm leading-6 text-muted">
+            Henüz hiçbir aracı kurmadıysan ilk hafta bu dört adım yeterli.
           </p>
-          <ol className="mt-6 grid gap-4 sm:grid-cols-3">
-            {baslangic.map((b, i) => (
-              <li key={b.href}>
+          <ol className="mt-5 space-y-2">
+            {ilkAdimlar.map((a, i) => (
+              <li key={a.href}>
                 <Link
-                  href={b.href}
-                  className="flex h-full flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent/50 motion-reduce:transition-none"
+                  href={a.href}
+                  className="group flex items-center gap-3 rounded-lg border border-border bg-bg px-3 py-2.5 text-sm font-medium transition-colors hover:border-accent/60 motion-reduce:transition-none"
                 >
-                  <span className="text-sm text-muted">{i + 1}. adım</span>
-                  <span className="mt-1 font-semibold">{b.title}</span>
-                  <span className="mt-2 text-sm leading-6 text-pretty text-muted">
-                    {b.text}
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-semibold text-accent-fg">
+                    {i + 1}
                   </span>
+                  {a.title}
+                  <ArrowRight
+                    className="ml-auto size-4 text-muted transition-colors group-hover:text-accent motion-reduce:transition-none"
+                    aria-hidden
+                  />
                 </Link>
               </li>
             ))}
           </ol>
-        </section>
-
-        <section aria-labelledby="bolumler" className="pb-16">
-          <h2
-            id="bolumler"
-            className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl"
+          <Link
+            href="/baslangic/kurulum-yol-haritasi/"
+            className="mt-4 inline-block text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
           >
-            Bölümler
-          </h2>
-          <ul className="mt-6 divide-y divide-border border-y border-border">
-            {bolumler.map((b) => (
-              <li key={b.title}>
+            Kurulum yol haritasının tamamı
+          </Link>
+        </div>
+      </section>
+
+      <section aria-labelledby="bolumler" className="pb-16 sm:pb-24">
+        <h2
+          id="bolumler"
+          className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl"
+        >
+          Bölümler
+        </h2>
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {bolumler.map((g) => {
+            const Icon = g.icon;
+            const ilk = g.pages.find((p) => p.ready);
+            return (
+              <li key={g.title} style={sec(g)}>
                 <Link
-                  href={b.href}
-                  className="group flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:gap-6"
+                  href={ilk?.href ?? "/"}
+                  className="group flex h-full flex-col rounded-xl border border-t-4 border-border border-t-accent bg-surface p-6 transition-colors hover:border-accent/50 hover:border-t-accent hover:bg-accent/5 motion-reduce:transition-none"
                 >
-                  <span className="font-medium group-hover:text-accent sm:w-72 sm:shrink-0">
-                    {b.title}
+                  <span className="flex items-center gap-3">
+                    <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent/12 text-accent">
+                      <Icon className="size-5" aria-hidden />
+                    </span>
+                    <span className="text-lg font-semibold">{g.title}</span>
                   </span>
-                  <span className="text-sm leading-6 text-pretty text-muted">
-                    {b.text} ({b.count} sayfa)
+                  <span className="mt-3 text-sm leading-6 text-pretty text-muted">
+                    {bolumAciklamalari[g.title]}
+                  </span>
+                  <span className="mt-auto flex items-center gap-1.5 pt-4 text-sm font-medium text-accent">
+                    {g.pages.filter((p) => p.ready).length} sayfa
+                    <ArrowRight
+                      className="size-4 transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none"
+                      aria-hidden
+                    />
                   </span>
                 </Link>
               </li>
-            ))}
-          </ul>
-        </section>
-
-        {kou && (
-          <section aria-labelledby="kou" className="pb-16 sm:pb-24">
-            <div className="rounded-xl border border-l-2 border-border border-l-accent bg-surface p-6">
-              <h2 id="kou" className="text-lg font-semibold sm:text-xl">
-                Kocaeli Üniversitesi Fen Bilimleri Enstitüsü
-              </h2>
-              <p className="mt-2 max-w-prose leading-7 text-pretty text-muted">
-                KOÜ FBE&apos;de yüksek lisans yapıyorsan: yönetmelik, uygulama
-                esasları ve tez yazım kılavuzu {kou.pages.length} sayfada, sade
-                bir dille ve her kuralın kaynağıyla anlatılıyor. Bağlayıcı olan
-                resmî metinlerdir.
-              </p>
-              <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-                <Link href="/kou-fbe/genel-bakis/" className={link}>
-                  Genel bakış ve süreç haritası
-                </Link>
-                <Link href="/kou-fbe/sureler-ve-sayilar/" className={link}>
-                  Önemli süreler ve sayılar
-                </Link>
-                <Link href="/kou-fbe/tez-yazim-kurallari/" className={link}>
-                  Tez yazım kuralları
-                </Link>
-              </p>
-            </div>
-          </section>
-        )}
-      </div>
+            );
+          })}
+        </ul>
+      </section>
     </Container>
   );
 }
