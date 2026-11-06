@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Akademik Rehber
 
-## Getting Started
+Yüksek lisans ve doktora öğrencileri için Türkçe, uygulamalı bir akademik araçlar rehberi.
 
-First, run the development server:
+**Site:** https://ensarakbas77.github.io/akademik-rehber/
+
+Rehberde dört bölüm var:
+
+- **Araçlar:** Zotero, Overleaf, Notion gibi araçların ne işe yaradığı, ne zaman kullanıldığı ve adım adım nasıl kullanıldığı
+- **Yüksek lisansta yapılması gerekenler:** Okuma, not alma, danışmanla çalışma, konu seçimi gibi alışkanlıklar ve tavsiyeler
+- **Akademik yazım:** Literatür taraması ve makale yazımı
+- **Kocaeli Üniversitesi FBE:** Enstitünün yüksek lisans yönetmeliği, uygulama esasları ve tez yazım kılavuzunun sade anlatımı
+
+> Site yapım aşamasında. Kocaeli Üniversitesi bölümü resmî metinlerin sadeleştirilmiş anlatımıdır. Bağlayıcı olan resmî metinlerdir.
+
+## Teknolojiler
+
+- [Next.js 16](https://nextjs.org) (App Router, TypeScript), statik dışa aktarma (`output: "export"`)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- İçerik için MDX ([`@next/mdx`](https://www.npmjs.com/package/@next/mdx))
+- Yayın: GitHub Actions ile GitHub Pages
+
+Arka uç (sunucu, veritabanı) yok. Site düz HTML, CSS ve JavaScript dosyalarından oluşur.
+
+## Yerelde çalıştırma
+
+Gerekli: [Node.js](https://nodejs.org) 20.9 veya üstü.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ardından tarayıcıda http://localhost:3000 adresini aç.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`npm install` paketleri proje klasöründeki `node_modules/` içine kurar (Python'daki `.venv` gibi). Bu klasör git'e eklenmez.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Komutlar
 
-## Learn More
+| Komut | Ne yapar |
+|---|---|
+| `npm run dev` | Geliştirme sunucusunu başlatır, değişiklikler anında görünür |
+| `npm run build` | Siteyi `out/` klasörüne statik dosyalar olarak derler |
+| `npm run lint` | ESLint ile kodu denetler |
+| `npx prettier --write .` | Kodu biçimlendirir |
 
-To learn more about Next.js, take a look at the following resources:
+## GitHub Pages için derleme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Site bir proje sitesi olduğu için `/akademik-rehber` alt yolunda yayınlanır. Bu önek derleme sırasında `NEXT_PUBLIC_BASE_PATH` ortam değişkeniyle verilir. Yerelde boş bırakılır.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GitHub Actions bunu kendisi yapar. Yerelde denemek istersen:
 
-## Deploy on Vercel
+```powershell
+# PowerShell
+$env:NEXT_PUBLIC_BASE_PATH="/akademik-rehber"; npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Git Bash (yol dönüştürmeyi kapatmak gerekir)
+MSYS_NO_PATHCONV=1 NEXT_PUBLIC_BASE_PATH=/akademik-rehber npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Yayın
+
+`main` dalına her push'ta [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) çalışır: siteyi derler ve GitHub Pages'e yükler. GitHub'da *Settings → Pages → Source* ayarı **GitHub Actions** olmalı.
+
+## Klasör yapısı
+
+Hedeflenen yapı (bazı klasörler sonraki aşamalarda eklenecek):
+
+```
+src/
+  app/          # Sayfalar (page.tsx veya page.mdx)
+  components/   # Ortak bileşenler
+  content/      # Menü, araç listesi, kontrol listesi verileri
+  lib/          # Yardımcı fonksiyonlar
+  mdx-components.tsx
+public/         # Olduğu gibi kopyalanan dosyalar
+docs/           # Kaynak belgeler (sitede yayınlanmaz)
+```
+
+Projenin kararları ve çalışma kuralları [`CLAUDE.md`](CLAUDE.md) dosyasında.
