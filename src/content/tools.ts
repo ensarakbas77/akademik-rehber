@@ -63,6 +63,13 @@ export const tools: Tool[] = [
       "Ücretli bir makalenin yasal açık erişim sürümünü bulan tarayıcı eklentisi.",
     url: "https://unpaywall.org",
     href: "/kaynak-bulma/unpaywall/",
+    info: {
+      pricing: "Ücretsiz; kâr amacı gütmeyen OurResearch tarafından sunuluyor.",
+      platform: "Tarayıcı eklentisi: Chrome ve Firefox.",
+      account: "Gerekmez.",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "google-scholar",
@@ -105,6 +112,14 @@ export const tools: Tool[] = [
       "Birkaç makaleden yola çıkıp benzer makaleleri ve yazarları harita olarak gösterir.",
     url: "https://www.researchrabbit.ai",
     href: "/kaynak-bulma/researchrabbit/",
+    info: {
+      pricing:
+        "Ücretsiz plan var (en fazla 50 başlangıç makalesi). Ücretli RR+ planı yıllık ödemede aylık 10 $; birçok ülkeye indirimli fiyat uygulanıyor.",
+      platform: "Web (tarayıcı).",
+      account: "Gerekir (ücretsiz).",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "connected-papers",
@@ -113,6 +128,14 @@ export const tools: Tool[] = [
     short: "Tek bir makaleden benzer çalışmaların grafiğini çıkarır.",
     url: "https://www.connectedpapers.com",
     href: "/kaynak-bulma/connected-papers/",
+    info: {
+      pricing:
+        "Ücretsiz planda ayda 5 graf. Academic ve Business planları ücretli ve sınırsız.",
+      platform: "Web (tarayıcı).",
+      account: "Ücretsiz plan için kayıt (Sign up) gerekir.",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "notion",
@@ -154,6 +177,15 @@ export const tools: Tool[] = [
       "IEEE'nin dergi ve konferans yayınlarının veri tabanı; mühendislik ve bilgisayar bilimleri için.",
     url: "https://ieeexplore.ieee.org",
     href: "/kaynak-bulma/ieee-xplore/",
+    info: {
+      pricing:
+        "Arama ve özetler ücretsiz. Tam metin çoğunlukla üniversite aboneliğiyle ya da satın alarak; açık erişimli makaleler ücretsiz.",
+      platform: "Web (tarayıcı).",
+      account:
+        "Aramak için gerekmez. Kayıtlı arama ve uyarı için ücretsiz IEEE hesabı.",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "grammarly",
@@ -239,6 +271,14 @@ export const tools: Tool[] = [
       "Atıf veri tabanları; dergi metrikleri ve Q değerleri burada görülür.",
     url: "https://www.webofscience.com",
     href: "/kaynak-bulma/scopus-ve-wos/",
+    info: {
+      pricing:
+        "İkisi de ücretli veri tabanı; üniversite aboneliğiyle erişilir. Scopus'un dergi metrikleri (CiteScore, SJR, SNIP) ve Web of Science'ın Master Journal List'i ücretsiz bakılabilir.",
+      platform: "Web (tarayıcı).",
+      account: "Kampüs ağından ya da kütüphanenin uzaktan erişimiyle girilir.",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "tubitak-arbis",

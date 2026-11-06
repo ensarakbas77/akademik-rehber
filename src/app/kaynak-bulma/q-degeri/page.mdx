@@ -1,0 +1,78 @@
+export const metadata = {
+  title: "Bir derginin Q değerini bulma",
+  description:
+    "Bir derginin Q1-Q4 çeyreğini SCImago (SJR) ve Journal Citation Reports (JCR) üzerinden bulma; kategori farkları ve iki listenin farklı sonuç vermesi.",
+};
+
+# Bir derginin Q değerini bulma
+
+**Q değeri, bir derginin kendi konu kategorisindeki dergiler arasında hangi çeyrekte olduğunu gösterir: Q1 en üst %25, Q4 en alt %25.**
+
+## Neden önemli?
+
+Dergi seçerken, bir kaynağın güvenilirliğini değerlendirirken ve bazı başvurularda derginin Q değeri sorulur. Ama "bu dergi Q1" demek tek başına yetmez: hangi listeye göre, hangi kategoride ve hangi yılda Q1 olduğu da önemlidir.
+
+## İki ana liste
+
+| | SCImago (SJR) | Journal Citation Reports (JCR) |
+| --- | --- | --- |
+| **Veri kaynağı** | Scopus | Web of Science |
+| **Sıralama ölçütü** | SJR göstergesi | Journal Impact Factor (etki faktörü) |
+| **Erişim** | Ücretsiz, [scimagojr.com](https://www.scimagojr.com) | Ücretli, üniversite aboneliğiyle |
+
+İki liste farklı veriyle ve farklı ölçütle hesaplandığı için **aynı dergi iki listede farklı çeyrekte olabilir**. Başvuracağın yer hangi listeyi istiyorsa ona bak.
+
+## SCImago'da Q değeri
+
+<Steps>
+  <Step title="Dergiyi ara">
+    [scimagojr.com](https://www.scimagojr.com) arama kutusuna derginin adını ya da ISSN'sini yaz ve sonuçlardan dergiyi seç.
+  </Step>
+  <Step title="Quartiles bölümüne in">
+    Derginin sayfasında aşağıdaki **Quartiles** grafiğine kadar in. Her renkli kutu bir yıl ve bir kategori için çeyreği gösterir; kutunun üzerine gelince Q değeri görünür.
+  </Step>
+  <Step title="Kategorini ve yılı kontrol et">
+    Dergi birden çok konu kategorisinde listelenebilir ve her birinde farklı çeyrekte olabilir. Kendi alanına en yakın kategoriye ve en son yıla bak.
+  </Step>
+</Steps>
+
+## JCR'da Q değeri
+
+<Steps>
+  <Step title="JCR'a üniversite üzerinden gir">
+    Kütüphanenin veri tabanları listesinden Journal Citation Reports'a gir. Kampüs dışındaysan uzaktan erişim hizmetini kullan.
+  </Step>
+  <Step title="Dergiyi ara ve yılı seç">
+    Dergiyi adıyla ya da ISSN'siyle ara, profil sayfasını aç ve bakmak istediğin yılı seç.
+  </Step>
+  <Step title="Kategorideki sırasına bak">
+    Profil sayfasında derginin kategorisindeki sırası ve çeyreği (JIF Quartile) yazar. Birden fazla kategorideyse her birini ayrı kontrol et.
+  </Step>
+</Steps>
+
+JCR'da çeyrek, derginin kategorisindeki sırasının o kategorideki toplam dergi sayısına bölünmesiyle bulunur. Bir derginin hangi Web of Science indeksinde (SCIE, SSCI, ESCI gibi) olduğunu ücretsiz [Master Journal List](https://mjl.clarivate.com) ile görebilirsin.
+
+<Callout type="warning" title="Q değeri her şeyi söylemez">
+- Q değeri, kategori içinde göreli bir sıralamadır. Küçük bir kategorideki Q1 dergi ile büyük ve rekabetçi bir kategorideki Q3 dergi doğrudan karşılaştırılamaz.
+- Değerler her yıl yeniden hesaplanır; bir dergi bir yıl Q1, ertesi yıl Q2 olabilir.
+- Konferans bildirileri dergi olmadığı için Q değeri almaz.
+- Q değeri tek bir makalenin kalitesini göstermez: [Kaliteli kaynak ve eleştirel okuma](/yapilmasi-gerekenler/elestirel-okuma/).
+</Callout>
+
+<Callout title="Kocaeli Üniversitesi FBE'deysen">
+KOÜ'nün yayın şartı Q değerinden değil, derginin hangi indekste tarandığından söz ediyor: [Yayın şartı](/kou-fbe/yayin-sarti/).
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["scopus-wos", "google-scholar"]} />
+
+Sonraki adım: Q değeri, dergi seçiminin yalnızca bir parçası: [Dergi veya konferans seçimi](/akademik-yazim/dergi-secimi/).
+
+## Kaynaklar
+
+- [Southern Cross University Library: Journal quartiles](https://libguides.scu.edu.au/researcheressentials/journalquartile) (SCImago ve JCR'da adım adım)
+- [Clarivate: JCR Reference Guide 2024](https://clarivate.com/wp-content/uploads/dlm_uploads/2024/06/JCR-Reference-Guide-2024.pdf) (JIF Quartile'ın hesaplanması)
+- [Xi'an Jiaotong-Liverpool University Library: Journal impact](https://libguides.lib.xjtlu.edu.cn/sch_commun/journal_impact)
+- [SCImago Journal & Country Rank](https://www.scimagojr.com)
+- [Clarivate: Master Journal List](https://mjl.clarivate.com)

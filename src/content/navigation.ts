@@ -79,14 +79,14 @@ export const navigation: NavGroup[] = [
   {
     title: "Kaynak bulma",
     pages: [
-      p("Google Scholar ile arama", "/kaynak-bulma/google-scholar/"),
-      p("Semantic Scholar", "/kaynak-bulma/semantic-scholar/"),
-      p("IEEE Xplore", "/kaynak-bulma/ieee-xplore/"),
-      p("ResearchRabbit", "/kaynak-bulma/researchrabbit/"),
-      p("Connected Papers", "/kaynak-bulma/connected-papers/"),
-      p("Unpaywall", "/kaynak-bulma/unpaywall/"),
-      p("Scopus ve Web of Science", "/kaynak-bulma/scopus-ve-wos/"),
-      p("Bir derginin Q değerini bulma", "/kaynak-bulma/q-degeri/"),
+      p("Google Scholar ile arama", "/kaynak-bulma/google-scholar/", true),
+      p("Semantic Scholar", "/kaynak-bulma/semantic-scholar/", true),
+      p("IEEE Xplore", "/kaynak-bulma/ieee-xplore/", true),
+      p("ResearchRabbit", "/kaynak-bulma/researchrabbit/", true),
+      p("Connected Papers", "/kaynak-bulma/connected-papers/", true),
+      p("Unpaywall", "/kaynak-bulma/unpaywall/", true),
+      p("Scopus ve Web of Science", "/kaynak-bulma/scopus-ve-wos/", true),
+      p("Bir derginin Q değerini bulma", "/kaynak-bulma/q-degeri/", true),
     ],
   },
   {

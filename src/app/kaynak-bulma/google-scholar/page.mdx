@@ -1,0 +1,72 @@
+export const metadata = {
+  title: "Google Scholar ile arama",
+  description:
+    "Google Scholar'da isabetli arama: tırnak ve author: ile arama, tarih sınırı, Cited by ve Related articles ile iz sürme, kütüphane bağlantıları, uyarılar ve künye aktarma.",
+};
+
+# Google Scholar ile arama
+
+Google Scholar, makaleleri, tezleri, kitapları ve bildirileri tarayan ücretsiz bir akademik arama motoru. Literatür taramasına başlamak için en kolay yer; bir makaleden ona atıf yapan yeni çalışmalara geçmeyi de sağlar.
+
+<ToolInfoBox slug="google-scholar" />
+
+## Ne zaman kullanılır?
+
+- **Konuya ilk girişte:** Anahtar kelimelerle arayıp alandaki çok atıf almış çalışmaları ve derlemeleri bulmak için.
+- **Bir makalenin izini sürerken:** O makaleye sonradan kimlerin atıf yaptığını görmek için.
+- **Yeni yayınları takip etmek için:** Bir konu ya da yazar için e-posta uyarısı kurarak.
+
+## Uygulamalı kullanım
+
+<Steps>
+  <Step title="Aramayı daralt">
+    - Bir ifadeyi ya da makale başlığını **tırnak içinde** ara: `"literature review"`.
+    - Yazara göre aramak için `author:` kullan: `author:"d knuth"`.
+    - Daha fazla seçenek (yayın yeri, tarih aralığı, başlıkta geçen kelimeler) sol üstteki menüden **Advanced search**'te.
+  </Step>
+  <Step title="Tarihi sınırla">
+    Sol paneldeki **Since Year** seçenekleri sonuçları yakın yıllarla sınırlar, sıralama alaka düzeyine göre kalır. En yeni eklenenleri görmek için **Sort by date**'i seç.
+  </Step>
+  <Step title="Bir makaleden diğerlerine geç">
+    Her sonucun altındaki bağlantılar literatürü genişletmenin en hızlı yolu:
+
+    - **Cited by:** Bu makaleye atıf yapan daha yeni çalışmalar.
+    - **Related articles:** Benzer çalışmalar.
+    - **All versions:** Aynı makalenin farklı kaynaklardaki sürümleri. Tam metne erişemediğinde açık bir sürüm burada olabilir.
+  </Step>
+  <Step title="Kütüphane bağlantılarını kullan">
+    Kampüs ağındayken, üniversitenin abone olduğu yayınlar için sonuçların yanında kütüphane bağlantıları kendiliğinden görünür. Kampüs dışındayken de bu bağlantılar bir süre çalışır: Google Scholar kampüsteyken abonelikleri kaydeder, bu kayıt 30 gün geçerlidir. Ayarı Scholar'ın **Settings** sayfasından değiştirebilirsin.
+  </Step>
+  <Step title="Künyeyi aktar">
+    Sonucun altındaki **Cite** ile hazır bir atıf metni görürsün; açılan pencerenin altından BibTeX, EndNote, RefMan ya da RefWorks biçiminde dışa aktarabilirsin. Zotero kullanıyorsan makaleyi Zotero Connector ile kaydetmek daha kolay: [Zotero](/kaynak-yonetimi/zotero/).
+  </Step>
+  <Step title="Uyarı kur">
+    Bir konu için arama yap, sol paneldeki **zarf simgesine** tıkla, e-posta adresini gir ve **Create alert**'e bas. Bu aramaya uyan yeni yayınlar e-postana gelir.
+  </Step>
+</Steps>
+
+## İpuçları
+
+<Callout type="tip" title="Aramayı isabetli yap">
+- Alanının terimlerini derleme makalelerinden öğren, sonra aramalarında onları kullan.
+- Aynı kelime başka alanlarda başka anlama geliyorsa alanını belirten tırnaklı bir ifade ekle (örneğin `"grid computing"`).
+- Beğendiğin makaleleri **Save** ile Google Scholar'ın kendi kitaplığına (My Library) kaydedebilirsin; ama kalıcı kaynak listen için Zotero'yu kullan.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+- **Her sonucu güvenilir saymak:** Google Scholar hakemli makalelerin yanında ön baskıları, tezleri ve kalitesi belirsiz yayınları da listeler. Nerede yayımlandığına bak: [Kaliteli kaynak ve eleştirel okuma](/yapilmasi-gerekenler/elestirel-okuma/).
+- **Cite metnini kontrol etmeden kopyalamak:** Google Scholar'ın ürettiği künyede eksik ya da hatalı bilgi olabilir. Künyeyi derginin sayfasıyla ya da DOI ile kontrol et.
+- **Atıf sayısını tek ölçüt yapmak:** Eski makaleler doğal olarak daha çok atıf alır; yeni ama önemli çalışmaları kaçırmamak için tarih sınırıyla da ara.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["semantic-scholar", "zotero", "unpaywall", "researchrabbit"]} />
+
+Sonraki adım: Kendi araştırmacı profilini aç: [Google Scholar profili](/akademik-kimlik/google-scholar-profili/).
+
+## Kaynaklar
+
+- [Google Scholar: Search Help (resmî yardım)](https://scholar.google.com/intl/en/scholar/help.html)

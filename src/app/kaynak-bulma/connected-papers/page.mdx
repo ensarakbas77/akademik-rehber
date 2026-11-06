@@ -1,0 +1,59 @@
+export const metadata = {
+  title: "Connected Papers",
+  description:
+    "Tek bir makaleden benzer çalışmaların grafiğini çıkaran Connected Papers: graf oluşturma, önceki ve türev çalışmalar, ücretsiz planın ayda 5 graf sınırı.",
+};
+
+# Connected Papers
+
+Connected Papers, verdiğin bir makaleye benzeyen çalışmaları bir grafik (graf) üzerinde gösterir. Graf, doğrudan atıf ilişkilerinden değil, makalelerin **benzerliğinden** oluşur; böylece birbirine doğrudan atıf yapmayan ama aynı konuyu işleyen çalışmalar da yan yana gelir.
+
+<ToolInfoBox slug="connected-papers" />
+
+## Ne zaman kullanılır?
+
+- **Yeni bir konuya girerken:** Elindeki tek bir iyi makalenin çevresinde hangi çalışmaların olduğunu birkaç dakikada görmek için.
+- **Bir alanın temel çalışmalarını bulmak için:** Graftaki makalelerin ortak olarak dayandığı eski çalışmaları listeleyerek.
+- **Konunun güncel durumunu görmek için:** Graftaki makalelere dayanan yeni çalışmaları listeleyerek.
+
+## Uygulamalı kullanım
+
+<Steps>
+  <Step title="Kayıt ol">
+    [connectedpapers.com](https://www.connectedpapers.com) üzerinden ücretsiz plana kaydol. Ücretsiz planda ayda 5 graf oluşturabilirsin; özelliklerin hepsi ücretsiz planda da var.
+  </Step>
+  <Step title="Başlangıç makalesini ver">
+    Arama kutusuna makalenin başlığını, DOI'sini ya da bağlantısını gir ve grafı oluştur.
+  </Step>
+  <Step title="Grafı oku">
+    Her daire bir makale. Benzer makaleler birbirine yakın durur. Makalelere tıklayarak özetlerini görebilirsin. Grafiğin yanındaki listede aynı makaleleri sıralı olarak bulursun.
+  </Step>
+  <Step title="Önceki ve türev çalışmalara bak">
+    **Prior works** graftaki makalelerin sık atıf yaptığı eski çalışmaları gösterir: çoğu zaman alanın temel makaleleri bunlardır. **Derivative works** graftaki makalelere sık atıf yapan yeni çalışmaları gösterir: çoğu zaman derlemeler ve güncel çalışmalar bunlardır.
+  </Step>
+  <Step title="İşine yarayanları kaydet">
+    Okumaya değer makaleleri Zotero'ya kaydet. Ücretsiz planda ayda 5 graf olduğu için grafları rastgele değil, iyi seçtiğin makalelerden oluştur.
+  </Step>
+</Steps>
+
+<Callout type="tip" title="Birden çok başlangıç makalesi">
+Planların hepsinde birden fazla makaleden tek bir graf (multi-origin graph) oluşturma özelliği var. Konunun iki farklı yönünü birleştiren bir graf istiyorsan işine yarar.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+- **Benzerliği kalite sanmak:** Grafta görünmek makalenin iyi olduğunu göstermez. Nerede yayımlandığına ve yöntemine yine bak.
+- **Graf hakkını boşa harcamak:** Ücretsiz planda ay başına 5 graf var; denemelerini ResearchRabbit ya da Semantic Scholar'da yap, grafı en iyi başlangıç makalesiyle oluştur.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["researchrabbit", "semantic-scholar", "zotero"]} />
+
+Sonraki adım: Erişemediğin makalelerin yasal açık sürümlerini bulmak için [Unpaywall](/kaynak-bulma/unpaywall/).
+
+## Kaynaklar
+
+- [Connected Papers: Fiyatlandırma](https://www.connectedpapers.com/pricing) (planlar, ayda 5 graf sınırı, tüm planlardaki özellikler)
+- [Connected Papers: Premium hesaplar ve çok kaynaklı graflar duyurusu (2022)](https://connectedpapers.substack.com/p/announcing-premium-accounts-multi-22-07-28)

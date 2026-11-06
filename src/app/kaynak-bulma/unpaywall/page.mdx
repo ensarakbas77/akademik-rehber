@@ -1,0 +1,53 @@
+export const metadata = {
+  title: "Unpaywall",
+  description:
+    "Ücretli bir makalenin yasal ve ücretsiz açık erişim sürümünü bulan Unpaywall tarayıcı eklentisi: kurulum, yeşil sekme ve sınırları.",
+};
+
+# Unpaywall
+
+Unpaywall, ücretli bir makalenin sayfasındayken o makalenin **yasal ve ücretsiz** bir sürümünü arayan bir tarayıcı eklentisi. Yazarların kurumsal arşivlere yüklediği sürümler, açık erişim dergiler ve ön baskı sunucuları gibi yerlerdeki kopyaları bulur.
+
+<ToolInfoBox slug="unpaywall" />
+
+## Ne zaman kullanılır?
+
+- **Üniversitenin aboneliği olmayan bir makaleye ulaşmak istediğinde:** Önce yasal bir açık sürüm var mı bak.
+- **Kampüs dışındayken:** Kütüphanenin uzaktan erişimi yoksa ya da yavaşsa.
+
+## Kurulum
+
+<Steps>
+  <Step title="Eklentiyi ekle">
+    Chrome için [Chrome Web Mağazası'ndan](https://chromewebstore.google.com/detail/unpaywall/iplffkdpngmdjhlpjmppncnlhomiipha), Firefox için [Firefox eklentileri sayfasından](https://addons.mozilla.org/en-US/firefox/addon/unpaywall/) Unpaywall'u ekle. Hesap gerekmez.
+  </Step>
+  <Step title="Bir makale sayfası aç">
+    Bir derginin makale sayfasına git. Unpaywall bu makalenin ücretsiz ve yasal bir kopyasını kendi dizininde arar.
+  </Step>
+  <Step title="Yeşil sekmeye tıkla">
+    Kopya bulunursa sayfanın kenarında yeşil bir sekme belirir; tıklayınca açık sürüm açılır. Sekme gri kalırsa ücretsiz bir kopya bulunamamıştır.
+  </Step>
+</Steps>
+
+<Callout type="tip" title="Hangi sürümü okuyorsun?">
+Unpaywall'un bulduğu kopya bazen yayımlanmış sürüm değil, yazarın hakem sonrası son metni (postprint) ya da ön baskısıdır. İçerik çoğunlukla aynıdır ama sayfa numaraları ve son düzeltmeler farklı olabilir. Atıf yaparken yayımlanmış sürümün künyesini kullan.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+- **Yasal olmayan sitelere yönelmek:** Unpaywall yalnızca yasal kopyaları gösterir. Bulamadığında üniversitenin kütüphanesine sor (kütüphaneler arası ödünç gibi hizmetler olabilir) ya da yazara e-posta yazıp makaleyi iste.
+- **Ön baskıyı yayımlanmış sürüm sanmak:** Ön baskılar hakem sürecinden geçmemiş olabilir.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["zotero", "google-scholar", "researchgate"]} />
+
+Sonraki adım: Eklentiyi Zotero Connector'ın yanına kur; ikisi birlikte kaydetme ve erişimi tek yerde çözer: [Zotero](/kaynak-yonetimi/zotero/).
+
+## Kaynaklar
+
+- [Unpaywall: Chrome Web Mağazası sayfası](https://chromewebstore.google.com/detail/unpaywall/iplffkdpngmdjhlpjmppncnlhomiipha) (ne yaptığı, yeşil sekme; son güncelleme Ocak 2025)
+- [Unpaywall: Firefox eklenti sayfası](https://addons.mozilla.org/en-US/firefox/addon/unpaywall/)
+- [Lib4RI: Unpaywall extension for your browser](https://www.lib4ri.ch/unpaywall-extension-your-browser) (ücretsiz, OurResearch, gri sekme)

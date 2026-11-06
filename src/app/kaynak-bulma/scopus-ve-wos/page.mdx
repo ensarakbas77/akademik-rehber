@@ -1,0 +1,75 @@
+export const metadata = {
+  title: "Scopus ve Web of Science",
+  description:
+    "İki büyük atıf veri tabanı Scopus ve Web of Science: neye yararlar, nasıl erişilir, ücretsiz bakılabilen dergi listeleri ve metrikler.",
+};
+
+# Scopus ve Web of Science
+
+Scopus (Elsevier) ve Web of Science (Clarivate), akademik yayınları ve aralarındaki atıfları dizinleyen iki büyük veri tabanı. Google Scholar'dan farkları, yalnızca belirli ölçütlerle seçilmiş dergileri ve kaynakları kapsamaları ve dergi metriklerini hesaplamaları. Türkiye'de yayın şartlarında ve akademik değerlendirmelerde sık sık bu iki veri tabanının indekslerine bakılır.
+
+<ToolInfoBox slug="scopus-wos" />
+
+## Ne zaman kullanılır?
+
+- **Sistematik bir literatür taraması yaparken:** Seçilmiş kaynaklarda, ayrıntılı filtrelerle aramak için.
+- **Bir derginin indekslenip indekslenmediğini öğrenmek için:** Dergi seçerken ya da bir kaynağın güvenilirliğini kontrol ederken.
+- **Dergi metriklerine bakmak için:** Q değeri, CiteScore ya da etki faktörü (Impact Factor).
+
+## Nasıl erişilir?
+
+İki veri tabanı da ücretli. Üniversiten abone olduysa kampüs ağından ya da kütüphanenin uzaktan erişim hizmetiyle girersin. Kütüphanenin veri tabanları listesinde bu ikisinin olup olmadığına bak.
+
+Abonelik olmadan da bakabileceğin ücretsiz araçlar var:
+
+| Araç | Ne gösterir? |
+| --- | --- |
+| [Scopus Sources](https://www.scopus.com/sources) | Scopus'taki dergilerin metrikleri: CiteScore, SJR ve SNIP |
+| [Master Journal List](https://mjl.clarivate.com) | Bir derginin Web of Science Core Collection'da olup olmadığı ve hangi indekste (örneğin SCIE, SSCI, ESCI) olduğu |
+| [SCImago (SJR)](https://www.scimagojr.com) | Scopus verisine dayanan dergi sıralamaları ve Q değerleri |
+
+Web of Science'ın Journal Citation Reports (JCR) aracı, derginin etki faktörünü ve JCR'daki Q değerini gösterir; buna da üniversitenin aboneliğiyle erişilir.
+
+## Uygulamalı kullanım
+
+<Steps>
+  <Step title="Aramanı kur">
+    Anahtar kelimelerini başlık, özet ve anahtar kelime alanlarında ara. İki veri tabanı da AND, OR gibi mantıksal operatörleri destekler; eş anlamlı terimleri OR ile, farklı kavramları AND ile bağla.
+  </Step>
+  <Step title="Sonuçları daralt">
+    Yıl, belge türü (makale, bildiri, derleme), konu alanı ve dil filtreleriyle sonuçları daralt. Atıf sayısına göre sıralayarak alanın çok atıf alan çalışmalarını bul.
+  </Step>
+  <Step title="Atıflarla genişlet">
+    Bir makalenin kaynaklarına ve ona atıf yapan çalışmalara bak. Böylece anahtar kelimeyle bulamadığın çalışmalara ulaşırsın.
+  </Step>
+  <Step title="Kaydet">
+    Seçtiğin kayıtları Zotero Connector ile kaydet ya da RIS veya BibTeX olarak dışa aktarıp Zotero'ya al.
+  </Step>
+</Steps>
+
+<Callout title="Yazar profilleri">
+Scopus, yayın yapan araştırmacılar için kendiliğinden bir yazar kimliği (Scopus Author ID) oluşturur. İlk yayınından sonra Scopus'taki profilini kontrol et ve ORCID numaranla eşleştiğinden emin ol: [ORCID](/akademik-kimlik/orcid/).
+</Callout>
+
+<Callout title="Kocaeli Üniversitesi FBE'deysen">
+Yayın şartındaki "hakemli dergi", anabilim dalın için Üniversitelerarası Kurulun doçentlik başvuru koşullarında sayılan indekslerin taradığı dergidir. Hangi indekslerin geçerli olduğunu danışmanınla kontrol et: [Yayın şartı](/kou-fbe/yayin-sarti/).
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+- **Scopus'ta ya da WoS'ta olmayan her şeyi değersiz saymak:** Birçok iyi konferans ve ulusal dergi bu veri tabanlarında olmayabilir. Kaynağın kalitesini kendi ölçütlerinle de değerlendir.
+- **Derginin web sitesindeki "indekslenir" ifadesine güvenmek:** Bunu Master Journal List ve Scopus Sources'tan kendin kontrol et.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["google-scholar", "ieee-xplore", "zotero"]} />
+
+Sonraki adım: Bir derginin Q değerini bul: [Bir derginin Q değerini bulma](/kaynak-bulma/q-degeri/).
+
+## Kaynaklar
+
+- [Elsevier: CiteScore metriklerine ücretsiz erişim duyurusu (2016)](https://www.eurekalert.org/news-releases/797430)
+- [Clarivate: Master Journal List'in yeniden yayına alınması](https://clarivate.com/news/web-of-science-group-relaunches-master-journal-list-of-21k-journals/)
+- [Southern Cross University Library: Journal quartiles](https://libguides.scu.edu.au/researcheressentials/journalquartile) (SJR ve JCR'da Q değeri)
