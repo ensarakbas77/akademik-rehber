@@ -43,3 +43,5 @@ next-env.d.ts
 # kişisel, depoya girmez (yalnızca yerelde)
 /docs/kaynak-README.md
 /prompt.txt
+# Claude Code'un kişisel ayarları (skill'ler depoda kalır)
+/.claude/settings.local.json

@@ -1,3 +1,50 @@
 @import "tailwindcss";
 
-/* Tasarım değişkenleri (renkler, yazı tipleri, koyu tema) Faz 1'de eklenecek. */
+/* Sınıf tabanlı koyu tema: <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --bg: #ffffff; /* sayfa */
+  --surface: #fafafa; /* kart, kod, kenar çubuğu */
+  --border: #e4e4e7;
+  --fg: #18181b; /* ana metin */
+  --muted: #52525b; /* ikincil metin (bg üzerinde AA) */
+  --accent: #2563eb; /* tek vurgu rengi */
+  --accent-fg: #ffffff; /* vurgu üzerindeki metin */
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #09090b;
+  --surface: #18181b;
+  --border: #27272a;
+  --fg: #f4f4f5;
+  --muted: #a1a1aa;
+  --accent: #60a5fa;
+  --accent-fg: #09090b;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+  }
+  ::selection {
+    @apply bg-accent/20;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
