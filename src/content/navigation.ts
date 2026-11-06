@@ -93,23 +93,27 @@ export const navigation: NavGroup[] = [
     title: "Kaynak yönetimi",
     pages: [
       p("Zotero", "/kaynak-yonetimi/zotero/", true),
-      p("Zotero mu Mendeley mi?", "/kaynak-yonetimi/zotero-mu-mendeley-mi/"),
+      p(
+        "Zotero mu Mendeley mi?",
+        "/kaynak-yonetimi/zotero-mu-mendeley-mi/",
+        true,
+      ),
     ],
   },
   {
     title: "Not alma ve takip",
     pages: [
-      p("Notion'da literatür takibi", "/not-alma/notion/"),
-      p("Obsidian ile bağlantılı notlar", "/not-alma/obsidian/"),
+      p("Notion'da literatür takibi", "/not-alma/notion/", true),
+      p("Obsidian ile bağlantılı notlar", "/not-alma/obsidian/", true),
     ],
   },
   {
     title: "Yazım",
     pages: [
-      p("Word + Zotero ile atıf", "/yazim/word-ve-zotero/"),
-      p("Overleaf ve LaTeX'e giriş", "/yazim/overleaf-ve-latex/"),
-      p("Grammarly", "/yazim/grammarly/"),
-      p("QuillBot", "/yazim/quillbot/"),
+      p("Word + Zotero ile atıf", "/yazim/word-ve-zotero/", true),
+      p("Overleaf ve LaTeX'e giriş", "/yazim/overleaf-ve-latex/", true),
+      p("Grammarly", "/yazim/grammarly/", true),
+      p("QuillBot", "/yazim/quillbot/", true),
     ],
   },
   {

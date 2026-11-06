@@ -54,6 +54,15 @@ export const tools: Tool[] = [
     short: "Elsevier'in kaynak yöneticisi, Zotero'nun alternatifi.",
     url: "https://www.mendeley.com",
     href: "/kaynak-yonetimi/zotero-mu-mendeley-mi/",
+    info: {
+      pricing:
+        "Ücretsiz; 2 GB çevrimiçi depolama. Yapay zekâ özellikleri ücretli (Elsevier'in LeapSpace aboneliğiyle).",
+      platform:
+        "Windows, macOS, Linux ve web. Tarayıcı eklentisi: Mendeley Web Importer. Word eklentisi: Mendeley Cite.",
+      account: "Gerekir (ücretsiz Elsevier/Mendeley hesabı).",
+      turkish: "Resmî sayfalarda belirtilmemiş",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "unpaywall",
@@ -142,8 +151,16 @@ export const tools: Tool[] = [
     name: "Notion",
     category: "Not alma ve takip",
     short: "Literatür takip tablosu ve makale notları için veri tabanı.",
-    url: "https://www.notion.so",
+    url: "https://www.notion.com",
     href: "/not-alma/notion/",
+    info: {
+      pricing:
+        "Ücretsiz plan var (dosya başına 5 MB yükleme). Plus planı yükseköğretimdeki öğrencilere ücretsiz (okul e-postasıyla, tek kişilik).",
+      platform: "Web, Windows, macOS, iOS, Android.",
+      account: "Gerekir (ücretsiz).",
+      turkish: "Yok",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "obsidian",
@@ -152,6 +169,14 @@ export const tools: Tool[] = [
     short: "Birbirine bağlanan Markdown notlar.",
     url: "https://obsidian.md",
     href: "/not-alma/obsidian/",
+    info: {
+      pricing:
+        "Ücretsiz, iş kullanımı dahil. Ücretli eklentiler: Sync (yıllık ödemede aylık 4 $) ve Publish; öğrencilere %40 indirim.",
+      platform: "Windows, macOS, Linux, iOS, Android.",
+      account: "Gerekmez. Yalnızca ücretli Sync ve Publish için hesap gerekir.",
+      turkish: "Var",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "word-zotero",
@@ -160,6 +185,15 @@ export const tools: Tool[] = [
     short: "Word'de Zotero eklentisiyle atıf ekleme ve kaynakça oluşturma.",
     url: "https://www.zotero.org/support/word_processor_integration",
     href: "/yazim/word-ve-zotero/",
+    info: {
+      pricing: "Ücretsiz (Zotero ile birlikte gelir).",
+      platform:
+        "Word (Windows, macOS). LibreOffice ve Google Docs için de eklenti var.",
+      account: "Gerekmez.",
+      turkish:
+        "Zotero'nun arayüzü Türkçe; bu sitedeki menü adları İngilizce arayüze göre",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "overleaf",
@@ -168,6 +202,14 @@ export const tools: Tool[] = [
     short: "Tarayıcıda çalışan LaTeX düzenleyicisi.",
     url: "https://www.overleaf.com",
     href: "/yazim/overleaf-ve-latex/",
+    info: {
+      pricing:
+        "Ücretsiz plan var (proje başına 1 ortak çalışan, 10 saniye derleme süresi). Öğrenci planı aylık 13 $ ya da yıllık 98 $.",
+      platform: "Web (tarayıcı).",
+      account: "Gerekir (ücretsiz).",
+      turkish: "Kısmen var (tr.overleaf.com)",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "ieee-xplore",
@@ -191,9 +233,38 @@ export const tools: Tool[] = [
     slug: "grammarly",
     name: "Grammarly",
     category: "Yazım",
-    short: "İngilizce metinlerde dil bilgisi ve yazım denetimi.",
+    short:
+      "Yazım, dil bilgisi ve noktalama denetimi; en çok İngilizce metinlerde işe yarar.",
     url: "https://www.grammarly.com",
     href: "/yazim/grammarly/",
+    info: {
+      pricing:
+        "Ücretsiz plan var (yazım ve dil bilgisi düzeltmeleri, ayda 100 yapay zekâ istemi). Pro ücretli.",
+      platform:
+        "Tarayıcı eklentisi, Windows ve macOS uygulaması, Word eklentisi, mobil klavye.",
+      account: "Gerekir (ücretsiz).",
+      turkish: "Arayüz İngilizce; Türkçe metinlerde öneri veriyor",
+      lastChecked: "2026-11",
+    },
+  },
+  {
+    slug: "quillbot",
+    name: "QuillBot",
+    category: "Yazım",
+    short:
+      "Kendi yazdığın cümleleri farklı ifadelerle yeniden yazar (paraphrase).",
+    url: "https://quillbot.com",
+    href: "/yazim/quillbot/",
+    info: {
+      pricing:
+        "Ücretsiz plan var (bir seferde 125 kelime, 2 mod). Premium yıllık ödemede aylık 4,17 $.",
+      platform:
+        "Web, tarayıcı eklentisi (Chrome, Edge, Safari), Windows ve macOS uygulaması, Word eklentisi, iOS ve Android.",
+      account: "Ücretsiz plan için kayıt (Sign up) gerekir.",
+      turkish:
+        "Arayüz İngilizce; yeniden ifade etme Türkçe metinlerde de çalışıyor",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "orcid",

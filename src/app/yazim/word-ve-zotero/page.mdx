@@ -1,0 +1,122 @@
+export const metadata = {
+  title: "Word + Zotero ile atıf",
+  description:
+    "Word'de Zotero eklentisiyle atıf ve kaynakça: Zotero sekmesi, sayfa numarası ekleme, stil değiştirme, belgeyi paylaşma ve teslimden önce bağlantıları kaldırma.",
+};
+
+# Word + Zotero ile atıf
+
+Zotero'nun Word eklentisi, metne atıf eklemeni ve kaynakçayı Zotero kütüphanendeki kayıtlardan otomatik oluşturmanı sağlar. Atıf stilini değiştirdiğinde ya da bir künyeyi düzelttiğinde belgedeki bütün atıflar ve kaynakça birlikte güncellenir.
+
+<ToolInfoBox slug="word-zotero" />
+
+Zotero'yu kurmadıysan önce [Zotero](/kaynak-yonetimi/zotero/) sayfasındaki kurulum adımlarını izle. Orada ilk atıfı ekleyip APA 7 ile kaynakça oluşturmayı da gösterdik; bu sayfa günlük kullanımın ayrıntılarını anlatıyor.
+
+## Ne zaman kullanılır?
+
+- **Ödev, rapor, makale ya da tezi Word'de yazarken.**
+- **Danışmanınla ya da ortak yazarlarla aynı Word belgesi üzerinde çalışırken.**
+- LibreOffice ve Google Docs için de Zotero eklentisi var. LaTeX kullanıyorsan yol farklı: [Overleaf ve LaTeX'e giriş](/yazim/overleaf-ve-latex/).
+
+## Zotero sekmesi
+
+Eklenti kurulunca Word'de bir **Zotero** sekmesi çıkar. En çok kullanacağın düğmeler:
+
+| Düğme                     | Ne yapar?                                                       |
+| ------------------------- | --------------------------------------------------------------- |
+| **Add/Edit Citation**     | İmlecin olduğu yere atıf ekler ya da oradaki atıfı düzenler     |
+| **Add/Edit Bibliography** | Kaynakçayı ekler ya da kaynakça düzenleyicisini açar            |
+| **Document Preferences**  | Belgenin atıf stilini ve dilini değiştirir                      |
+| **Refresh**               | Zotero'daki kayıtlarda yaptığın değişiklikleri belgeye yansıtır |
+| **Unlink Citations**      | Atıfları ve kaynakçayı düz metne çevirir. **Geri alınamaz**     |
+
+Sekme görünmüyorsa Zotero'da **Edit → Settings → Cite → Word Processor Plugins** yolundan eklentiyi yeniden kur (macOS'ta **Zotero → Settings**).
+
+## Uygulamalı kullanım
+
+### Atıf eklemek ve sayfa numarası vermek
+
+<Steps>
+  <Step title="Atıf kutusunu aç">
+    İmleci atıfın geleceği yere koy ve **Add/Edit Citation**'a tıkla. Bir arama
+    kutusu açılır.
+  </Step>
+  <Step title="Kaynağı bul">
+    Yazarın soyadını, başlıktan bir kelimeyi ya da yılı yaz. Önerilerden doğru
+    kaydı seç.
+  </Step>
+  <Step title="Gerekirse sayfa numarası ekle">
+    Doğrudan alıntı yaptıysan ya da belirli bir sayfaya atıf veriyorsan, kaydı
+    seçtikten sonra Enter'a basmadan önce sayfa numarasını yaz (örneğin `34` ya
+    da `s.34`). Ya da seçtiğin kaynağa tıklayıp açılan kutuda sayfa numarasını
+    gir.
+  </Step>
+  <Step title="Bir atıfa birden çok kaynak koy">
+    Aynı parantezde birden çok kaynak gösterilecekse, ilkini seçtikten sonra
+    ikincisini de aynı kutuda arayıp ekle. Sonra Enter'a bas.
+  </Step>
+</Steps>
+
+### Kaynakçayı eklemek
+
+Kaynakçanın duracağı yere, örneğin "Kaynaklar" başlığının altına imleci koy ve **Add/Edit Bibliography**'ye tıkla. Belgede atıf yaptığın her kaynak listeye girer; yeni atıf ekledikçe kaynakça da kendiliğinden güncellenir.
+
+### Stili değiştirmek
+
+**Document Preferences**'ı aç ve listeden yeni stili seç (örneğin APA'dan IEEE'ye). Bütün atıflar ve kaynakça yeni stile göre yeniden yazılır. Aynı pencerede atıf dilini de seçersin: **Türkçe** seçersen "ve", "vd." gibi sabit ifadeler Türkçe yazılır.
+
+İstediğin stil listede yoksa Zotero'nun stil deposundan eklenebilir: Zotero ayarlarında **Cite** bölümünü aç ve **Get additional styles…** bağlantısından stili arayıp kur.
+
+### Belgeyi başkasıyla paylaşmak
+
+- Belgeyi `.docx` olarak kaydet ve paylaş. Document Preferences'ta atıfların **Fields** olarak saklanması önerilir; **Bookmarks** yalnız LibreOffice kullanan biriyle ortak çalışacaksan gerekir.
+- Belgeyi düzenleyen herkesin Zotero kurulu olmalı. Ortak çalışıyorsanız kaynakları bir Zotero **grup kütüphanesinde** toplayın: başkasının kütüphanesinden eklenen atıflar, o kütüphaneye erişimi olmayan kişide kütüphanesindeki kayıtla eşleşmez.
+- Danışmanın yalnızca okuyup yorum yapacaksa Zotero'ya ihtiyacı yok; atıflar Word'de normal metin gibi görünür.
+
+### Teslimden önce
+
+Bazı dergiler ve enstitüler, Zotero alanları içermeyen düz bir dosya isteyebilir. Bunun için **Unlink Citations** kullanılır, ama bu işlem geri alınamaz. **Önce belgenin bir kopyasını kaydet**, bağlantıları yalnız kopyada kaldır. Çalışma dosyan bağlantılı kalsın.
+
+<Callout title="Kocaeli Üniversitesi FBE'de tez yazıyorsan">
+Tez yazım kılavuzu bir stil adı (APA, IEEE vb.) vermiyor; Zotero'da hangi stilin seçileceği kılavuzda yazmıyor. Kılavuzun istedikleri:
+
+- Metin içinde yazar soyadı ve yıl: "(Öztürk, 2003)", iki yazarda "(Öztürk ve Karabay, 2005)", ikiden fazlasında "(Öztürk ve diğ., 1998)". Kaynaklar yazar soyadına göre alfabetik.
+- Kaynakçada **bağlaçlar dışında her kelimenin ilk harfi büyük**. APA 7 ise makale başlıklarını cümle düzeninde yazar; bu iki kural birbirinden farklı.
+- Kaynaklar tek satır aralıklı, aralarında bir satır boşluk, ikinci ve sonraki satırlarda 1 cm asılı girinti; dergi adı, cilt numarası, kitap adı ve sempozyum adı italik.
+
+Seçtiğin stilin çıktısını kılavuzdaki örneklerle karşılaştır, farkları danışmanınla konuş. Kılavuz ayrıntılı kaynak yazım düzeninin enstitünün web sayfasında ayrıca yayımlandığını söylüyor; o belgeye de bak. Ayrıntı: [Tez yazım kuralları, Kaynak gösterme](/kou-fbe/tez-yazim-kurallari/#kaynak-gosterme).
+
+</Callout>
+
+## İpuçları
+
+<Callout type="tip" title="Daha az uğraşmak için">
+  - Bir künyede hata görürsen düzeltmeyi Word'de değil Zotero'daki kayıtta yap,
+  sonra **Refresh**'e bas. - Tezin bölümlerini ayrı dosyalarda yazıyorsan
+  hepsinde aynı stili seç. Son birleştirmeden sonra Refresh'e bir kez daha bas.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+  - **Atıf metnini elle düzeltmek:** Zotero'nun eklediği bir atıfı elle
+  değiştirirsen Zotero değişikliği korumak isteyip istemediğini sorar; korursan
+  o atıf artık kendiliğinden güncellenmez. Sayfa numarası gibi ekleri atıf
+  kutusundan ver. - **Atıfları kopyala-yapıştırla başka bir belgeye taşımak ve
+  kaynakçayı elle yazmak:** Kaynakçayı her zaman Add/Edit Bibliography ile
+  oluştur. - **Çalışma dosyasında Unlink Citations'a basmak:** Geri alınamaz.
+  Yalnız teslim edeceğin kopyada kullan.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["zotero", "overleaf", "grammarly"]} />
+
+Sonraki adım: İngilizce yazıyorsan dil denetimi için [Grammarly](/yazim/grammarly/).
+
+## Kaynaklar
+
+- [Zotero: Word Processor Plugin Usage (resmî belge)](https://www.zotero.org/support/word_processor_plugin_usage) (düğmeler, sayfa numarası, Fields ve Bookmarks, Unlink Citations)
+- [Zotero: Word Processor Integration](https://www.zotero.org/support/word_processor_integration) (Word, LibreOffice, Google Docs)
+- [Zotero: Word eklentisinin kurulumu](https://www.zotero.org/support/word_processor_plugin_installation)
+- [Zotero: Citation styles](https://www.zotero.org/support/styles) (ek stil kurma)

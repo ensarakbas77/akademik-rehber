@@ -5,7 +5,7 @@ Bu dosya üç not dosyasındaki her maddeyi bir site sayfasına bağlar. Sonunda
 - **Notlar:** `yonetmelik.md` (Yön), `uygulama-esaslari.md` (UE), `tez-yazim-kilavuzu.md` (TYK)
 - **Sayfa listesi:** `src/content/navigation.ts`, "Kocaeli Üniversitesi FBE" grubu. Orada "taslak liste" olarak duruyor; bu harita kesinleştirmek için hazırlandı.
 - **Durum:** **Onaylandı (Ensar, 6 Kasım 2026).** §5'teki tüm öneriler kabul edildi. "Öneri" diye geçen sayfalar ve kapsam dışı maddeler artık kesin. Sayfalar yazılırken her madde bu dosyada işaretlenecek.
-- **Yazım durumu (6 Kasım 2026):** 14 sayfanın hepsi yazıldı. §1–3 tablolarındaki "Durum" sütunu her maddenin karşılığını gösterir. Bekleyenler: `/kaynaklar/` (KAY) sayfası ile karar 6 ve 7'deki çapraz notlar; bunlar o sayfalar yazılınca eklenecek.
+- **Yazım durumu (6 Kasım 2026):** 14 sayfanın hepsi yazıldı. §1–3 tablolarındaki "Durum" sütunu her maddenin karşılığını gösterir. Bekleyenler: `/kaynaklar/` (KAY) sayfası ile karar 6'daki çapraz not (AI sayfası yazılınca eklenecek). Karar 7'deki not Word + Zotero sayfasına eklendi.
 
 ## Belge künyeleri (her KOÜ sayfasında gösterilecek)
 
@@ -177,7 +177,7 @@ Bu dosya üç not dosyasındaki her maddeyi bir site sayfasına bağlar. Sonunda
 | 3.7 | Denklemler | YK | Yazıldı |
 | 3.8–3.9 | Alıntı, dipnot | YK | Yazıldı |
 | 3.10 | Ekler sayfası | YK | Yazıldı |
-| 3.11 | Kaynak gösterme ve yazım (a–k) | YK; **ayrıca** "Yazım > Word + Zotero ile atıf" sayfasına KOÜ notu (bkz. karar 7) | Yazıldı; Zotero sayfasındaki KOÜ notu bekliyor |
+| 3.11 | Kaynak gösterme ve yazım (a–k) | YK; **ayrıca** "Yazım > Word + Zotero ile atıf" sayfasına KOÜ notu (bkz. karar 7) | Yazıldı; KOÜ notu Zotero ve Word + Zotero sayfalarında |
 | 4. USB ve teslim | Dijital kopya, imzasız sayfalar, YÖK Tez Veri Giriş Formu, dosya adları, RAR | MEZ; KL; **ayrıca** "Akademik kimlik > YÖK Ulusal Tez Merkezi" sayfasına çapraz bağlantı | Yazıldı; YÖK Tez Merkezi sayfasından KOÜ Mezuniyet ve kontrol listesine bağlantı verildi |
 | Ek-1a – Ek-15 | Örnek sayfalar ve "ÖNEMLİ" kutuları | YK (bölüm bölüm); KL | Yazıldı |
 | Ek numarası tutarsızlıkları | Tablo | YK (bilgi kutusu) | Yazıldı |

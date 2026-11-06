@@ -1,0 +1,129 @@
+export const metadata = {
+  title: "Obsidian ile bağlantılı notlar",
+  description:
+    "Obsidian'da bilgisayarındaki Markdown dosyalarıyla birbirine bağlı kavram ve makale notları tutmak: kasa, [[bağlantı]], geri bağlantılar ve grafik görünümü.",
+};
+
+# Obsidian ile bağlantılı notlar
+
+Obsidian, notlarını bilgisayarındaki bir klasörde düz metin (Markdown) dosyaları olarak tutan bir not uygulaması. Notları klasörlere gömmek yerine birbirine **bağlantılarla** bağlarsın: "Transformer" notun "Attention" notuna ve okuduğun beş makalenin notuna bağlanır. Zamanla kendi kavram ağın oluşur.
+
+<ToolInfoBox slug="obsidian" />
+
+## Ne zaman kullanılır?
+
+- **Kavram notları için:** Derslerde ve makalelerde karşılaştığın kavramları, her biri ayrı bir notta, birbirine bağlı tutmak için.
+- **Makale notlarını kavramlara bağlamak için:** Bir kavramın hangi makalelerde geçtiğini tek bakışta görmek için.
+- **Verilerinin bilgisayarında kalmasını istiyorsan:** Notlar senin klasöründeki dosyalardır; internet olmadan da çalışır.
+
+<Callout title="Notion mu Obsidian mı?">
+  Notion tablolar ve filtrelerle güçlü: literatür takip tablosu, ders planı,
+  görev listesi. Obsidian bağlantılı notlarda güçlü: kavramlar ve fikirler
+  arasındaki ilişkiler. İkisini birden kurmak zorunda değilsin. Tablo seviyorsan
+  [Notion](/not-alma/notion/), kavram ağı kurmak istiyorsan Obsidian. Kaynaklar
+  her durumda Zotero'da kalır.
+</Callout>
+
+## Kurulum
+
+<Steps>
+  <Step title="Uygulamayı indir">
+    [obsidian.md/download](https://obsidian.md/download) sayfasından işletim
+    sistemine uygun sürümü indir ve kur. Hesap açman gerekmez.
+  </Step>
+  <Step title="Bir kasa (vault) oluştur">
+    Obsidian ilk açıldığında bir kasa oluşturmanı ister. Kasa, notlarının
+    duracağı bir klasördür. Adını "Yüksek lisans notları" koy ve kolayca
+    yedekleyebileceğin bir yerde oluştur.
+  </Step>
+  <Step title="Arayüzü Türkçeye çevir (isteğe bağlı)">
+    **Settings → General** altındaki dil seçeneğinden Türkçeyi seç. Uygulamayı
+    yeniden başlatınca arayüz Türkçe olur.
+  </Step>
+</Steps>
+
+## Temel kullanım
+
+### Bağlantı kurmak
+
+Bir notun içinde `[[` yazınca Obsidian notlarını önerir. Seçtiğin not bağlanır:
+
+```markdown
+Bu makale [[Attention mekanizması]] üzerine kurulu.
+Ayrıntı için [[Transformer#Kodlayıcı]] başlığına bak.
+Kısaca [[Büyük dil modeli|BDM]] diye anacağım.
+```
+
+- `[[Not adı]]` bir nota bağlanır.
+- `[[Not adı#Başlık]]` o notun bir başlığına bağlanır.
+- `[[Not adı|Görünen ad]]` bağlantıyı farklı bir adla gösterir.
+- Henüz var olmayan bir nota da bağlantı verebilirsin. Bağlantıya tıkladığında not oluşturulur. Böylece önce bağlantıyı koyup notu sonra yazarsın.
+
+### Geri bağlantılar
+
+Bir notu açtığında sağ kenar çubuğundaki **Backlinks** (geri bağlantılar) sekmesi, o nota bağlantı veren bütün notları listeler. Örneğin "Attention mekanizması" notunu açınca bu kavramdan söz eden makale notlarının hepsini görürsün. Aynı sekmede, notun adının geçtiği ama henüz bağlantıya dönüştürülmemiş yerler de ayrıca listelenir.
+
+### Grafik görünümü
+
+Sol kenardaki şerit menüsünden **Open graph view**'u açınca kasadaki bütün notları ve aralarındaki bağlantıları bir ağ olarak görürsün. Yalnız açık notun çevresini görmek için komut paletinden **Open local graph** komutunu çalıştır.
+
+## Uygulamalı kullanım: makale notunu kavramlara bağlamak
+
+<Steps>
+  <Step title="Klasörleri az tut">
+    Kasada iki klasör aç: `Makaleler` ve `Kavramlar`. Gerisini bağlantılar
+    çözer.
+  </Step>
+  <Step title="Makale notu aç">
+    `Makaleler` klasöründe makale için bir not aç. Not adı olarak "Yazar Yıl"
+    kullan (örneğin "Vaswani 2017"). İlk satıra makalenin DOI'sini yaz.
+  </Step>
+  <Step title="Kendi cümlelerinle özetle">
+    Makaleyi okurken kendi cümlelerinle kısa bir özet, ana katkı ve yöntem yaz.
+    Bir kavram geçtiğinde onu `[[ ]]` içine al.
+  </Step>
+  <Step title="Kavram notlarını doldur">
+    Bağlantısı verilmiş ama henüz yazılmamış kavramlara tıklayıp notlarını
+    oluştur ve `Kavramlar` klasörüne taşı. Her kavram notuna iki üç cümlelik bir
+    tanım yaz.
+  </Step>
+  <Step title="Geri bağlantılarla bağlantıları gör">
+    Birkaç hafta sonra bir kavram notunu açıp geri bağlantılarına bak: o
+    kavramın geçtiği bütün makaleler orada. Literatür taramasında bir kavramı
+    anlatırken hangi makalelere atıf yapacağını buradan çıkarırsın.
+  </Step>
+</Steps>
+
+<Callout type="tip" title="İpuçları">
+  - Notlar düz Markdown dosyası olduğu için başka bir uygulamayla da açılabilir.
+  Kasa klasörünü düzenli yedekle; bulut klasörü ya da harici disk yeterli. -
+  Notları kendi cümlelerinle yaz. Makaleden aldığın bir cümleyi tırnak içine al
+  ve sayfa numarasını not et. - Eklenti (community plugin) kurmadan başla. Temel
+  özellikler ilk aylarda yeterli; sistemi kurmak işin kendisinden uzun sürmesin.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+  - **Klasör ağacı kurmaya zaman harcamak:** Obsidian'ın gücü bağlantılarda.
+  Derin klasör yapısı yerine bağlantı ver. - **Kaynakçayı Obsidian'da tutmak:**
+  Künyelerin ve atıfların asıl yeri Zotero. Obsidian'da makale notunda DOI ve
+  "Yazar Yıl" yeterli. - **Yedek almamak:** Ücretli Sync hizmetini
+  kullanmıyorsan notlar yalnızca bilgisayarında durur. Bilgisayar bozulursa
+  notlar da gider.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["zotero", "notion", "researchrabbit"]} />
+
+Sonraki adım: Notlarını yazıya dökmeye başla: [Word + Zotero ile atıf](/yazim/word-ve-zotero/) ya da [Overleaf ve LaTeX'e giriş](/yazim/overleaf-ve-latex/).
+
+## Kaynaklar
+
+- [Obsidian: Fiyatlandırma](https://obsidian.md/pricing) (ücretsiz kullanım, Sync ve Publish, öğrenci indirimi)
+- [Obsidian: İndirme](https://obsidian.md/download) (platformlar)
+- [Obsidian Help: Internal links](https://obsidian.md/help/links) (`[[ ]]` bağlantı söz dizimi)
+- [Obsidian Help: Backlinks](https://obsidian.md/help/plugins/backlinks)
+- [Obsidian Help: Graph view](https://obsidian.md/help/plugins/graph)
+- [obsidian-translations](https://github.com/obsidianmd/obsidian-translations) (Türkçe arayüz çevirisi)

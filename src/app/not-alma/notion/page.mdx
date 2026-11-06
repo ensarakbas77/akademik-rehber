@@ -1,0 +1,165 @@
+export const metadata = {
+  title: "Notion'da literatür takip veritabanı",
+  description:
+    "Notion'da okuduğun makaleleri takip eden bir veritabanı kurmak: sütunlar, makale notu şablonu, görünümler ve öğrencilere ücretsiz Plus planı.",
+};
+
+# Notion'da literatür takip veritabanı
+
+Notion; sayfaları, listeleri ve tabloları bir arada tutan bulut tabanlı bir not uygulaması. Bu sayfada Notion'u tek bir iş için kuruyoruz: okuduğun makaleleri, her birinden ne öğrendiğini ve literatürde gördüğün boşlukları takip eden bir **literatür veritabanı**.
+
+<ToolInfoBox slug="notion" />
+
+## Ne zaman kullanılır?
+
+- **Okuduğun makaleleri tek tabloda görmek için:** Hangi makaleyi okudun, hangisi sırada, hangisi tezin için önemli.
+- **Makaleleri karşılaştırmak için:** Yöntem, veri seti ve sonuç sütunları yan yana durduğunda literatür taraması tablosu kendiliğinden oluşur.
+- **Konu ararken:** Her makale için doldurduğun "Eksik / Fırsat" sütunu, zamanla tez konusu adaylarının listesine dönüşür.
+
+Künyeler ve PDF'ler Zotero'da kalır; Notion okuma notlarının ve karşılaştırmanın yeridir.
+
+## Kurulum
+
+<Steps>
+  <Step title="Hesap aç">
+    [notion.com](https://www.notion.com) üzerinden hesap aç. Üniversite e-postan
+    varsa hesabı onunla aç: öğrencilere ücretsiz Plus planı bu adrese bağlı
+    (aşağıda).
+  </Step>
+  <Step title="Bir ana sayfa oluştur">
+    Kenar çubuğundan yeni bir sayfa aç ve adını "Yüksek lisans" koy. Dersler,
+    ödevler ve literatür veritabanı bu sayfanın altında durur.
+  </Step>
+  <Step title="Veritabanını ekle">
+    Sayfanın içinde `/database` yaz ve tablo biçiminde bir veritabanı ekle.
+    Adını "Literatür takip" koy.
+  </Step>
+</Steps>
+
+<Callout type="tip" title="Öğrencilere ücretsiz Plus planı">
+  Yükseköğretim kurumlarındaki öğrenciler ve öğretim elemanları Plus planını
+  ücretsiz kullanabiliyor. Koşullar: okul e-postan Notion hesabının ana
+  e-postası olmalı ve üniversiten World Higher Education Database'de (WHED)
+  listelenmeli. Masaüstü uygulamasında ya da tarayıcıda **Settings → Upgrade
+  plan → Get free education plan** yolunu izle; okulun tanınıyorsa plan
+  kendiliğinden açılır. Bu plan tek kişilik; okul e-postanı yılda bir yeniden
+  doğrulaman gerekiyor, doğrulayamazsan çalışma alanı ücretsiz plana döner.
+</Callout>
+
+## Sütunlar
+
+Notion'da sütunlara "property" denir. Bir sütun eklemek için **Add property**'ye tıkla, ad ver ve türünü seç. Var olan bir sütunun türünü değiştirmek için sütun adına tıkla, **Edit property → Change type** yolunu izle.
+
+| Sütun               | Tür          | Ne yazılır?                                                       |
+| ------------------- | ------------ | ----------------------------------------------------------------- |
+| Başlık              | Title        | Makalenin adı                                                     |
+| Yazarlar            | Text         | İlk yazar ve "et al." yeterli                                     |
+| Yıl                 | Number       |                                                                   |
+| Yayın yeri          | Text         | Dergi ya da konferans adı                                         |
+| Tür                 | Select       | Dergi, Konferans, Ön baskı, Tez, Kitap                            |
+| Q değeri            | Select       | Q1, Q2, Q3, Q4, Yok                                               |
+| DOI / Link          | URL          |                                                                   |
+| Konu                | Multi-select | Alanındaki alt konular                                            |
+| Problem             | Text         | Makale neyi çözüyor? Tek cümle                                    |
+| Yöntem / Model      | Text         |                                                                   |
+| Veri seti           | Text         |                                                                   |
+| Metrik ve sonuç     | Text         | Örneğin "F1 = 0,91"                                               |
+| Eksik / Fırsat      | Text         | Makalenin yapmadığı, senin yapabileceğin şey. **En önemli sütun** |
+| Durum               | Status       | Okunacak, Okunuyor, Okundu                                        |
+| Önem                | Select       | 1, 2, 3                                                           |
+| Nerede kullanacağım | Multi-select | Tez, ders projesi, ödev                                           |
+| Zotero'da           | Checkbox     | Künye Zotero'ya kaydedildi mi?                                    |
+| Eklenme             | Created time | Kendiliğinden dolar                                               |
+
+Q değerini nasıl bulacağın: [Bir derginin Q değerini bulma](/kaynak-bulma/q-degeri/).
+
+## Makale notu şablonu
+
+Veritabanındaki her satır aynı zamanda bir sayfadır. Bir şablon kurarsan her yeni makale aynı başlıklarla açılır.
+
+<Steps>
+  <Step title="Şablonu oluştur">
+    Veritabanının sağ üstündeki **New** düğmesinin yanındaki oka tıkla ve **+
+    New template** seç. Şablonun adını "Makale notu" koy.
+  </Step>
+  <Step title="Başlıkları ekle">
+    Şablon sayfasına aşağıdaki başlıkları yaz. İstersen Durum sütununu
+    "Okunacak" olarak önceden doldur.
+  </Step>
+  <Step title="Varsayılan yap">
+    Şablon listesinde "Makale notu"nun yanındaki **•••** menüsünden **Set as
+    default** seç ve tüm veritabanına uygulanmasını seç. Artık **New**'e her
+    bastığında bu şablon açılır.
+  </Step>
+</Steps>
+
+```text
+Kendi cümlelerimle özet (3-5 cümle)
+Ana katkı
+Yöntem: nasıl yapmışlar?
+Güçlü yanlar / zayıf yanlar
+Bilmediğim kavramlar
+Kullanabileceğim bulgular (sayfa numarasıyla)
+```
+
+## Görünümler
+
+Aynı veritabanını farklı biçimlerde görebilirsin. Veritabanının üstündeki görünüm sekmelerinin yanından yeni bir görünüm ekle:
+
+- **Tablo:** Bütün makaleler. Varsayılan görünüm.
+- **Pano (Board):** Durum sütununa göre gruplanmış: Okunacak, Okunuyor, Okundu. Kartları sürükleyerek durumunu değiştirirsin.
+- **Tez:** Bir tablo görünümü; filtre "Nerede kullanacağım = Tez", sıralama "Önem" azalan.
+
+## Uygulamalı kullanım: bir makaleyi baştan sona işlemek
+
+<Steps>
+  <Step title="Bul ve kaydet">
+    Makaleyi bul ve Zotero Connector ile Zotero'ya kaydet:
+    [Zotero](/kaynak-yonetimi/zotero/).
+  </Step>
+  <Step title="Satır ekle">
+    Notion'da **New** ile yeni bir satır aç. Başlık, yazar, yıl, yayın yeri ve
+    DOI'yi doldur; Durum "Okunacak", Zotero'da kutusu işaretli.
+  </Step>
+  <Step title="Okurken notu doldur">
+    Makaleyi okurken satırın sayfasındaki şablon başlıklarını doldur. Önce kendi
+    cümlelerinle kısa bir özet yaz.
+  </Step>
+  <Step title="Tablo sütunlarını tamamla">
+    Okuma bitince Problem, Yöntem, Veri seti, Metrik ve sonuç, Eksik / Fırsat
+    sütunlarını doldur ve Durum'u "Okundu" yap.
+  </Step>
+</Steps>
+
+<Callout type="tip" title="Notları kendi cümlelerinle yaz">
+  Makaleden cümle kopyalamak yerine kendi cümlelerinle not al. Hem daha iyi
+  öğrenirsin hem de bu notları ileride teze taşırken farkında olmadan intihal
+  yapma riskin azalır. Birebir aldığın bir cümle varsa tırnak içine al ve sayfa
+  numarasını yaz.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+  - **Kaynakçayı Notion'dan yapmaya çalışmak:** Notion atıf ve kaynakça üretmez.
+  Künyelerin asıl yeri Zotero. - **Sütunları en baştan çok ayrıntılı kurmak:**
+  Tabloyu doldurmak okumaktan uzun sürmeye başlarsa sütunları azalt. "Problem",
+  "Yöntem" ve "Eksik / Fırsat" en azından dolu olsun. - **Büyük PDF'leri
+  Notion'a yüklemek:** Ücretsiz planda dosya başına sınır 5 MB. PDF'ler zaten
+  Zotero'da; Notion'a yalnız DOI ya da bağlantı koy.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["zotero", "obsidian", "researchrabbit"]} />
+
+Sonraki adım: Kavramlar arasında bağlantılı notlar tutmak istiyorsan [Obsidian ile bağlantılı notlar](/not-alma/obsidian/). İkisinden birini seçmen yeterli.
+
+## Kaynaklar
+
+- [Notion: Fiyatlandırma](https://www.notion.com/pricing) (ücretsiz plan sınırları, öğrenci teklifi)
+- [Notion: Notion for education](https://www.notion.com/help/notion-for-education) (ücretsiz eğitim planı koşulları ve etkinleştirme)
+- [Notion: Veritabanı oluşturma](https://www.notion.com/help/create-a-database) (`/database`, property ekleme ve türünü değiştirme)
+- [Notion: Veritabanı şablonları](https://www.notion.com/help/database-templates) (**+ New template**)
+- [Notion: 11 Ağustos 2022 sürüm notları](https://www.notion.com/releases/2022-08-11) (varsayılan şablon)
+- [Notion: Dil değiştirme](https://www.notion.com/help/change-your-language) (desteklenen arayüz dilleri)

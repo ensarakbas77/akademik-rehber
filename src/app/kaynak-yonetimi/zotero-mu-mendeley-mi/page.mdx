@@ -1,0 +1,96 @@
+export const metadata = {
+  title: "Zotero mu Mendeley mi?",
+  description:
+    "İki kaynak yöneticisinin karşılaştırması: ücret, depolama, açık kaynak olma, Word eklentisi, LaTeX desteği ve Mendeley'den Zotero'ya geçiş.",
+};
+
+# Zotero mu Mendeley mi?
+
+**Kısa cevap: Yeni başlıyorsan Zotero'yu seç ve tek bir kaynak yöneticisiyle devam et.** Mendeley'i zaten kullanıyorsan ve işini görüyorsa hemen bırakman gerekmez; ama ikisini birlikte kullanma.
+
+Mendeley, Elsevier'in kaynak yöneticisi. Zotero gibi makaleleri ve PDF'leri kaydeder, Word'de atıf yapar ve kaynakça üretir.
+
+<ToolInfoBox slug="mendeley" />
+
+## Karşılaştırma
+
+|                          | Zotero                                                                   | Mendeley                                                            |
+| ------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| **Geliştiren**           | Bağımsız, kâr amacı gütmeyen bir proje                                   | Elsevier (yayıncı)                                                  |
+| **Açık kaynak**          | Evet                                                                     | Hayır                                                               |
+| **Ücretsiz depolama**    | 300 MB                                                                   | 2 GB                                                                |
+| **Bilgisayara kayıt**    | Kütüphane bilgisayarında durur; çevrimiçi eşitleme isteğe bağlı          | Kütüphane Mendeley hesabında, çevrimiçi tutulur                     |
+| **Tarayıcıdan kaydetme** | Zotero Connector                                                         | Mendeley Web Importer                                               |
+| **Word eklentisi**       | Zotero ile birlikte kurulur; LibreOffice ve Google Docs eklentisi de var | Mendeley Cite (Word 2016 ve sonrası, Microsoft 365, iPad için Word) |
+| **LaTeX ve Overleaf**    | Better BibTeX eklentisiyle `.bib` dosyası güncel tutulur                 | `.bib` olarak dışa aktarılabilir                                    |
+| **Türkçe arayüz**        | Var                                                                      | Resmî sayfalarda belirtilmemiş                                      |
+
+Ücretsiz depolama, PDF'lerin çevrimiçi eşitlenmesi içindir. Zotero'da 300 MB dolsa bile kütüphane bilgisayarında çalışmaya devam eder; yalnızca eşitlenen dosyalar için ek depolama gerekir.
+
+## Neden Zotero öneriyoruz?
+
+- **Açık kaynak ve bağımsız:** Verilerin bir yayıncının ürün kararlarına bağlı değil. Mendeley'in eski masaüstü uygulaması (Mendeley Desktop) 1 Eylül 2022'den itibaren yeni indirmeye kapatıldı ve yerini Mendeley Reference Manager aldı; bu geçişte bazı kullanıcılar alıştıkları özellikleri kaybetti.
+- **LaTeX iş akışı:** Better BibTeX, Zotero'daki koleksiyonu `.bib` dosyası olarak güncel tutar. Overleaf'e geçeceksen bu büyük kolaylık.
+- **Bu sitedeki anlatımlar:** Kaynak yönetimiyle ilgili adımlar Zotero üzerinden anlatılıyor: [Zotero](/kaynak-yonetimi/zotero/), [Word + Zotero ile atıf](/yazim/word-ve-zotero/).
+
+Mendeley'in güçlü yanı, ücretsiz planda daha fazla çevrimiçi depolama sunması. Çok sayıda PDF'i birden fazla cihazda eşitlemek istiyorsan bu fark önemli olabilir.
+
+<Callout title="Yapay zekâ özellikleri">
+  Mendeley'in yapay zekâ özellikleri (makale hakkında soru sorma gibi) ücretli.
+  Elsevier, Mendeley'in ücretli planını kendi yapay zekâ ürünü LeapSpace'e
+  bağladı. Kaynak yöneticisi seçerken bu özelliklere ihtiyacın yok; temel
+  işlevler (kaydetme, düzenleme, atıf) iki araçta da ücretsiz.
+</Callout>
+
+## Mendeley'den Zotero'ya geçiş
+
+<Steps>
+  <Step title="Mendeley'de her şeyin çevrimiçi olduğundan emin ol">
+    Mendeley Reference Manager kütüphaneyi zaten çevrimiçi tutar. Eski Mendeley
+    Desktop kullanıyorsan eşitlemeyi kontrol et ve PDF'lerinin çevrimiçi
+    kütüphanede açıldığını gör. Yalnızca eşitlenmiş PDF'ler aktarılır.
+  </Step>
+  <Step title="Zotero'yu güncelle">
+    Zotero'da **Help → Check for Updates…** ile son sürüme geç.
+  </Step>
+  <Step title="İçe aktar">
+    **File → Import** yolunu aç, **Mendeley Reference Manager (online import)**
+    seçeneğini seç ve Mendeley hesabınla giriş yap. Klasör yapın da aktarılır.
+  </Step>
+  <Step title="Kontrol et">
+    Birkaç kaydın künyesine ve PDF'ine bak. Ardından yeni kaynakları yalnız
+    Zotero'ya kaydet.
+  </Step>
+</Steps>
+
+<Callout type="warning" title="Word belgelerin">
+  Mendeley Cite ile eklenmiş atıfları Zotero okuyamaz. Mendeley Cite'la yazdığın
+  bir belgeyi Zotero'yla sürdüreceksen atıfları Zotero'dan yeniden eklemen
+  gerekir. Bitmek üzere olan bir ödev ya da makaleyi Mendeley'le bitir, yeni
+  işlere Zotero'yla başla. Mendeley grup kütüphaneleri de doğrudan aktarılmaz;
+  önce öğeleri kendi kütüphanendeki bir klasöre kopyala.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+  - **İki kaynak yöneticisini birlikte kullanmak:** Kaynaklar ikiye bölünür,
+  aynı makale iki yerde farklı künyeyle durur. Birini seç. - **Danışmanın ne
+  kullandığını sormamak:** Ortak bir belge üzerinde çalışacaksanız aynı aracı
+  kullanmanız işleri kolaylaştırır.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["zotero", "word-zotero", "overleaf"]} />
+
+Sonraki adım: Zotero'yu kur ve ilk makaleni kaydet: [Zotero](/kaynak-yonetimi/zotero/).
+
+## Kaynaklar
+
+- [Mendeley Reference Manager](https://www.mendeley.com/reference-management/reference-manager) (Web Importer, 2 GB ücretsiz depolama)
+- [Mendeley: İndirme sayfası](https://www.mendeley.com/download-reference-manager) (Windows, macOS, Linux)
+- [Mendeley Cite](https://www.mendeley.com/reference-management/mendeley-cite) (desteklenen Word sürümleri)
+- [Elsevier: Mendeley Premium ve LeapSpace](https://researcher.elsevier.com/mendeley-upgrade)
+- [University of Maryland HS/HSL: Mendeley Desktop'tan Reference Manager'a geçiş](https://answers.hshsl.umaryland.edu/faq/366221) (1 Eylül 2022)
+- [Zotero: Mendeley'den içe aktarma (resmî belge)](https://www.zotero.org/support/kb/mendeley_import)

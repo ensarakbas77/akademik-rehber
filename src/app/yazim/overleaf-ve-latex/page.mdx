@@ -1,0 +1,218 @@
+export const metadata = {
+  title: "Overleaf ve LaTeX'e giriş",
+  description:
+    "Tarayıcıda LaTeX yazmak için Overleaf: ücretsiz planın sınırları, temel LaTeX komutları, Zotero'dan kaynakça ve yapay zekâyı LaTeX'te doğru kullanmak.",
+};
+
+# Overleaf ve LaTeX'e giriş
+
+LaTeX, metni komutlarla biçimlendiren bir dizgi sistemi: başlıkları, formülleri, şekil ve tablo numaralarını, kaynakçayı senin yerine düzenler. Overleaf ise LaTeX'i bilgisayarına kurmadan tarayıcıda yazmanı ve aynı belge üzerinde başkalarıyla çalışmanı sağlayan bir çevrimiçi düzenleyici.
+
+<ToolInfoBox slug="overleaf" />
+
+## Ne zaman kullanılır?
+
+- **Mühendislik ve bilgisayar bilimlerinde makale yazarken:** Birçok dergi ve konferans LaTeX şablonu verir; bazıları LaTeX ile gönderim ister.
+- **Formül, tablo ve şekil yoğun raporlarda:** Numaralandırma ve çapraz başvurular kendiliğinden güncellenir.
+- **Danışmanınla aynı belge üzerinde çalışırken:** Belgeyi paylaşırsın, ikiniz de tarayıcıdan açarsınız.
+
+Word'de yazmaya alışkınsan ve alanında Word yaygınsa LaTeX'e geçmek zorunda değilsin: [Word + Zotero ile atıf](/yazim/word-ve-zotero/).
+
+## Ücretsiz planın sınırları
+
+| Konu                                             | Ücretsiz plan                                                                             |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| **Ortak çalışan**                                | Proje başına 1 kişi düzenleyici ya da yorumcu olarak; yalnızca görüntüleyen kişi sınırsız |
+| **Derleme süresi**                               | 10 saniye (ücretli planlarda 4 dakika)                                                    |
+| **Sürüm geçmişi**                                | Son 24 saat                                                                               |
+| **Değişiklik takibi (track changes)**            | Yok                                                                                       |
+| **Zotero, Mendeley, GitHub, Dropbox bağlantısı** | Yok                                                                                       |
+| **Yapay zekâ özellikleri**                       | Günlük sınırlı kullanım; sohbet tarzı AI Assistant yok                                    |
+| **Dosya**                                        | Proje başına en fazla 2000 dosya, tek yüklemede en fazla 50 MB                            |
+
+Bir ödev ya da makale için ücretsiz plan çoğu zaman yeterli. Tez büyüdükçe 10 saniyelik derleme sınırına takılabilirsin (aşağıda çözümleri var). Öğrenci planı aylık 13 $ ya da yıllık 98 $.
+
+<Callout type="tip" title="Önce kurumsal e-postanla dene">
+  Overleaf'e üniversite e-postanla giriş yap. Üniversitenin kurumsal Overleaf
+  lisansı varsa ücretli özellikler hesabında açılır. Lisans yoksa ücretsiz
+  planla devam edersin.
+</Callout>
+
+## Kurulum
+
+<Steps>
+  <Step title="Hesap aç">
+    [overleaf.com](https://www.overleaf.com) üzerinden hesap aç. Arayüzün Türkçe
+    bir bölümü [tr.overleaf.com](https://tr.overleaf.com) adresinde, ama bazı
+    menüler İngilizce kalıyor.
+  </Step>
+  <Step title="İlk projeni oluştur">
+    **New Project → Blank Project** ile boş bir proje aç. Sol tarafta kodu, sağ
+    tarafta PDF çıktısını görürsün. **Recompile** düğmesi PDF'i yeniler.
+  </Step>
+  <Step title="30 dakikalık rehberi oku">
+    Overleaf'in [Learn LaTeX in 30
+    minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+    rehberini bir kez baştan sona oku. Sonra haftalık raporlarını Overleaf'te
+    yazarak pratik yap.
+  </Step>
+</Steps>
+
+## Temel komutlar
+
+Bir makale ya da rapor için şu komutları bilmek iyi bir başlangıç:
+
+```latex
+\documentclass[12pt]{article}      % Belge türü: makale ve rapor için article, tez için report
+\usepackage[T1]{fontenc}            % Türkçe karakterlerin (ş, ğ, ı) doğru basılması
+\usepackage[turkish,shorthands=:!]{babel}  % Türkçe başlıklar ve heceleme
+\usepackage{graphicx}               % Resim eklemek için
+\usepackage{amsmath}                % Formüller için
+
+\title{Rapor başlığı}
+\author{Ad Soyad}
+
+\begin{document}                    % Asıl içerik buradan başlar
+\maketitle
+
+\section{Giriş}                     % Numaralı bölüm başlığı
+Bu cümlede \textbf{kalın} ve \emph{italik} yazı var.
+Bir atıf örneği: \cite{anahtar2024}.
+
+\subsection{Yöntem}                 % Alt bölüm
+\begin{itemize}                     % Madde işaretli liste
+  \item Birinci madde
+  \item İkinci madde
+\end{itemize}
+
+Satır içi formül: $y = wx + b$. Numaralı formül:
+\begin{equation}
+  E = mc^2
+  \label{eq:enerji}
+\end{equation}
+Denklem~\ref{eq:enerji} ile hesaplandı.   % \label ve \ref ile otomatik numara
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{resimler/ornek.png}
+  \caption{Örnek görüntü.}
+  \label{fig:ornek}
+\end{figure}
+
+\begin{table}[h]
+  \centering
+  \caption{Sonuçlar}
+  \begin{tabular}{lcc}              % l: sola, c: ortaya hizalı sütun
+    \hline
+    Yöntem & Doğruluk & F1 \\
+    \hline
+    A      & 0,91     & 0,89 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\bibliographystyle{ieeetr}          % Kaynakça stili
+\bibliography{kaynaklar}            % kaynaklar.bib dosyası
+\end{document}
+```
+
+## Zotero'dan kaynakça
+
+Overleaf'in Zotero'yla doğrudan eşitlemesi ücretli planlarda. Ücretsiz yol, Zotero'daki koleksiyonu `.bib` dosyası olarak dışa aktarıp projeye yüklemek:
+
+<Steps>
+  <Step title="Better BibTeX'i kur">
+    Zotero'ya Better BibTeX eklentisini kur. Adımlar: [Zotero, LaTeX ve Overleaf
+    kullanıyorsan](/kaynak-yonetimi/zotero/#latex-ve-overleaf-kullaniyorsan).
+  </Step>
+  <Step title="Koleksiyonu dışa aktar">
+    Zotero'da koleksiyona sağ tıkla, **Export Collection** seç, biçim olarak
+    **Better BibTeX**'i seç ve `kaynaklar.bib` adıyla kaydet.
+  </Step>
+  <Step title="Overleaf'e yükle ve atıf yap">
+    Dosyayı projeye **Upload** ile yükle. Metinde `\cite{anahtar}` kullan;
+    anahtarları Better BibTeX üretir. Yeni kaynak ekledikçe dosyayı yeniden dışa
+    aktarıp yükle.
+  </Step>
+</Steps>
+
+## Yapay zekâyla LaTeX: doğru iş akışı
+
+Metnini bir yapay zekâ aracına verip LaTeX'e çevirtmek mantıklı bir başlangıç: biçimlendirmek, içerik üretmek değildir. Ama iki risk var. Araç "düzeltiyorum" diyerek cümlelerini sessizce değiştirebilir; o zaman metin artık tamamen senin olmaz. Hiç öğrenmeden ilerlersen de bir derleme hatasında ya da danışmanın "şu tabloyu düzelt" dediğinde takılırsın.
+
+<Steps>
+  <Step title="Metni kendin yaz">
+    İçeriği Word'de, bir not uygulamasında ya da doğrudan Overleaf'te kendin yaz.
+  </Step>
+  <Step title="Çevirirken içeriği kilitle">
+    Araçtan yalnızca biçimlendirmesini, kelimelere dokunmamasını açıkça iste. Örnek istem aşağıda.
+  </Step>
+  <Step title="Karşılaştır">
+    Çıktıdaki metni kendi metninle karşılaştır. Değişen bir cümle varsa düzelt.
+  </Step>
+  <Step title="Kodu açıklat">
+    Arada bir, kullanılan komutların ne işe yaradığını tek satırla açıklamasını iste. Birkaç rapordan sonra basit şeyleri kendin yazarsın.
+  </Step>
+  <Step title="Kaynakçayı asla yapay zekâya yazdırma">
+    Yapay zekâ araçları var olmayan kaynaklar için `@article{...}` kayıtları uydurabilir. Kaynaklar yalnızca Zotero'dan gelsin.
+  </Step>
+</Steps>
+
+```text
+Aşağıdaki metni LaTeX'e çevir. Kelimeleri, cümleleri ve anlamı değiştirme;
+yalnızca biçimlendir. Başlıklar için \section, tablolar için tabular kullan.
+Atıfları \cite{} olarak boş bırak, anahtarları ben ekleyeceğim. Yalnızca kodu ver.
+```
+
+Overleaf'in kendi yapay zekâ özellikleri de var: derleme hatalarını açıklayan **Error Assist**, tablo ve formül üreticileri, İngilizce dil önerileri. Ücretsiz planda günlük sınırlı kullanılır. Açmak için **Account Settings → AI features → Enable AI features** yolunu izle. Yapay zekâyı yazımda nerede kullanabileceğin: [AI ile tez ve makale yazmak](/yapay-zeka/ai-ile-yazim/).
+
+## İpuçları
+
+<Callout type="tip" title="10 saniyelik derleme sınırına takılırsan">
+  - Bölümleri ayrı dosyalara böl ve ana dosyaya `\input{bolumler / giris}` ile
+  ekle. Üzerinde çalışmadığın bölümleri geçici olarak yorum satırı yap (`%`). -
+  Resimleri yüklemeden önce küçült; çok büyük PNG'ler derlemeyi yavaşlatır. -
+  Yazarken belge sınıfına `draft` seçeneği ekle (`\documentclass[12pt,draft]
+  {report}`). Resimler yerine boş kutular basılır, derleme hızlanır. Son
+  çıktıdan önce seçeneği kaldır.
+</Callout>
+
+<Callout title="Kocaeli Üniversitesi FBE'de tez yazıyorsan">
+  GitHub'da KOÜ FBE tez yazım kılavuzuna göre hazırlanmış bir LaTeX şablonu var:
+  [kou-fbe-latex-tez](https://github.com/MGokcayK/kou-fbe-latex-tez). Şablonun
+  kendi açıklamasında resmî bir dosya olmadığı yazıyor ve 2021 kılavuzuna
+  dayanıyor; güncel kılavuzdaki yeni kurallar (örneğin yapay zekâ beyanı) eksik
+  olabilir. Kılavuz da daha önce kabul edilmiş tezlerin ya da kılavuzun kendi
+  biçiminin şablon olarak kullanılmamasını istiyor. Şablonu kullanmadan önce
+  güncel kılavuzla karşılaştır ve danışmanına sor: [Tez yazım
+  kuralları](/kou-fbe/tez-yazim-kurallari/). Ödevler ve makaleler için düz
+  `article` sınıfı yeterli.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+  - **Kırmızı hata mesajlarını görmezden gelmek:** Overleaf bazı hatalara rağmen
+  PDF üretir, ama çıktı beklediğin gibi olmayabilir. Hataları baştan düzelt;
+  Error Assist ya da hata mesajının ilk satırı çoğu zaman yeterli ipucu verir. -
+  **Dergi şablonunu değiştirmek:** Derginin şablonundaki biçim ayarlarıyla
+  oynama; dergi şablonunu olduğu gibi kullanmanı bekler. - **Projenin yedeğini
+  almamak:** Ücretsiz planda sürüm geçmişi 24 saat. Önemli aşamalarda projeyi
+  **Menu → Download → Source** ile bilgisayarına indir.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["zotero", "grammarly", "word-zotero"]} />
+
+Sonraki adım: İngilizce yazıyorsan dil denetimi için [Grammarly](/yazim/grammarly/).
+
+## Kaynaklar
+
+- [Overleaf: Planlar](https://www.overleaf.com/plans) (fiyatlar, ortak çalışan sayısı, günlük yapay zekâ kullanımı)
+- [Overleaf: Premium özellikler](https://docs.overleaf.com/getting-started/free-and-premium-plans/premium-features) (track changes, geçmiş, Zotero, GitHub, Dropbox)
+- [Overleaf: Plan sınırları](https://docs.overleaf.com/getting-started/free-and-premium-plans/plan-limits) (derleme süresi, dosya sayısı, yükleme boyutu)
+- [Overleaf: Ücretsiz derleme süresindeki değişiklik](https://www.overleaf.com/blog/changes-to-free-compile-timeout) (10 saniye)
+- [Overleaf: AI features](https://docs.overleaf.com/integrations-and-add-ons/ai-features) (özellikler ve açma yolu)
+- [Overleaf: Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+- [kou-fbe-latex-tez](https://github.com/MGokcayK/kou-fbe-latex-tez) (resmî olmayan KOÜ FBE şablonu)

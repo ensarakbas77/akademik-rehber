@@ -417,8 +417,10 @@ akademik-rehber/
   - "Yüksek lisansta yapılması gerekenler" bölümünün 9 sayfasının hepsi yazıldı (kaynak: `docs/kaynak-README.md` Gönderi 2 ve 4, Bölüm 6 ve 8). Maddeleri `checklist.ts`'te, sayfa sonunda `DerlemeNotu`.
   - `tools.ts`'e ORCID, Scopus/WoS, TÜBİTAK ARBİS, YÖK Tez Merkezi eklendi (yalnız ad, açıklama, resmî site; ücret bilgisi yok).
   - "Akademik yazım" bölümünün 8 sayfası yazıldı (`src/app/akademik-yazim/`). Literatür taraması sayfaları README Bölüm 10'dan (BTM535 örneği olmadan); makale sayfaları web'de doğrulanan kaynaklarla (ICMJE, COPE, YÖK Bilimsel Araştırma ve Yayın Etiği Yönergesi, Think. Check. Submit., Taylor & Francis, Elsevier, Springer Nature, Frontiers), sayfa sonunda "Kaynaklar" ve `LastChecked`. Bu sayfaların kontrol listeleri ilk dönem listesine katılmaz: her sayfa kendi `Checklist` kimliğini (`yazim-*`) kullanır. `tools.ts`'e IEEE Xplore ve Grammarly eklendi.
-  - Araç sayfaları: "Akademik kimlik" (8) ve "Kaynak bulma" (8) grupları yazıldı. Bilgiler 6 Kasım 2026'da web'de doğrulandı, `tools.ts`'te ilgili araçlara `info` eklendi. Akademik kimlik grubu yayında (`1ccc771`).
-- **Sıradaki:** Faz 3 devam: kalan araç sayfaları (Kaynak yönetimi: Zotero mu Mendeley mi; Not alma: Notion, Obsidian; Yazım: Word + Zotero, Overleaf, Grammarly, QuillBot; Yapay zekâ araçları: Elicit, Consensus, NotebookLM, AI ile yazım).
+  - Araç sayfaları: "Akademik kimlik" (8) ve "Kaynak bulma" (8) grupları yazıldı. Bilgiler 6 Kasım 2026'da web'de doğrulandı, `tools.ts`'te ilgili araçlara `info` eklendi. İkisi de yayında.
+  - "Zotero mu Mendeley mi?", "Not alma" (Notion, Obsidian) ve "Yazım" (Word + Zotero, Overleaf ve LaTeX, Grammarly, QuillBot) sayfaları yazıldı; bilgiler 6 Kasım 2026'da web'de doğrulandı. `tools.ts`'e QuillBot eklendi. Not: Grammarly artık Türkçe metinlerde de öneri veriyor (kaynak README eskimiş). Karar 7'deki KOÜ notu Word + Zotero sayfasında.
+  - MDX dosyalarına toplu `prettier --write` uygulama: metni yeniden sarar. Yalnız `.ts`/`.tsx` dosyalarını biçimlendir.
+- **Sıradaki:** Faz 3 devam: Yapay zekâ araçları (Elicit, Consensus, NotebookLM, AI ile yazım; AI sayfasına karar 6'daki KOÜ kutusu). Sonra Başlangıç ve Ek sayfaları (Faz 4 ile birlikte).
 
 ## 9. Çalışma kuralları (Claude için)
 
