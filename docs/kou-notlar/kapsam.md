@@ -178,7 +178,7 @@ Bu dosya üç not dosyasındaki her maddeyi bir site sayfasına bağlar. Sonunda
 | 3.8–3.9 | Alıntı, dipnot | YK | Yazıldı |
 | 3.10 | Ekler sayfası | YK | Yazıldı |
 | 3.11 | Kaynak gösterme ve yazım (a–k) | YK; **ayrıca** "Yazım > Word + Zotero ile atıf" sayfasına KOÜ notu (bkz. karar 7) | Yazıldı; Zotero sayfasındaki KOÜ notu bekliyor |
-| 4. USB ve teslim | Dijital kopya, imzasız sayfalar, YÖK Tez Veri Giriş Formu, dosya adları, RAR | MEZ; KL; **ayrıca** "Akademik kimlik > YÖK Ulusal Tez Merkezi" sayfasına çapraz bağlantı | Yazıldı; YÖK Tez Merkezi sayfasına bağlantı bekliyor |
+| 4. USB ve teslim | Dijital kopya, imzasız sayfalar, YÖK Tez Veri Giriş Formu, dosya adları, RAR | MEZ; KL; **ayrıca** "Akademik kimlik > YÖK Ulusal Tez Merkezi" sayfasına çapraz bağlantı | Yazıldı; YÖK Tez Merkezi sayfasından KOÜ Mezuniyet ve kontrol listesine bağlantı verildi |
 | Ek-1a – Ek-15 | Örnek sayfalar ve "ÖNEMLİ" kutuları | YK (bölüm bölüm); KL | Yazıldı |
 | Ek numarası tutarsızlıkları | Tablo | YK (bilgi kutusu) | Yazıldı |
 | Okunamayan görseller | Şekil 3.1–3.3, Ek-1a ölçüleri | YK (yazmadan önce PDF'e bakılacak) | Yazıldı: sayfada kılavuza yönlendirme (karar 5) |

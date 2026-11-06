@@ -72,6 +72,14 @@ export const tools: Tool[] = [
       "Akademik arama motoru; yeni yayınlar için e-posta uyarısı kurulabilir.",
     url: "https://scholar.google.com",
     href: "/kaynak-bulma/google-scholar/",
+    info: {
+      pricing: "Ücretsiz.",
+      platform: "Web (tarayıcı).",
+      account:
+        "Aramak için gerekmez. Profil için Google hesabı gerekir; profilin aramada görünmesi için doğrulanmış bir üniversite e-postası da gerekir.",
+      turkish: "Var",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "semantic-scholar",
@@ -80,6 +88,14 @@ export const tools: Tool[] = [
     short: "Yapay zekâ destekli akademik arama motoru.",
     url: "https://www.semanticscholar.org",
     href: "/kaynak-bulma/semantic-scholar/",
+    info: {
+      pricing: "Ücretsiz.",
+      platform: "Web (tarayıcı).",
+      account:
+        "Aramak için gerekmez. Yazar sayfasını sahiplenmek ve uyarı almak için hesap gerekir.",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "researchrabbit",
@@ -155,6 +171,65 @@ export const tools: Tool[] = [
       "Araştırmacılara verilen kalıcı kimlik numarası; isim karışıklığını önler.",
     url: "https://orcid.org",
     href: "/akademik-kimlik/orcid/",
+    info: {
+      pricing: "Ücretsiz.",
+      platform: "Web (tarayıcı).",
+      account: "Gerekir; orcid.org/register adresinden ücretsiz kayıt.",
+      turkish: "Var",
+      lastChecked: "2026-11",
+    },
+  },
+  {
+    slug: "dergipark",
+    name: "DergiPark",
+    category: "Akademik kimlik",
+    short:
+      "TÜBİTAK ULAKBİM'in Türkiye'deki akademik dergileri barındırdığı platform.",
+    url: "https://dergipark.org.tr",
+    href: "/akademik-kimlik/dergipark/",
+    info: {
+      pricing:
+        "Platformda hesap ücreti belirtilmiyor. Yayın ücreti alınıp alınmadığı dergiye göre değişir.",
+      platform: "Web (tarayıcı).",
+      account:
+        "Okumak için gerekmez. Makale göndermek ve hakemlik için hesap gerekir.",
+      turkish: "Var",
+      lastChecked: "2026-11",
+    },
+  },
+  {
+    slug: "ieee-account",
+    name: "IEEE hesabı",
+    category: "Akademik kimlik",
+    short:
+      "IEEE Xplore ve IEEE konferanslarında kullanılan ücretsiz hesap; üyelikten ayrıdır.",
+    url: "https://www.ieee.org",
+    href: "/akademik-kimlik/ieee/",
+    info: {
+      pricing:
+        "Hesap ücretsiz. IEEE üyeliği (öğrenci üyeliği dahil) ücretli; güncel tutar ieee.org'da.",
+      platform: "Web (tarayıcı).",
+      account: "Kendisi bir hesap. Üyelik için de önce hesap açılır.",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
+  },
+  {
+    slug: "researchgate",
+    name: "ResearchGate",
+    category: "Akademik kimlik",
+    short:
+      "Akademik sosyal ağ: yayınlarını paylaşır, yazarları takip eder, tam metin istersin.",
+    url: "https://www.researchgate.net",
+    href: "/akademik-kimlik/researchgate/",
+    info: {
+      pricing: "Kayıt ücretsiz.",
+      platform: "Web (tarayıcı).",
+      account:
+        "Gerekir. Kurumsal e-posta ile kayıt isteniyor; kurumsal e-postası olmayanlar için başvuru nadiren kabul ediliyor.",
+      turkish: "Yok (İngilizce)",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "scopus-wos",
@@ -173,6 +248,14 @@ export const tools: Tool[] = [
       "TÜBİTAK'ın araştırmacı bilgi sistemi; burs ve proje başvurularında kullanılır.",
     url: "https://arbis.tubitak.gov.tr",
     href: "/akademik-kimlik/tubitak-arbis/",
+    info: {
+      pricing: "TÜBİTAK burs, destek ve proje başvurularının ön koşulu.",
+      platform: "Web (tarayıcı).",
+      account:
+        "Gerekir. Giriş: T.C. kimlik no ve parola, e-imza, mobil imza ya da e-Devlet.",
+      turkish: "Var (Türkçe ve İngilizce)",
+      lastChecked: "2026-11",
+    },
   },
   {
     slug: "yok-tez-merkezi",
@@ -182,6 +265,13 @@ export const tools: Tool[] = [
       "Türkiye'deki lisansüstü tezlerin arandığı ve tezlerin teslim edildiği sistem.",
     url: "https://tez.yok.gov.tr",
     href: "/akademik-kimlik/yok-tez-merkezi/",
+    info: {
+      pricing: "Ücretsiz. Yazarın izin verdiği tezlerin tam metni açık.",
+      platform: "Web (tarayıcı).",
+      account: "Aramak için gerekmez. Tez veri girişi için e-Devlet ile giriş.",
+      turkish: "Var",
+      lastChecked: "2026-11",
+    },
   },
 ];
 

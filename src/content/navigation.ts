@@ -62,14 +62,18 @@ export const navigation: NavGroup[] = [
   {
     title: "Akademik kimlik",
     pages: [
-      p("ORCID", "/akademik-kimlik/orcid/"),
-      p("Google Scholar profili", "/akademik-kimlik/google-scholar-profili/"),
-      p("DergiPark", "/akademik-kimlik/dergipark/"),
-      p("Semantic Scholar", "/akademik-kimlik/semantic-scholar/"),
-      p("IEEE hesabı", "/akademik-kimlik/ieee/"),
-      p("ResearchGate", "/akademik-kimlik/researchgate/"),
-      p("TÜBİTAK ARBİS", "/akademik-kimlik/tubitak-arbis/"),
-      p("YÖK Ulusal Tez Merkezi", "/akademik-kimlik/yok-tez-merkezi/"),
+      p("ORCID", "/akademik-kimlik/orcid/", true),
+      p(
+        "Google Scholar profili",
+        "/akademik-kimlik/google-scholar-profili/",
+        true,
+      ),
+      p("DergiPark", "/akademik-kimlik/dergipark/", true),
+      p("Semantic Scholar", "/akademik-kimlik/semantic-scholar/", true),
+      p("IEEE hesabı", "/akademik-kimlik/ieee/", true),
+      p("ResearchGate", "/akademik-kimlik/researchgate/", true),
+      p("TÜBİTAK ARBİS", "/akademik-kimlik/tubitak-arbis/", true),
+      p("YÖK Ulusal Tez Merkezi", "/akademik-kimlik/yok-tez-merkezi/", true),
     ],
   },
   {

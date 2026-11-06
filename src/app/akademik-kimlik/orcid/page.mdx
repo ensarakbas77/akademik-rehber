@@ -1,0 +1,90 @@
+export const metadata = {
+  title: "ORCID",
+  description:
+    "Araştırmacılara verilen ücretsiz ve kalıcı kimlik numarası ORCID: kayıt, görünürlük ayarları, yayın ekleme ve diğer profillere bağlama.",
+};
+
+# ORCID
+
+ORCID, araştırmacılara verilen ücretsiz ve kalıcı bir kimlik numarasıdır (ORCID iD). `0000-000X-XXXX-XXXX` biçimindeki bu numara, adı seninkine benzeyen başka araştırmacılarla karıştırılmanı önler ve kariyerin boyunca seninle kalır.
+
+<ToolInfoBox slug="orcid" />
+
+## Ne zaman gerekir?
+
+- **Makale ya da bildiri gönderirken:** Birçok dergi ve konferans gönderimde yazarların ORCID numarasını ister. DergiPark'taki dergilerin bir kısmında bu zorunludur.
+- **Burs, proje ve başvurularda:** Kimliğini ve yayınlarını tek numarayla göstermek için.
+- **Diğer akademik profillerini bağlamak için:** Google Scholar, Semantic Scholar, ResearchGate ve dergi sistemlerinde aynı numarayı kullanırsın.
+
+İlk açılacak akademik hesap budur: diğer profillerin çoğu ORCID numaranı ister ya da ona bağlanır.
+
+## Kurulum
+
+<Steps>
+  <Step title="Kayıt ol">
+    [orcid.org/register](https://orcid.org/register) adresinden adını, soyadını ve e-posta adresini girerek kayıt ol. Kayıt ücretsiz. Arayüzün dilini Türkçe yapabilirsin.
+  </Step>
+  <Step title="Varsayılan görünürlüğü seç">
+    Kayıt sırasında kaydındaki bilgilerin varsayılan olarak kimlere görüneceğini seçersin. Üç seçenek var:
+
+    - **Everyone (Herkes):** herkes görür
+    - **Trusted parties (Güvenilen taraflar):** yalnızca senin izin verdiğin kurumlar ve kişiler görür
+    - **Only me (Yalnızca ben):** yalnızca sen görürsün
+
+    Profilin diğer araştırmacılar ve dergiler tarafından görülebilsin diye "Everyone" seçmek yaygın bir öneridir. ORCID numaran her durumda herkese açıktır; e-posta adreslerin ise varsayılan olarak yalnızca sana görünür. Görünürlüğü daha sonra her bilgi için ayrı ayrı değiştirebilirsin.
+  </Step>
+  <Step title="Yedek e-posta ekle">
+    ORCID, hesabına erişimi kaybetmemen için en az bir ek e-posta adresi eklemeni öneriyor. Kurumsal e-postan değişebilir; kişisel bir adresi de ekle.
+  </Step>
+</Steps>
+
+## Profilini tamamla
+
+<Steps>
+  <Step title="Kurum bilgini ekle">
+    Education (eğitim) bölümüne yüksek lisans yaptığın üniversiteyi, enstitüyü ve programını ekle.
+  </Step>
+  <Step title="Yayınlarını ekle">
+    Works bölümündeki **Add works** menüsünde dört yol var:
+
+    - **Search & link:** Yayınlarını başka bir sistemden bağlayarak aktarır. Önerilen yol bu.
+    - **DOI gibi bir tanımlayıcıyla ekleme:** Tek bir yayını hızlıca ekler.
+    - **Import BibTeX:** Zotero'dan dışa aktardığın bir BibTeX dosyasını içe alır.
+    - **Add manually:** Bilgileri elle girersin.
+
+    Henüz yayının yoksa sorun değil; ilk yayınında buraya dönersin.
+  </Step>
+  <Step title="Otomatik güncellemeyi aç">
+    ORCID, kaydını Crossref ve DataCite gibi sistemlerle bağlamanı öneriyor. Böylece DOI alan yeni yayınların izin verdiğin ölçüde kaydına kendiliğinden eklenir.
+  </Step>
+</Steps>
+
+## İpuçları
+
+<Callout type="tip" title="Tek kimlik, her yerde aynı numara">
+- Numaranı diğer profillerine ekle: Google Scholar, Semantic Scholar, ResearchGate, DergiPark. Hepsi birbirine bağlı tek bir akademik kimlik olur.
+- Makale gönderirken yazar bilgisine ORCID numaranı eksiksiz yaz; birçok dergi bunu yayımlanan makalede gösterir.
+- Adının farklı yazılışları varsa (örneğin Türkçe karakterli ve karaktersiz) ORCID'de "Other names" (diğer adlar) olarak ekleyebilirsin.
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+- **İkinci bir hesap açmak:** Şifreni unuttuysan yeni hesap açma; şifre sıfırlamayı kullan. İki ayrı numara, yayınlarını ikiye böler.
+- **Her şeyi "Only me" bırakmak:** Kayıt boş görünür, kimse yayınlarını göremez.
+- **Yalnızca kurumsal e-posta kullanmak:** Mezun olunca ya da kurum değişince erişimini kaybedebilirsin. Yedek e-posta ekle.
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["google-scholar", "semantic-scholar", "researchgate", "dergipark"]} />
+
+Sonraki adım: [Google Scholar profili](/akademik-kimlik/google-scholar-profili/) aç ve ORCID numaranı oraya da ekle.
+
+## Kaynaklar
+
+- [ORCID: For researchers](https://info.orcid.org/researchers/) (ücretsiz kayıt, bağlantılar, yedek e-posta)
+- [ORCID: Kayıt sayfası](https://orcid.org/register)
+- [ORCID: Türkçe, Almanca ve Lehçe arayüz duyurusu](https://info.orcid.org/turkish-german-and-polish-added-registry-now-supports-95-of-languages-of-users/)
+- [UC Irvine Libraries: ORCID'e yayın ekleme](https://guides.lib.uci.edu/orcid/add-your-works)
+- [Erasmus University Rotterdam: ORCID kaydı ve görünürlük ayarları](https://libguides.eur.nl/ORCID/register)
