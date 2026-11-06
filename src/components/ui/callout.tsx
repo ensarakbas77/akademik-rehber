@@ -2,8 +2,18 @@ import { Info, Lightbulb, TriangleAlert } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 const types = {
-  info: { label: "Bilgi", icon: Info, border: "border-l-accent", tone: "text-accent" },
-  tip: { label: "İpucu", icon: Lightbulb, border: "border-l-accent", tone: "text-accent" },
+  info: {
+    label: "Bilgi",
+    icon: Info,
+    border: "border-l-accent",
+    tone: "text-accent",
+  },
+  tip: {
+    label: "İpucu",
+    icon: Lightbulb,
+    border: "border-l-accent",
+    tone: "text-accent",
+  },
   // Uyarı, vurgu renginden ayrı görünmesi gereken tek renk (skill kuralı).
   warning: {
     label: "Dikkat",

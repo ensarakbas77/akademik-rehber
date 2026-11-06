@@ -24,7 +24,11 @@ export const navigation: NavGroup[] = [
   {
     title: "Yüksek lisansta yapılması gerekenler",
     pages: [
-      p("Okumaya erken başla", "/yapilmasi-gerekenler/okumaya-erken-basla/"),
+      p(
+        "Okumaya erken başla",
+        "/yapilmasi-gerekenler/okumaya-erken-basla/",
+        true,
+      ),
       p(
         "Kaynaklarını ve notlarını düzenli tut",
         "/yapilmasi-gerekenler/duzenli-tut/",
@@ -73,7 +77,7 @@ export const navigation: NavGroup[] = [
   {
     title: "Kaynak yönetimi",
     pages: [
-      p("Zotero", "/kaynak-yonetimi/zotero/"),
+      p("Zotero", "/kaynak-yonetimi/zotero/", true),
       p("Zotero mu Mendeley mi?", "/kaynak-yonetimi/zotero-mu-mendeley-mi/"),
     ],
   },
@@ -164,3 +168,9 @@ export const normalizePath = (path: string) =>
 export const readyPages = navigation.flatMap((g) =>
   g.pages.filter((p) => p.ready),
 );
+
+/** Yol, yazılmış bir sayfaya mı gidiyor? (sondaki "/" ve "#..." önemsiz) */
+export const isReadyPath = (href: string) =>
+  readyPages.some(
+    (p) => normalizePath(p.href) === normalizePath(href.split("#")[0]),
+  );

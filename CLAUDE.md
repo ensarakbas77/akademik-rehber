@@ -405,7 +405,15 @@ akademik-rehber/
   - `kapsam.md` §1–3 tablolarına "Durum" sütunu eklendi; her madde işaretli.
   - Bekleyenler: `/kaynaklar/` sayfası; karar 6 (AI sayfasında KOÜ kutusu) ve karar 7 (Zotero sayfasında KOÜ notu); YÖK Tez Merkezi sayfasına bağlantı. Bunlar o sayfalar yazılınca eklenecek.
   - Build, önekli build, tsc, lint ve iç link/çapa kontrolü temiz. Commit edilmedi.
-- **Sıradaki:** Ensar'ın KOÜ sayfalarını okuyup kontrol etmesi; sonra commit ve Faz 2 (pilot sayfalar). *(Claude Code: her faz bitince bu satırı güncelle.)*
+  - KOÜ bölümü commit edildi ve yayında.
+- **Faz 2 (pilot sayfalar) yazıldı, ekran görüntüleri bekleniyor:**
+  - Sayfalar: `/kaynak-yonetimi/zotero/` (araç kalıbı) ve `/yapilmasi-gerekenler/okumaya-erken-basla/` (tavsiye kalıbı).
+  - Bileşenler: `Steps`/`Step`, `Screenshot`, `ToolInfoBox`, `ToolLinkCard`/`ToolLinks`, `AdviceChecklist`, `LastChecked`. Veri: `src/content/tools.ts`, `src/content/checklist.ts`.
+  - Tavsiye kontrol listeleri tek anahtarı (`checklist:ilk-donem`) paylaşır; "Temizle" yalnız o sayfanın maddelerini siler.
+  - MDX'te henüz yazılmamış sayfaya giden link düz metin + "(yakında)" olarak görünür, sayfa `ready` olunca kendiliğinden link olur.
+  - Zotero bilgileri 6 Kasım 2026'da web'de doğrulandı (Zotero 10, 300 MB ücretsiz depolama).
+  - Çekilecek ekran görüntüleri listesi: `docs/ekran-goruntuleri.md`. Commit edilmedi.
+- **Sıradaki:** Ensar'ın iki pilot sayfayı kontrol etmesi ve ekran görüntülerini çekmesi; sonra Faz 3 (içerik). *(Claude Code: her faz bitince bu satırı güncelle.)*
 
 ## 9. Çalışma kuralları (Claude için)
 

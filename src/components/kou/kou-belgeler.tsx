@@ -4,10 +4,7 @@ import { fbeSite, kouBelgeler } from "@/content/kou";
 export function KouBelgeler() {
   return (
     <section className="mt-16 max-w-prose rounded-xl border border-border p-5">
-      <h2
-        id="kaynak-belgeler"
-        className="scroll-mt-20 text-base font-semibold"
-      >
+      <h2 id="kaynak-belgeler" className="scroll-mt-20 text-base font-semibold">
         Kaynak belgeler
       </h2>
       <ul className="mt-3 space-y-3 text-sm leading-6">

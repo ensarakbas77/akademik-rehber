@@ -1,0 +1,154 @@
+export const metadata = {
+  title: "Zotero",
+  description:
+    "Ücretsiz kaynak yöneticisi Zotero: kurulum, tarayıcı eklentisi, koleksiyonlar, DOI ile ekleme, künye kontrolü, Word'de APA ile atıf ve Better BibTeX ile Overleaf.",
+};
+
+# Zotero
+
+Zotero, okuduğun makalelerin künyelerini ve PDF'lerini tek bir yerde toplayan ücretsiz bir kaynak yöneticisi. Word'de ya da LaTeX'te yazarken atıfları ve kaynakçayı senin yerine biçimlendirir.
+
+<ToolInfoBox slug="zotero" />
+
+## Ne zaman kullanılır?
+
+- **Bir makaleyi okumaya değer bulduğun anda:** Künyesini ve PDF'ini kaydet. Sonra "o makale neydi" diye aramazsın.
+- **Ödev, makale ya da tez yazarken:** Metne atıf eklersin, kaynakça kendiliğinden oluşur. Kaynak eklendikçe ya da çıkarıldıkça kaynakça güncellenir.
+- **Kaynakları konulara ayırmak için:** Her ödev, makale ya da tez bölümü için ayrı bir koleksiyon açarsın.
+
+İlk dönemde kurulması önerilen araçlardan biri. Kaynak sayısı azken başlamak, sonradan yüzlerce kaynağı taşımaktan çok daha kolay.
+
+## Kurulum
+
+<Steps>
+  <Step title="Masaüstü uygulamasını indir">
+    [zotero.org/download](https://www.zotero.org/download/) adresinden işletim sistemine uygun sürümü indir ve kur. Kasım 2026 itibarıyla güncel sürüm Zotero 10.
+  </Step>
+  <Step title="Tarayıcı eklentisini (Zotero Connector) kur">
+    Aynı sayfadan tarayıcın için **Zotero Connector**'ı ekle. Chrome, Firefox ve Edge için ayrı eklenti var. Safari'nin eklentisi Zotero'yla birlikte gelir; Safari'nin eklenti ayarlarından açman yeterli. Kayıtların doğrudan bilgisayarındaki kütüphaneye ve seçtiğin koleksiyona düşmesi için kaydederken Zotero açık olmalı.
+  </Step>
+  <Step title="Word eklentisini kontrol et">
+    Word bilgisayarında kuruluysa Zotero'yu ilk açtığında Word eklentisi kendiliğinden kurulur. Word'ü açıp üst menüde **Zotero** sekmesini gör. Sekme yoksa Zotero'da **Edit → Settings → Cite → Word Processor Plugins** yolundan eklentiyi yeniden kur. macOS'ta ayarlar **Zotero → Settings** altında.
+  </Step>
+  <Step title="İstersen hesap aç ve eşitlemeyi kur">
+    Kütüphaneni başka bir bilgisayarda ya da telefonda da görmek istiyorsan [zotero.org](https://www.zotero.org) üzerinden ücretsiz bir hesap aç. Sonra **Settings → Sync** bölümünden hesabınla giriş yap. PDF'ler için ücretsiz alan 300 MB; dolarsa ücretli plana geçebilir ya da PDF'leri yalnızca bilgisayarında tutabilirsin.
+  </Step>
+</Steps>
+
+Zotero'nun arayüzü Türkçe olarak da kullanılabiliyor. Bu sayfada menü adlarının resmî belgelerdeki İngilizce hâli verildi; Türkçe arayüzde aynı yerde Türkçe karşılıklarını görürsün.
+
+## Uygulamalı kullanım: bir makaleyi kaydedip Word'de APA ile atıf yapmak
+
+Senaryo: Bir ödev için makale topluyorsun ve raporu Word'de, APA 7 biçimiyle yazacaksın.
+
+### 1. Koleksiyonları kur
+
+<Steps>
+  <Step title="Ödev için bir koleksiyon aç">
+    Sol panelde kütüphanenin adına sağ tıkla ve yeni bir koleksiyon (*New Collection*) oluştur. Adını ödevin adı yap.
+  </Step>
+  <Step title="Her konu başlığı için bir alt koleksiyon ekle">
+    Ödevin bölümlerine göre alt koleksiyonlar aç. Genel kaynaklar ve derleme (survey) makaleleri için bir de `0 Genel` alt koleksiyonu iyi bir başlangıç.
+  </Step>
+</Steps>
+
+Bir makale iki başlığa birden giriyorsa onu ikinci koleksiyona da **sürükleyip bırak**. Zotero kopya oluşturmaz; aynı kayıt iki koleksiyonda birden görünür.
+
+### 2. Makaleyi kaydet
+
+Makaleyi eklemenin üç yolu var. En güveniliri DOI ile eklemek.
+
+<Steps>
+  <Step title="DOI biliyorsan: Tanımlayıcıya göre öğe ekle">
+    Üst çubuktaki **sihirli değnek** simgesine (*Add Item by Identifier*, Türkçe arayüzde "Tanımlayıcıya göre öğe ekle") tıkla, DOI'yi yapıştır ve Enter'a bas. Künye eksiksiz gelir. Aynı yolla ISBN ile kitap da eklenir. Birden fazla DOI'yi boşluk ya da satır sonuyla ayırıp tek seferde ekleyebilirsin.
+  </Step>
+  <Step title="Makalenin sayfasındaysan: Zotero Connector">
+    Önce Zotero'da kaydedeceğin koleksiyonu seç. Sonra tarayıcıda Connector simgesine tıkla. Simge sayfaya göre değişir: makale sayfasında dergi makalesi simgesi, tanınmayan sayfada gri bir web sayfası simgesi görünür. Açılan küçük pencerede kaydedilecek koleksiyonu değiştirebilir, etiket ekleyebilirsin. Erişimin olan ya da açık erişimli PDF'ler çoğu sitede kayıtla birlikte iner.
+  </Step>
+  <Step title="Elinde yalnızca PDF varsa: sürükle bırak">
+    PDF dosyasını Zotero'ya sürükle. Zotero PDF'ten künye bilgisini bulmaya çalışır ve üstüne bir kayıt oluşturur. Bulamazsa PDF'e sağ tıklayıp *Create Parent Item* seç ve DOI'yi gir.
+  </Step>
+</Steps>
+
+### 3. Künyeyi kontrol et
+
+Kaynakça, kayıttaki bilgilerden üretilir. Kayıt yanlışsa kaynakça da yanlış olur. Her kayıtta sağdaki bilgi panelinden şunlara bak:
+
+- **Yazarlar, yıl, başlık, dergi adı, cilt, sayı, sayfa ve DOI** eksiksiz mi?
+- **Öğe türü doğru mu?** Kayıt "Web Sayfası" türünde ve yazarsız geldiyse (genelde bir PDF linkinden kaydedildiğinde olur) sil ve DOI ile yeniden ekle.
+- **Başlık cümle düzeninde mi?** APA 7'de makale başlıkları cümle düzeninde yazılır: yalnızca ilk kelimenin ve özel isimlerin baş harfi büyük. Zotero bunu kendisi yapmaz; başlığı kayıtta nasıl tuttuysan öyle yazar. Başlığa (düzenleme kutusunu açmadan) sağ tıkla, *Sentence case* (Türkçe arayüzde "Cümle düzeni") seç, sonra özel isimleri ve kısaltmaları elle düzelt. İki noktadan sonraki ilk harfi Zotero APA için kendisi büyütür.
+
+### 4. Word'de atıf ekle
+
+<Steps>
+  <Step title="İlk atıfı ekle ve stili seç">
+    Word'de **Zotero** sekmesinde **Add/Edit Citation**'a tıkla. İlk seferde Zotero bir stil sorar: **American Psychological Association 7th edition** seç. Aynı pencerede dil olarak **Türkçe** seçersen atıf ve kaynakçadaki sabit ifadeler (bağlaçlar, kısaltmalar) Türkçe yazılır.
+  </Step>
+  <Step title="Makaleyi ara ve ekle">
+    Açılan arama kutusuna yazarın soyadını ya da başlıktan bir kelime yaz, listeden makaleyi seç ve Enter'a bas. Atıf metne eklenir.
+  </Step>
+  <Step title="Kaynakçayı ekle">
+    İmleci belgenin sonuna götür ve **Add/Edit Bibliography**'ye tıkla. Metindeki bütün atıfların kaynakçası oluşur.
+  </Step>
+  <Step title="Metin değiştikçe yenile">
+    Kaynak ekleyip çıkardığında ya da Zotero'da bir künyeyi düzelttiğinde **Refresh**'e tıkla. Atıflar ve kaynakça güncellenir.
+  </Step>
+</Steps>
+
+Word'le çalışmanın ayrıntıları (belgeyi başkasıyla paylaşmak, stili değiştirmek) [Word + Zotero ile atıf](/yazim/word-ve-zotero/) sayfasında anlatılacak.
+
+### LaTeX ve Overleaf kullanıyorsan
+
+Overleaf'in Zotero'yla doğrudan eşitlemesi ücretli planlarda var. Ücretsiz yol, kaynakları `.bib` dosyası olarak dışa aktarmak:
+
+<Steps>
+  <Step title="Better BibTeX eklentisini kur">
+    [Better BibTeX](https://retorque.re/zotero-better-bibtex/) Zotero için ücretsiz bir eklenti. Eklentinin GitHub sayfasındaki son sürümden `.xpi` dosyasını indir. Firefox kullanıyorsan linke sağ tıklayıp kaydet; sol tıklarsan Firefox dosyayı kendi eklentisi sanar. Zotero'da *Tools → Plugins* penceresini aç, sağ üstteki dişli simgesinden *Install Plugin From File…* seç ve dosyayı göster. Eklenti Zotero 10 ile çalışıyor.
+  </Step>
+  <Step title="Koleksiyonu dışa aktar">
+    Tez ya da makale koleksiyonuna sağ tıkla, *Export Collection* seç, biçim olarak **Better BibTeX** seç ve dosyayı `kaynaklar.bib` adıyla kaydet.
+  </Step>
+  <Step title="Dosyayı Overleaf'e yükle">
+    Dosyayı Overleaf projesine yükle (*Upload*). Metinde `\cite{anahtar}` ile atıf yap. Atıf anahtarlarını Better BibTeX kendisi üretir. Zotero'ya yeni kaynak ekledikçe dosyayı yeniden dışa aktarıp yükle.
+  </Step>
+</Steps>
+
+Overleaf'e kurumsal e-postanla giriş yap: üniversitenin kurumsal lisansı varsa ücretli özellikler açılabilir. Ayrıntı: [Overleaf ve LaTeX'e giriş](/yazim/overleaf-ve-latex/).
+
+## İpuçları
+
+<Callout type="tip" title="Düzen baştan kurulursa kolay">
+- Kaydetmeden önce koleksiyonu seç. Böylece makale doğrudan doğru yere düşer.
+- DOI'yi gördüğün her yerde DOI ile ekle. Künye eksiksiz ve en temiz böyle gelir.
+- Ücretli bir makalenin yasal açık erişim sürümünü bulmak için [Unpaywall](/kaynak-bulma/unpaywall/) eklentisini Zotero Connector'ın yanına kur.
+- PDF'leri Zotero'nun kendi okuyucusunda açıp üzerinde vurgu ve not alabilirsin. Notlar kaydın altında saklanır.
+</Callout>
+
+<Callout title="Kocaeli Üniversitesi FBE'de tez yazıyorsan">
+Enstitünün tez yazım kılavuzu kaynakları yazar soyadı ve yılla göstermeyi istiyor, ama bir stil adı (APA, IEEE vb.) vermiyor. Zotero'da hangi stilin seçileceği kılavuzda yazmıyor. Seçtiğin stilin çıktısını kılavuzdaki örneklerle karşılaştır: [Tez yazım kuralları, Kaynak gösterme](/kou-fbe/tez-yazim-kurallari/#kaynak-gosterme).
+</Callout>
+
+## Sık yapılan hatalar
+
+<Callout type="warning" title="Bunlara dikkat">
+- **Künyeyi kontrol etmemek:** Zotero ne kaydettiyse kaynakçaya o yazılır. Eksik yazar, yanlış yıl ya da "Web Sayfası" türündeki kayıt kaynakçada hata olarak çıkar.
+- **Word'de atıfı elle düzeltmek:** Zotero'nun eklediği atıf ya da kaynakça metnini elle değiştirirsen, Refresh'te değişikliğin kaybolabilir. Düzeltmeyi Zotero'daki kayıtta yap, sonra Refresh'e bas.
+- **Taslak sürüme atıf yapmak:** Makalenin yayımlanmış sürümü varsa ona atıf yap. Geçici indirme linklerini (Academia.edu gibi sitelerden ya da `Expires=` içeren adreslerden) kaynak olarak kullanma.
+- **İki kaynak yöneticisini birlikte kullanmak:** Zotero ve Mendeley'i aynı anda kullanmak kaynakları ikiye böler. Birini seç: [Zotero mu Mendeley mi?](/kaynak-yonetimi/zotero-mu-mendeley-mi/)
+</Callout>
+
+## İlgili araçlar ve sonraki adım
+
+<ToolLinks slugs={["word-zotero", "overleaf", "unpaywall", "notion"]} />
+
+Sonraki adım: Okuduğun makalelerin notlarını bir takip tablosunda topla. [Okumaya erken başla](/yapilmasi-gerekenler/okumaya-erken-basla/) sayfası bunun nasıl yapılacağını anlatıyor.
+
+## Kaynaklar
+
+- [Zotero indirme sayfası](https://www.zotero.org/download/)
+- [Zotero depolama planları](https://www.zotero.org/storage)
+- [Zotero'ya öğe ekleme (resmî belge)](https://www.zotero.org/support/adding_items_to_zotero)
+- [Word eklentisinin kurulumu (resmî belge)](https://www.zotero.org/support/word_processor_plugin_installation)
+- [Başlıkları cümle düzenine çevirme (resmî belge)](https://www.zotero.org/support/kb/sentence_casing)
+- [Zotero 10 duyurusu](https://forums.zotero.org/discussion/133256/announcing-zotero-10)
+- [Better BibTeX kurulumu](https://retorque.re/zotero-better-bibtex/installation/)

@@ -2,9 +2,16 @@ import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
 import { isValidElement, type ReactNode } from "react";
 import { KouBelgeler } from "@/components/kou/kou-belgeler";
+import { AdviceChecklist } from "@/components/tools/advice-checklist";
+import { ToolInfoBox } from "@/components/tools/tool-info-box";
+import { ToolLinkCard, ToolLinks } from "@/components/tools/tool-link-card";
 import { Callout } from "@/components/ui/callout";
 import { Checklist } from "@/components/ui/checklist";
 import { Kaynak } from "@/components/ui/kaynak";
+import { LastChecked } from "@/components/ui/last-checked";
+import { Screenshot } from "@/components/ui/screenshot";
+import { Step, Steps } from "@/components/ui/steps";
+import { isReadyPath } from "@/content/navigation";
 import { slugify } from "@/lib/slugify";
 
 /** Başlığın düz metnini çıkarır (kalın, kod gibi iç etiketler dahil). */
@@ -56,12 +63,27 @@ const components: MDXComponents = {
   li: (props) => <li className="pl-1 marker:text-muted" {...props} />,
   strong: (props) => <strong className="font-semibold" {...props} />,
   // Site içi linkler next/link'e gider, böylece basePath önekini otomatik alır.
-  a: ({ href = "", ...props }) =>
-    href.startsWith("/") ? (
-      <Link href={href} className={link} {...props} />
-    ) : (
-      <a href={href} className={link} {...props} />
-    ),
+  // Henüz yazılmamış sayfaya giden link düz metin olarak, "(yakında)" notuyla
+  // görünür; sayfa navigation.ts'te ready olunca kendiliğinden link olur.
+  a: ({ href = "", children, ...props }) => {
+    if (!href.startsWith("/"))
+      return (
+        <a href={href} className={link} {...props}>
+          {children}
+        </a>
+      );
+    if (!isReadyPath(href.split("#")[0]))
+      return (
+        <span>
+          {children} <span className="text-sm text-muted">(yakında)</span>
+        </span>
+      );
+    return (
+      <Link href={href} className={link} {...props}>
+        {children}
+      </Link>
+    );
+  },
   blockquote: (props) => (
     <blockquote
       className="my-6 max-w-prose border-l-2 border-border pl-4 text-muted [&>p]:my-2"
@@ -101,10 +123,18 @@ const components: MDXComponents = {
     />
   ),
   // MDX'te import etmeden kullanılabilen proje bileşenleri.
+  AdviceChecklist,
   Callout,
   Checklist,
   Kaynak,
   KouBelgeler,
+  LastChecked,
+  Screenshot,
+  Step,
+  Steps,
+  ToolInfoBox,
+  ToolLinkCard,
+  ToolLinks,
 };
 
 export function useMDXComponents(): MDXComponents {

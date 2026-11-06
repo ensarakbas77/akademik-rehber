@@ -36,7 +36,13 @@ function write(key: string, value: string) {
 }
 
 /** İşaretlenebilir madde listesi. `id` her liste için benzersiz olmalı. */
-export function Checklist({ id, items }: { id: string; items: ChecklistItem[] }) {
+export function Checklist({
+  id,
+  items,
+}: {
+  id: string;
+  items: ChecklistItem[];
+}) {
   const key = `checklist:${id}`;
   const raw = useSyncExternalStore(
     subscribe,
@@ -79,7 +85,13 @@ export function Checklist({ id, items }: { id: string; items: ChecklistItem[] })
                   onChange={() => toggle(item.id)}
                   className="mt-1.5 size-4 shrink-0 accent-accent"
                 />
-                <span className={done.has(item.id) ? "text-muted line-through decoration-muted/60" : undefined}>
+                <span
+                  className={
+                    done.has(item.id)
+                      ? "text-muted line-through decoration-muted/60"
+                      : undefined
+                  }
+                >
                   {item.text}
                   {item.kaynak && (
                     <>
@@ -99,7 +111,13 @@ export function Checklist({ id, items }: { id: string; items: ChecklistItem[] })
         </span>
         <button
           type="button"
-          onClick={() => write(key, "[]")}
+          onClick={() => {
+            // Yalnız bu listedeki maddeleri temizle; aynı anahtarı paylaşan
+            // diğer sayfaların işaretleri kalsın.
+            const next = new Set(done);
+            items.forEach((item) => next.delete(item.id));
+            write(key, JSON.stringify([...next]));
+          }}
           disabled={count === 0}
           className="rounded-lg px-2 py-1 transition-colors hover:bg-border/40 hover:text-fg disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-muted motion-reduce:transition-none"
         >
