@@ -19,8 +19,6 @@ export const navigation: NavGroup[] = [
       p("Kurulum yol haritası", "/baslangic/kurulum-yol-haritasi/"),
       p("İlk dönem kontrol listesi", "/baslangic/ilk-donem-kontrol-listesi/"),
       p("İlk 30 gün planı", "/baslangic/ilk-30-gun-plani/"),
-      // Geçici: Faz 1 düzen denemesi. İçerik sayfaları gelince kaldırılacak.
-      p("Deneme sayfası", "/deneme/", true),
     ],
   },
   {
@@ -121,21 +119,31 @@ export const navigation: NavGroup[] = [
     ],
   },
   {
-    // Taslak liste: kesin sayfalar KOÜ kapsam haritasından sonra belirlenecek.
+    // Kesin liste: docs/kou-notlar/kapsam.md §5 (Ensar onayladı, 6 Kasım 2026).
     title: "Kocaeli Üniversitesi FBE",
     pages: [
-      p("Genel bakış ve süreç haritası", "/kou-fbe/genel-bakis/"),
-      p("Önemli süreler ve sayılar", "/kou-fbe/sureler-ve-sayilar/"),
-      p("Dersler, kredi ve not sistemi", "/kou-fbe/dersler-ve-notlar/"),
-      p("Danışman", "/kou-fbe/danisman/"),
-      p("Tez önerisi ve tez dönemi", "/kou-fbe/tez-onerisi/"),
-      p("Tez yazım kuralları", "/kou-fbe/tez-yazim-kurallari/"),
-      p("İntihal raporu ve tez teslimi", "/kou-fbe/intihal-ve-teslim/"),
-      p("Tez savunma sınavı", "/kou-fbe/savunma/"),
-      p("Mezuniyet", "/kou-fbe/mezuniyet/"),
-      p("Kayıt dondurma, izin ve ilişik kesme", "/kou-fbe/kayit-dondurma/"),
-      p("Teslim öncesi kontrol listesi", "/kou-fbe/teslim-kontrol-listesi/"),
-      p("Sık sorulan sorular", "/kou-fbe/sss/"),
+      p("Genel bakış ve süreç haritası", "/kou-fbe/genel-bakis/", true),
+      p("Önemli süreler ve sayılar", "/kou-fbe/sureler-ve-sayilar/", true),
+      p("Kayıt, muafiyet ve yatay geçiş", "/kou-fbe/kayit-ve-muafiyet/", true),
+      p("Dersler, kredi ve not sistemi", "/kou-fbe/dersler-ve-notlar/", true),
+      p("Danışman", "/kou-fbe/danisman/", true),
+      p("Tez konusu ve tez dönemi", "/kou-fbe/tez-konusu/", true),
+      p("Yayın şartı", "/kou-fbe/yayin-sarti/", true),
+      p("Tez yazım kuralları", "/kou-fbe/tez-yazim-kurallari/", true),
+      p("İntihal raporu ve tez teslimi", "/kou-fbe/intihal-ve-teslim/", true),
+      p("Tez savunma sınavı", "/kou-fbe/savunma/", true),
+      p("Mezuniyet", "/kou-fbe/mezuniyet/", true),
+      p(
+        "İzin, öğrenime ara verme ve ilişik kesme",
+        "/kou-fbe/izin-ve-ilisik-kesme/",
+        true,
+      ),
+      p(
+        "Teslim öncesi kontrol listesi",
+        "/kou-fbe/teslim-kontrol-listesi/",
+        true,
+      ),
+      p("Sık sorulan sorular", "/kou-fbe/sss/", true),
     ],
   },
   {

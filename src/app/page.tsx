@@ -14,10 +14,10 @@ export default function Home() {
         </p>
         <p className="mt-8">
           <Link
-            href="/deneme/"
+            href="/kou-fbe/genel-bakis/"
             className="inline-flex h-10 items-center gap-2 rounded-lg bg-accent px-4 text-sm font-medium text-accent-fg transition-colors hover:bg-accent/90 motion-reduce:transition-none"
           >
-            Deneme sayfasına git
+            KOÜ FBE bölümüne git
           </Link>
         </p>
       </div>

@@ -1,6 +1,10 @@
 import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
 import { isValidElement, type ReactNode } from "react";
+import { KouBelgeler } from "@/components/kou/kou-belgeler";
+import { Callout } from "@/components/ui/callout";
+import { Checklist } from "@/components/ui/checklist";
+import { Kaynak } from "@/components/ui/kaynak";
 import { slugify } from "@/lib/slugify";
 
 /** Başlığın düz metnini çıkarır (kalın, kod gibi iç etiketler dahil). */
@@ -96,6 +100,11 @@ const components: MDXComponents = {
       {...props}
     />
   ),
+  // MDX'te import etmeden kullanılabilen proje bileşenleri.
+  Callout,
+  Checklist,
+  Kaynak,
+  KouBelgeler,
 };
 
 export function useMDXComponents(): MDXComponents {

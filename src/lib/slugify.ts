@@ -11,12 +11,18 @@ const map: Record<string, string> = {
   Ö: "o",
   Ş: "s",
   Ü: "u",
+  â: "a",
+  î: "i",
+  û: "u",
+  Â: "a",
+  Î: "i",
+  Û: "u",
 };
 
 /** Türkçe metinden ASCII kimlik üretir: "Kaynak gösterme" -> "kaynak-gosterme" */
 export const slugify = (s: string) =>
   s
-    .replace(/[çğıİöşüÇĞÖŞÜ]/g, (c) => map[c])
+    .replace(/[çğıİöşüÇĞÖŞÜâîûÂÎÛ]/g, (c) => map[c])
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");

@@ -1,0 +1,317 @@
+export const metadata = {
+  title: "Teslim öncesi kontrol listesi",
+  description:
+    "KOÜ FBE tezli yüksek lisans tezini teslim etmeden önce işaretleyebileceğin kontrol listesi: yayın, ilk teslim belgeleri, benzerlik, zorunlu bölümler, biçim ve son teslim.",
+};
+
+# Teslim öncesi kontrol listesi
+
+Bu liste diğer KOÜ sayfalarındaki kuralları maddelere çeviriyor. Her maddenin yanında kaynağı var. İşaretlerin yalnızca **bu tarayıcıda** saklanır, başka bir yere gönderilmez.
+
+Liste belgelerden çıkarıldı; enstitünün her dönem ilan ettiği ek istekler burada olmayabilir. Teslimden önce [enstitünün sitesine](http://fbe.kocaeli.edu.tr) de bak.
+
+## Kısaca
+
+- Önce yayın şartını ve süreni kontrol et. <Kaynak>Yönetmelik md. 22/1, 24/3</Kaynak>
+- İlk teslimde tez PDF'i, tez teslim formu ve benzerlik raporu birlikte gider. <Kaynak>Yönetmelik md. 24/1</Kaynak> <Kaynak>Tez Yazım Kılavuzu s. 2</Kaynak>
+- Zorunlu bölümleri ve biçim kurallarını teslimden önce tek tek kontrol et. <Kaynak>Tez Yazım Kılavuzu s. 3, 8-17</Kaynak>
+- Savunmadan sonra 2 ay içinde ciltli tez ve USB teslim edilir. <Kaynak>Yönetmelik md. 25/1</Kaynak>
+
+## Yayın ve süre
+
+<Checklist
+  id="kou-teslim-yayin"
+  items={[
+    {
+      id: "yayin-var",
+      text: "Yüksek lisans süresince bir makale (yayımlanmış ya da DOI almış), sunulmuş bir bildiri ya da tescilli bir patentim var.",
+      kaynak: "Yönetmelik md. 24/3",
+    },
+    {
+      id: "yayin-yazarlik",
+      text: "Bu yayında ilk yazar benim, danışmanım da yazarlar arasında.",
+      kaynak: "Yönetmelik md. 24/3",
+    },
+    {
+      id: "yayin-bildiri",
+      text: "Bildiri yolunu seçtiysem: tam metin bildiri kitabında basıldı ve katılım belgem var.",
+      kaynak: "Uygulama Esasları md. 20/2",
+    },
+    {
+      id: "yayin-kou-adi",
+      text: "Yayında Üniversitenin ve Enstitünün adı geçiyor.",
+      kaynak: "Uygulama Esasları md. 5/2",
+    },
+    {
+      id: "sure-azami",
+      text: "Azami süreyi (6 yarıyıl) aşmadan savunmaya girebileceğim.",
+      kaynak: "Yönetmelik md. 22/1-2",
+    },
+    {
+      id: "sure-izin",
+      text: "Savunma tarihinde izinli, raporlu ya da öğrenime ara vermiş durumda olmayacağım.",
+      kaynak: "Yönetmelik md. 49/4",
+    },
+  ]}
+/>
+
+## İlk teslim
+
+<Checklist
+  id="kou-teslim-ilk"
+  items={[
+    {
+      id: "ilk-tarih",
+      text: "Enstitünün bu dönem için sitesinde ilan ettiği ilk teslim tarihini öğrendim.",
+      kaynak: "Uygulama Esasları md. 19",
+    },
+    {
+      id: "ilk-teslim-belgesi",
+      text: "Danışmanımın tezin savunulabilir olduğunu beyan ettiği tez teslim belgesi / onaylı tez teslim formu hazır.",
+      kaynak: "Yönetmelik md. 24/1-a",
+    },
+    {
+      id: "ilk-benzerlik-raporu",
+      text: "Danışmanımın enstitünün yazılımıyla oluşturduğu benzerlik raporu hazır.",
+      kaynak: "Yönetmelik md. 24/1-b",
+    },
+    {
+      id: "ilk-benzerlik-tek",
+      text: "Tek bir kaynaktan benzerlik %3'ü aşmıyor.",
+      kaynak: "Uygulama Esasları md. 20/1",
+    },
+    {
+      id: "ilk-benzerlik-toplam",
+      text: "Toplam benzerlik %20'yi aşmıyor (Kaynaklar bölümü ve tezden üretilen kendi yayınlarım hariç).",
+      kaynak: "Uygulama Esasları md. 20/1",
+    },
+    {
+      id: "ilk-pdf",
+      text: "Tezi jüri oluşturulmadan önce PDF olarak göndereceğim.",
+      kaynak: "Tez Yazım Kılavuzu s. 2",
+    },
+    {
+      id: "ilk-diger",
+      text: "Enstitünün istediği diğer belgeleri sordum ve hazırladım.",
+      kaynak: "Yönetmelik md. 24/1-c",
+    },
+  ]}
+/>
+
+## Zorunlu bölümler
+
+<Checklist
+  id="kou-teslim-bolumler"
+  items={[
+    {
+      id: "bolum-kapak",
+      text: "Dış kapak (Ek-1a) ve onay sayfası (Ek-1b) var, ikisi de Times New Roman 14 punto kalın.",
+      kaynak: "Tez Yazım Kılavuzu s. 3-4, 9",
+    },
+    {
+      id: "bolum-etik",
+      text: "Etik beyan, araştırma fonu desteği ve yapay zekâ kullanımı beyanı (Ek-2) var; kutular bilgisayarda işaretlendi.",
+      kaynak: "Tez Yazım Kılavuzu s. 4, Ek-2",
+    },
+    {
+      id: "bolum-yz",
+      text: "Yapay zekâ kullandıysam tarih, amaç, aracın adı ve versiyonu beyanda yazıyor.",
+      kaynak: "Tez Yazım Kılavuzu Ek-2",
+    },
+    {
+      id: "bolum-yayim",
+      text: "Yayımlama ve fikri mülkiyet hakları sayfası (Ek-3) var; erişim seçeneği işaretlendi.",
+      kaynak: "Tez Yazım Kılavuzu s. 4, Ek-3",
+    },
+    {
+      id: "bolum-onsoz-icindekiler",
+      text: "Önsöz ve teşekkür ile İçindekiler var.",
+      kaynak: "Tez Yazım Kılavuzu s. 3-4",
+    },
+    {
+      id: "bolum-dizinler",
+      text: "Şekil, tablo, simge ya da kısaltma kullandıysam ilgili dizinler var.",
+      kaynak: "Tez Yazım Kılavuzu s. 3, 5",
+    },
+    {
+      id: "bolum-ozet",
+      text: "Türkçe özet en fazla 250 kelime, en fazla 5 anahtar kelime alfabetik sırada.",
+      kaynak: "Tez Yazım Kılavuzu s. 5, Ek-9",
+    },
+    {
+      id: "bolum-abstract",
+      text: "Abstract, Türkçe özetin birebir çevirisi; keywords aynı sırada.",
+      kaynak: "Tez Yazım Kılavuzu s. 5, Ek-10",
+    },
+    {
+      id: "bolum-etik-no",
+      text: "Etik kurul izni gerekiyorsa onay yazısının numarası iki özette de yazıyor.",
+      kaynak: "Tez Yazım Kılavuzu Ek-9, Ek-10",
+    },
+    {
+      id: "bolum-giris",
+      text: "Metin Giriş ile başlıyor ve Giriş'in son bölümünde çalışmanın amacı yazıyor.",
+      kaynak: "Tez Yazım Kılavuzu s. 5",
+    },
+    {
+      id: "bolum-sonuc",
+      text: "Metin Sonuçlar ve Öneriler ile bitiyor; önceki bulgular tekrar edilmiyor.",
+      kaynak: "Tez Yazım Kılavuzu s. 5-6",
+    },
+    {
+      id: "bolum-kaynaklar",
+      text: "Kaynaklar, Kişisel Yayın ve Eserler ve Özgeçmiş var.",
+      kaynak: "Tez Yazım Kılavuzu s. 3, 6-7",
+    },
+    {
+      id: "bolum-ozgecmis",
+      text: "Özgeçmişte TC kimlik numarası, doğum yeri ve tarihi, e-posta, telefon, adres ve fotoğraf yok.",
+      kaynak: "Tez Yazım Kılavuzu s. 7",
+    },
+  ]}
+/>
+
+## Biçim
+
+<Checklist
+  id="kou-teslim-bicim"
+  items={[
+    {
+      id: "bicim-sayfa",
+      text: "A4 kâğıt, her kenardan 3 cm boşluk; satır sonunda tireyle bölünmüş kelime yok.",
+      kaynak: "Tez Yazım Kılavuzu s. 8-9",
+    },
+    {
+      id: "bicim-yazi",
+      text: "Metin Times New Roman 12 punto, 1,5 satır aralıklı, paragraf sonrası 12 nk.",
+      kaynak: "Tez Yazım Kılavuzu s. 9-10",
+    },
+    {
+      id: "bicim-paragraf",
+      text: "Paragraflar girintisiz ve iki yana yaslı; dul ve yetim satır yok.",
+      kaynak: "Tez Yazım Kılavuzu s. 10",
+    },
+    {
+      id: "bicim-baslik",
+      text: "Birinci derece başlıklar büyük harfle ve yeni sayfada; dördüncü dereceden alt başlık yok; numaradan sonra nokta var, sekme yok.",
+      kaynak: "Tez Yazım Kılavuzu s. 10-11",
+    },
+    {
+      id: "bicim-sayfa-no",
+      text: "Sayfa numaraları alt ortada; başlangıç kısmı i, ii, iii; metin 1, 2, 3; dış kapak ve onay sayfası numarasız.",
+      kaynak: "Tez Yazım Kılavuzu s. 11",
+    },
+    {
+      id: "bicim-tablo-sekil",
+      text: "Tablo açıklaması üstte, şekil açıklaması altta, sonlarında nokta yok; başka kaynaktan alınanlarda kaynak yazıyor.",
+      kaynak: "Tez Yazım Kılavuzu s. 11-12",
+    },
+    {
+      id: "bicim-atif",
+      text: "Bütün tablo, şekil ve denklemlere metinde atıf var.",
+      kaynak: "Tez Yazım Kılavuzu s. 8",
+    },
+    {
+      id: "bicim-denklem",
+      text: "Denklemler denklem düzenleyiciyle yazıldı, numaraları sağda; çarpma için yıldız kullanılmadı.",
+      kaynak: "Tez Yazım Kılavuzu s. 12-13",
+    },
+    {
+      id: "bicim-ondalik",
+      text: "Ondalık ayırıcı virgül (yalnız Abstract'ta nokta); SI birimleri kullanıldı.",
+      kaynak: "Tez Yazım Kılavuzu s. 8",
+    },
+    {
+      id: "bicim-kaynak",
+      text: "Metin içi atıflar yazar soyadı ve yılla; Kaynaklar listesi soyadına göre alfabetik, 1 cm asılı girintili.",
+      kaynak: "Tez Yazım Kılavuzu s. 14, Ek-12",
+    },
+    {
+      id: "bicim-dipnot",
+      text: "Dipnot kaynak göstermek için kullanılmadı.",
+      kaynak: "Tez Yazım Kılavuzu s. 13",
+    },
+  ]}
+/>
+
+## Savunma sonrası ve son teslim
+
+<Checklist
+  id="kou-teslim-son"
+  items={[
+    {
+      id: "son-duzeltme",
+      text: "Jürinin istediği düzeltmeleri yaptım ve tezi imzalı onay sayfasıyla PDF olarak gönderdim.",
+      kaynak: "Tez Yazım Kılavuzu s. 2",
+    },
+    {
+      id: "son-onay-imza",
+      text: "Basılı tezdeki onay sayfasında jüri üyelerinin ıslak imzası var.",
+      kaynak: "Tez Yazım Kılavuzu s. 2",
+    },
+    {
+      id: "son-beyan-imza",
+      text: "Basılı tezdeki etik beyan ve yayımlama hakları sayfalarını imzaladım.",
+      kaynak: "Tez Yazım Kılavuzu s. 4, 18-19",
+    },
+    {
+      id: "son-cilt",
+      text: "2 adet karton ciltli tez hazır (kapak 350 g/m², parlak selefon).",
+      kaynak: "Tez Yazım Kılavuzu s. 2",
+    },
+    {
+      id: "son-yok-form",
+      text: "YÖK Tez Veri Giriş Formunu doldurdum ve referans numaramı aldım.",
+      kaynak: "Tez Yazım Kılavuzu s. 19",
+    },
+    {
+      id: "son-usb-pdf",
+      text: "USB'deki PDF basılı tezle birebir aynı ve ReferansNo_tez.pdf adında.",
+      kaynak: "Tez Yazım Kılavuzu s. 18-19",
+    },
+    {
+      id: "son-usb-imzasiz",
+      text: "USB'deki dosyada onay, etik beyan ve yayımlama hakları sayfaları imzasız.",
+      kaynak: "Tez Yazım Kılavuzu s. 18-19",
+    },
+    {
+      id: "son-usb-ekler",
+      text: "Ek dosyalar varsa tek bir ReferansNo_ekler.rar arşivinde.",
+      kaynak: "Tez Yazım Kılavuzu s. 19",
+    },
+    {
+      id: "son-yok-alanlar",
+      text: "YÖK'e yüklenecek başlık ve özette italik, formül, simge, Yunan harfi ve standart dışı karakter yok.",
+      kaynak: "Tez Yazım Kılavuzu s. 18",
+    },
+    {
+      id: "son-danisman-yazi",
+      text: "Danışmanımın kabul yazısı hazır.",
+      kaynak: "Yönetmelik md. 25/1",
+    },
+    {
+      id: "son-evrak",
+      text: "Diğer mezuniyet evrakının listesini enstitüden öğrendim ve hazırladım.",
+      kaynak: "Tez Yazım Kılavuzu s. 2, 19",
+    },
+    {
+      id: "son-sure",
+      text: "Hepsini savunma tarihinden itibaren 2 ay dolmadan teslim edeceğim.",
+      kaynak: "Yönetmelik md. 25/1-2",
+    },
+  ]}
+/>
+
+<Callout type="warning" title="Bu listede belgelerin net olmadığı yerler var">
+- "Mezuniyet evrakı"nın ne olduğu belgelerde yazmıyor. <Kaynak>Tez Yazım Kılavuzu s. 2</Kaynak>
+- Bildiri yolunda iki belgenin koşulları birleştirilerek yazıldı. Ayrıntı: [Yayın şartı](/kou-fbe/yayin-sarti/).
+- Kılavuzda alıntı boşlukları ve özet sayfasının başlığı gibi birkaç yer iki türlü yazılmış. Ayrıntı: [Tez yazım kuralları](/kou-fbe/tez-yazim-kurallari/).
+</Callout>
+
+## İlgili sayfalar
+
+- [İntihal raporu ve tez teslimi](/kou-fbe/intihal-ve-teslim/)
+- [Tez yazım kuralları](/kou-fbe/tez-yazim-kurallari/)
+- [Mezuniyet](/kou-fbe/mezuniyet/)
+
+<KouBelgeler />

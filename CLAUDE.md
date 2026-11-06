@@ -181,7 +181,7 @@ Skill'deki temel bileşenlere ek olarak:
 | **Yazım** | Word + Zotero ile atıf · Overleaf ve LaTeX'e giriş (temel komutlar, AI ile LaTeX'e doğru yaklaşım) · Grammarly · QuillBot (doğru ve yanlış kullanım) |
 | **Yapay zekâ araçları** | Elicit · Consensus · NotebookLM · AI ile tez/makale yazmak (YÖK etik rehberi, beyan, trafik ışığı modeli, iyi ve kötü prompt örnekleri) |
 | **Akademik yazım** | Literatür taraması adım adım (10 adım) · Özet ile karşılaştırmalı inceleme farkı · Makalenin yapısı · Başlık, özet ve anahtar kelimeler · Dergi veya konferans seçimi · Gönderim ve hakem süreci · Hakem yorumlarına yanıt · Atıf ve akademik etik |
-| **Kocaeli Üniversitesi FBE** | Ayrıntısı Bölüm 4.1'de. Kayıttan mezuniyete süreç, süreler, dersler ve not sistemi, danışman, tez önerisi, tez yazım kuralları, intihal ve teslim, savunma, mezuniyet, teslim öncesi kontrol listesi |
+| **Kocaeli Üniversitesi FBE** | Ayrıntısı Bölüm 4.1'de. Kayıttan mezuniyete süreç, süreler, kayıt ve muafiyet, dersler ve not sistemi, danışman, tez konusu, yayın şartı, tez yazım kuralları, intihal ve teslim, savunma, mezuniyet, izin ve ilişik kesme, teslim öncesi kontrol listesi, SSS |
 | **Ek** | Tüm araçlar (filtrelenebilir tablo) · Kaynaklar · Hakkında |
 
 **Pilot sayfalar:** Önce **Zotero** (araç sayfası kalıbı) ve **Okumaya erken başla** (tavsiye sayfası kalıbı) uçtan uca bitirilir. Diğer sayfalar bu iki kalıbı izler. KOÜ bölümü kendi kural sayfası kalıbını kullanır (Bölüm 4.1).
@@ -192,12 +192,13 @@ Skill'deki temel bileşenlere ek olarak:
 
 | Dosya | İçerik |
 |---|---|
-| `yl-yonetmelik.pdf` | Lisansüstü eğitim-öğretim yönetmeliği (yüksek lisans hükümleri) |
-| `yl-uygulama-esaslari.pdf` | Enstitünün yüksek lisans uygulama esasları |
+| `yl-yonetmelik.pdf` | KOÜ Lisansüstü Eğitim ve Öğretim Yönetmeliği (RG 18.09.2023). Tüm lisansüstü programları kapsar; sitede yalnız tezli YL hükümleri anlatılır |
+| `yl-uygulama-esaslari.pdf` | FBE Uygulama Esasları (yürürlük 2021-2022 bahar). YL ve doktorayı kapsar |
 | `tez-yazim-kilavuzu.pdf` | Tez yazım kılavuzu |
 
 **Bu bölümün özel kuralları:**
 1. **Eksiksizlik:** Belgelerdeki her madde, her süre, her sayı (kredi, AKTS, not, oran, gün/ay/yarıyıl, sayfa ölçüsü, yazı boyutu…) sitede bir yerde yer almalı. Hiçbir hüküm "önemsiz" diye atlanmaz.
+   - **Onaylı istisna:** Doktora, sanatta yeterlik, tıp, tezsiz YL ve yabancı uyruklu aday hükümleri kapsam dışı. Bunlar en fazla SSS'de tek cümleyle anılır. Liste `kapsam.md` §5'te.
 2. **Doğruluk:** Hiçbir bilgi tahmin edilmez veya genel bilgiden tamamlanmaz. Belgede yazmıyorsa sitede de "belgede belirtilmemiş" denir. Okunamayan, belirsiz ya da belgeler arasında çelişen bir yer varsa sayfada açıkça işaretlenir ve Ensar'a bildirilir.
 3. **Kaynak gösterme:** Her kural, kaynağıyla birlikte verilir: `Yönetmelik md. 12/3`, `Uygulama Esasları md. 5`, `Tez Yazım Kılavuzu s. 14`. Sitede bu, kuralın yanında küçük bir `Kaynak` rozeti olarak görünür.
 4. **Sade dil, aynı anlam:** Mevzuat dili sadeleştirilir ama anlamı değişmez. "Olabilir" ile "zorundadır" farkı, istisnalar ve koşullar korunur. Anlamın kayabileceği kritik yerlerde kısa bir doğrudan alıntı verilebilir (resmî mevzuat metinleri telif koruması dışındadır).
@@ -209,22 +210,33 @@ Skill'deki temel bileşenlere ek olarak:
 3. **Ensar'ın kontrolü:** Notlar ve kapsam haritası Ensar'a gösterilir. Onaydan sonra sayfalar yazılır.
 4. **Sayfalar:** Kapsam haritasına göre yazılır. Bitince kapsam haritasındaki her madde işaretlenir.
 
-**Önerilen sayfalar** (taslak: kesin liste, belgeler okunup kapsam haritası çıkınca belirlenir):
+**Kesin sayfalar** (kapsam haritasına göre, Ensar onayladı, 6 Kasım 2026). Hangi maddenin hangi sayfaya gittiği `docs/kou-notlar/kapsam.md`'de:
 
-| Sayfa | İçerik |
-|---|---|
-| Genel bakış ve süreç haritası | Kayıttan mezuniyete adımlar, zaman çizelgesi olarak. Bölümün girişindeki uyarı burada |
-| Önemli süreler ve sayılar | Tüm süre, kredi, not ve oranların tek tabloda özeti, her satırda kaynak. Hızlı bakış sayfası |
-| Dersler, kredi ve not sistemi | Ders yükü, kredi/AKTS, seminer, notlar ve başarı koşulları, ders saydırma, devam |
-| Danışman | Atanma, değişiklik, ikinci danışman |
-| Tez önerisi ve tez dönemi | Konu belirleme, öneri, tez dönemine geçiş, uzmanlık alan dersi (varsa) |
-| Tez yazım kuralları | Kılavuzun tamamı: sayfa düzeni, kenar boşlukları, yazı tipi ve boyutu, satır aralığı, ön sayfalar ve sırası, bölüm yapısı, başlık numaralandırma, şekil, tablo ve denklemler, kaynak gösterme ve kaynakça biçimi, ekler, yapay zekâ beyanı (varsa), baskı ve teslim. Uzunsa alt sayfalara bölünür |
-| İntihal raporu ve tez teslimi | Benzerlik oranı sınırları, teslim belgeleri, teslim süreleri |
-| Tez savunma sınavı | Jüri, sınav süreleri, olası sonuçlar (kabul, düzeltme, ret) ve sonrası |
-| Mezuniyet | Mezuniyet koşulları, yayın şartı (varsa), diploma |
-| Kayıt dondurma, izin ve ilişik kesme | İlgili tüm durumlar |
-| Teslim öncesi kontrol listesi | Tez yazım kılavuzundan çıkan maddeler, `Checklist` ile etkileşimli |
-| Sık sorulan sorular | Ensar'ın kendi sorduğu sorularla zamanla büyür |
+| Sayfa | Yol | İçerik |
+|---|---|---|
+| Genel bakış ve süreç haritası | `/kou-fbe/genel-bakis/` | Belge künyeleri, kısaltmalar, kayıttan mezuniyete adımlar, 2023 öncesi kayıtlılar uyarısı. Bölümün girişindeki uyarı burada |
+| Önemli süreler ve sayılar | `/kou-fbe/sureler-ve-sayilar/` | Tüm süre, kredi, not ve oranların tek tabloda özeti, her satırda kaynak |
+| Kayıt, muafiyet ve yatay geçiş | `/kou-fbe/kayit-ve-muafiyet/` | Kabul özeti, bilimsel hazırlık, özel öğrenci, yatay geçiş, muafiyet ve ders saydırma, kayıt yenileme |
+| Dersler, kredi ve not sistemi | `/kou-fbe/dersler-ve-notlar/` | Ders yükü, BAT dersi, uzmanlık alan dersi, seminer, devam, notlar, ortalama, itiraz |
+| Danışman | `/kou-fbe/danisman/` | Atanma, ölçütler, görevler, değişiklik, ikinci danışman |
+| Tez konusu ve tez dönemi | `/kou-fbe/tez-konusu/` | Teze kayıt, Tez Konu Bildirim Formu, 3 ve 4 yarıyıl yolu |
+| Yayın şartı | `/kou-fbe/yayin-sarti/` | Makale, bildiri ya da patent; yazarlık koşulları; KOÜ/FBE adı |
+| Tez yazım kuralları | `/kou-fbe/tez-yazim-kurallari/` | Kılavuzun tamamı. Uzunsa alt sayfalara bölünür |
+| İntihal raporu ve tez teslimi | `/kou-fbe/intihal-ve-teslim/` | Benzerlik sınırları, ilk teslim belgeleri ve tarihi |
+| Tez savunma sınavı | `/kou-fbe/savunma/` | Jüri, tarih aralığı, yüz yüze ve uzaktan, süre, kararlar ve sonrası |
+| Mezuniyet | `/kou-fbe/mezuniyet/` | Son teslim, ciltli tez, USB, YÖK formu, diploma, erişim erteleme |
+| İzin, öğrenime ara verme ve ilişik kesme | `/kou-fbe/izin-ve-ilisik-kesme/` | Mazeret, sağlık raporu, izinler, askerlik, kayıt sildirme, tüm ilişik kesme durumları |
+| Teslim öncesi kontrol listesi | `/kou-fbe/teslim-kontrol-listesi/` | Belgelerden çıkan maddeler, `Checklist` ile etkileşimli |
+| Sık sorulan sorular | `/kou-fbe/sss/` | Belirsiz ve çelişkili konular dahil; Ensar'ın sorularıyla büyür |
+
+**Çelişkilerde tutum (onaylı):**
+
+- İki hüküm de kaynak numarasıyla gösterilir.
+- Yönetmelik önce yazılır.
+- "Hangisinin uygulandığını enstitüye sorun" uyarısı konur.
+- Sitede karar verilmez.
+
+Liste `kapsam.md` §6'da.
 
 **Kural sayfası şablonu:**
 1. **Kısaca:** 3–5 maddelik özet
@@ -384,7 +396,16 @@ akademik-rehber/
 | **4. Etkileşim ve SEO** | İlk dönem kontrol listesi ve 30 gün planı · araç filtresi · arama (Pagefind, isteğe bağlı) · skill'deki `metadata` kuralları (`metadataBase: https://ensarakbas77.github.io/akademik-rehber/`), `sitemap.ts`, `robots.ts`, Open Graph görseli | Özellikler çalışıyor |
 | **5. Kontrol** | Skill Bölüm 5'teki doğrulama listesinin tamamı + Lighthouse (performans, erişilebilirlik) + kırık link taraması | Yayına hazır |
 
-**Şu anki durum (6 Kasım 2026):** **Faz 0 bitti** (site yayında). **Faz 1 yerelde bitti, onay bekliyor:** `globals.css` tasarım değişkenleri, Inter + JetBrains Mono (`latin-ext`), `ThemeScript`/`ThemeToggle`, Header, Footer, MobileNav (çekmece `createPortal` ile `body`'ye taşınır, çünkü üst çubuktaki `backdrop-blur` içindeki `fixed` öğeleri hapseder), `DocsLayout`, `Sidebar`, `Toc`, `PrevNext`, `mdx-components.tsx` (h2/h3 `slugify` kimlikli, tablolar yatay kaydırılır). `navigation.ts` tüm site haritasını içerir, `ready: false` sayfalar kenar çubuğunda soluk ve link olmadan görünür. `/deneme/` üç sütunlu düzende, açık ve koyu temada, 375px ve 1440px'te kontrol edildi. Sıradaki: Ensar'ın onayıyla commit/push, ardından Faz 2 (pilot sayfalar). KOÜ belgeleri `docs/kaynaklar/kou/` altında, çıkarım başlamadı. *(Claude Code: her faz bitince bu satırı güncelle.)*
+**Şu anki durum (6 Kasım 2026):**
+
+- **Faz 0 ve Faz 1 bitti**, push edildi, site yayında. Faz 1'de kabuk ve tasarım sistemi kuruldu: tema, Header/Footer, MobileNav (çekmece `createPortal` ile `body`'ye taşınır), `DocsLayout`, `Sidebar`, `Toc`, `PrevNext`, `mdx-components.tsx`, `navigation.ts` site haritası.
+- **KOÜ çıkarımı (§4.1, çalışma sırası 1–3) bitti; Ensar kapsam haritasını onayladı.** Notlar `docs/kou-notlar/` altında.
+- **KOÜ sayfaları (§4.1, çalışma sırası 4) yazıldı:** 14 sayfanın hepsi `src/app/kou-fbe/` altında, `navigation.ts` kesin listeye göre güncellendi, deneme sayfası kaldırıldı.
+  - Yeni bileşenler: `Kaynak`, `Callout`, `Checklist`, `KouBelgeler` (`src/content/kou.ts` belge künyeleri).
+  - `kapsam.md` §1–3 tablolarına "Durum" sütunu eklendi; her madde işaretli.
+  - Bekleyenler: `/kaynaklar/` sayfası; karar 6 (AI sayfasında KOÜ kutusu) ve karar 7 (Zotero sayfasında KOÜ notu); YÖK Tez Merkezi sayfasına bağlantı. Bunlar o sayfalar yazılınca eklenecek.
+  - Build, önekli build, tsc, lint ve iç link/çapa kontrolü temiz. Commit edilmedi.
+- **Sıradaki:** Ensar'ın KOÜ sayfalarını okuyup kontrol etmesi; sonra commit ve Faz 2 (pilot sayfalar). *(Claude Code: her faz bitince bu satırı güncelle.)*
 
 ## 9. Çalışma kuralları (Claude için)
 
