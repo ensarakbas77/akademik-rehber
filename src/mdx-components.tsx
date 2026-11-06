@@ -4,8 +4,10 @@ import { isValidElement, type ReactNode } from "react";
 import { KouBelgeler } from "@/components/kou/kou-belgeler";
 import { AdviceChecklist } from "@/components/tools/advice-checklist";
 import { DerlemeNotu } from "@/components/tools/derleme-notu";
+import { IlkDonemListesi } from "@/components/tools/ilk-donem-listesi";
 import { ToolInfoBox } from "@/components/tools/tool-info-box";
 import { ToolLinkCard, ToolLinks } from "@/components/tools/tool-link-card";
+import { ToolTable } from "@/components/tools/tool-table";
 import { Callout } from "@/components/ui/callout";
 import { Checklist } from "@/components/ui/checklist";
 import { Kaynak } from "@/components/ui/kaynak";
@@ -128,6 +130,7 @@ const components: MDXComponents = {
   Callout,
   Checklist,
   DerlemeNotu,
+  IlkDonemListesi,
   Kaynak,
   KouBelgeler,
   LastChecked,
@@ -137,6 +140,7 @@ const components: MDXComponents = {
   ToolInfoBox,
   ToolLinkCard,
   ToolLinks,
+  ToolTable,
 };
 
 export function useMDXComponents(): MDXComponents {

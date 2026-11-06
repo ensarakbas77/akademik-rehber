@@ -16,9 +16,13 @@ export const navigation: NavGroup[] = [
     title: "Başlangıç",
     pages: [
       p("Ana sayfa", "/", true),
-      p("Kurulum yol haritası", "/baslangic/kurulum-yol-haritasi/"),
-      p("İlk dönem kontrol listesi", "/baslangic/ilk-donem-kontrol-listesi/"),
-      p("İlk 30 gün planı", "/baslangic/ilk-30-gun-plani/"),
+      p("Kurulum yol haritası", "/baslangic/kurulum-yol-haritasi/", true),
+      p(
+        "İlk dönem kontrol listesi",
+        "/baslangic/ilk-donem-kontrol-listesi/",
+        true,
+      ),
+      p("İlk 30 gün planı", "/baslangic/ilk-30-gun-plani/", true),
     ],
   },
   {
@@ -181,9 +185,9 @@ export const navigation: NavGroup[] = [
   {
     title: "Ek",
     pages: [
-      p("Tüm araçlar", "/araclar/"),
-      p("Kaynaklar", "/kaynaklar/"),
-      p("Hakkında", "/hakkinda/"),
+      p("Tüm araçlar", "/araclar/", true),
+      p("Kaynaklar", "/kaynaklar/", true),
+      p("Hakkında", "/hakkinda/", true),
     ],
   },
 ];

@@ -19,9 +19,18 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  // Yalnız alan adı: Next, basePath'i (/akademik-rehber) görsel yollarına
+  // kendisi ekliyor. Tam adres verilirse önek iki kez yazılıyor.
+  metadataBase: new URL(new URL(site.url).origin),
   title: { default: site.name, template: `%s | ${site.name}` },
   description: site.description,
-  openGraph: { locale: "tr_TR", type: "website" },
+  openGraph: {
+    locale: "tr_TR",
+    type: "website",
+    siteName: site.name,
+    title: site.name,
+    description: site.description,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

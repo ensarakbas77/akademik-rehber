@@ -5,7 +5,7 @@ Bu dosya üç not dosyasındaki her maddeyi bir site sayfasına bağlar. Sonunda
 - **Notlar:** `yonetmelik.md` (Yön), `uygulama-esaslari.md` (UE), `tez-yazim-kilavuzu.md` (TYK)
 - **Sayfa listesi:** `src/content/navigation.ts`, "Kocaeli Üniversitesi FBE" grubu. Orada "taslak liste" olarak duruyor; bu harita kesinleştirmek için hazırlandı.
 - **Durum:** **Onaylandı (Ensar, 6 Kasım 2026).** §5'teki tüm öneriler kabul edildi. "Öneri" diye geçen sayfalar ve kapsam dışı maddeler artık kesin. Sayfalar yazılırken her madde bu dosyada işaretlenecek.
-- **Yazım durumu (6 Kasım 2026):** 14 sayfanın hepsi yazıldı. §1–3 tablolarındaki "Durum" sütunu her maddenin karşılığını gösterir. Bekleyen: `/kaynaklar/` (KAY) sayfası. Karar 6'daki kutu AI ile yazım sayfasına, karar 7'deki not Word + Zotero sayfasına eklendi.
+- **Yazım durumu (6 Kasım 2026):** 14 sayfanın hepsi yazıldı. §1–3 tablolarındaki "Durum" sütunu her maddenin karşılığını gösterir. `/kaynaklar/` (KAY) sayfası da yazıldı; bekleyen madde yok. Karar 6'daki kutu AI ile yazım sayfasına, karar 7'deki not Word + Zotero sayfasına eklendi.
 
 ## Belge künyeleri (her KOÜ sayfasında gösterilecek)
 
@@ -47,7 +47,7 @@ Bu dosya üç not dosyasındaki her maddeyi bir site sayfasına bağlar. Sonunda
 
 | Madde | Konu | Sayfa | Durum |
 |---|---|---|---|
-| md. 1–3 | Amaç, kapsam, dayanak | GB (kaynak kutusu), KAY | Yazıldı; KAY sayfası henüz yok |
+| md. 1–3 | Amaç, kapsam, dayanak | GB (kaynak kutusu), KAY | Yazıldı |
 | md. 4 | Tanımlar (EYK, ABD kurulu, AKTS, DOI…) | GB (kısaltmalar sözlüğü) | Yazıldı |
 | md. 5/1–4, 5/6–9 | Tezli YL'ye kabul (ALES 55, %50/%20/%30, 60 barajı, 5 kat, 3+2 jüri) | BK (kısa: "nasıl kabul edildin"); sayılar SS | Yazıldı |
 | md. 5/5 | Yabancı dil bilim dalları için 80 puan | BK (tek satır) | Yazıldı |
@@ -103,17 +103,17 @@ Bu dosya üç not dosyasındaki her maddeyi bir site sayfasına bağlar. Sonunda
 | md. 51 | Aynı anda iki lisansüstü programa kayıt yok | SSS | Yazıldı |
 | md. 52 | Tıp ve diş hekimliği denkliği | KD | Kapsam dışı |
 | md. 53 | Hüküm yoksa YÖK yönetmeliği | GB (kaynak kutusu) | Yazıldı |
-| md. 54 | 2018 yönetmeliği kaldırıldı | GB; KAY | Yazıldı; KAY sayfası henüz yok |
+| md. 54 | 2018 yönetmeliği kaldırıldı | GB; KAY | Yazıldı |
 | Geçici md. 1/1–2 | Eski çoklu kayıt; eski tezsiz YL mezunları | KD | Kapsam dışı |
 | Geçici md. 1/3 | 18.09.2023 öncesi kayıtlılara eski 24/2 uygulanır | GB (uyarı kutusu); YAY; SSS | Yazıldı |
-| md. 55–56 | Yürürlük, yürütme | GB (künye); KAY | Yazıldı; KAY sayfası henüz yok |
+| md. 55–56 | Yürürlük, yürütme | GB (künye); KAY | Yazıldı |
 
 ## 2. Uygulama esasları → sayfa
 
 | Madde | Konu | Sayfa | Durum |
 |---|---|---|---|
-| md. 1 | Amaç; eski yönetmeliğe dayanması | GB (uyarı kutusu); KAY | Yazıldı; KAY sayfası henüz yok |
-| md. 2–4 | Kapsam, dayanak, tanımlar | GB; KAY | Yazıldı; KAY sayfası henüz yok |
+| md. 1 | Amaç; eski yönetmeliğe dayanması | GB (uyarı kutusu); KAY | Yazıldı |
+| md. 2–4 | Kapsam, dayanak, tanımlar | GB; KAY | Yazıldı |
 | md. 5/1 | Uzaktan öğretim dersleri | DN (tek satır) | Yazıldı |
 | md. 5/2 | Yayınlarda KOÜ ve FBE adı zorunlu | **YAY**; SSS | Yazıldı |
 | md. 5/3 | Danışman başına öğrenci sınırı YÖK'e göre | DAN (tek satır) | Yazıldı |
@@ -155,7 +155,7 @@ Bu dosya üç not dosyasındaki her maddeyi bir site sayfasına bağlar. Sonunda
 
 | Bölüm | Konu | Sayfa | Durum |
 |---|---|---|---|
-| Kapak ve tarih | 2020 / 2021 belirsizliği | YK (künye); KAY | Yazıldı; KAY sayfası henüz yok |
+| Kapak ve tarih | 2020 / 2021 belirsizliği | YK (künye); KAY | Yazıldı |
 | 1. Genel ilkeler | Kılavuza uymayan tez kabul edilmez; FBE sitesi | YK | Yazıldı |
 | 1. Genel ilkeler | İlk teslim PDF + onaylı teslim formu | İT; KL | Yazıldı |
 | 1. Genel ilkeler | Savunma sonrası PDF, imzalı onay, 2 denetim, 5 iş günü | MEZ; İT; SS | Yazıldı |

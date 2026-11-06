@@ -421,8 +421,16 @@ akademik-rehber/
   - "Zotero mu Mendeley mi?", "Not alma" (Notion, Obsidian) ve "Yazım" (Word + Zotero, Overleaf ve LaTeX, Grammarly, QuillBot) sayfaları yazıldı; bilgiler 6 Kasım 2026'da web'de doğrulandı. `tools.ts`'e QuillBot eklendi. Not: Grammarly artık Türkçe metinlerde de öneri veriyor (kaynak README eskimiş). Karar 7'deki KOÜ notu Word + Zotero sayfasında.
   - MDX dosyalarına toplu `prettier --write` uygulama: metni yeniden sarar. Yalnız `.ts`/`.tsx` dosyalarını biçimlendir.
   - "Yapay zekâ araçları" (Elicit, Consensus, Gemini Notebook, AI ile yazım) yazıldı. NotebookLM'in adı 16 Temmuz 2026'da Gemini Notebook oldu; sayfa yolu `/yapay-zeka/notebooklm/` olarak kaldı. AI ile yazım sayfası YÖK'ün Mayıs 2024 etik rehberinin metnine dayanıyor ve karar 6'daki KOÜ kutusunu içeriyor.
-- **Faz 3'te kalan:** Başlangıç sayfaları (Kurulum yol haritası, İlk dönem kontrol listesi, İlk 30 gün planı) ve Ek sayfaları (Tüm araçlar, Kaynaklar, Hakkında). Bunlar Faz 4'teki etkileşimli özelliklerle birlikte yapılacak.
-- **Sıradaki:** Faz 4 (Ensar'ın onayıyla).
+- **Faz 3 bitti:** Başlangıç sayfaları (Kurulum yol haritası, İlk dönem kontrol listesi, İlk 30 gün planı) ve Ek sayfaları (Tüm araçlar, Kaynaklar, Hakkında) yazıldı. `navigation.ts`'teki bütün sayfalar `ready`. `kapsam.md`'de bekleyen madde kalmadı (KAY sayfası `/kaynaklar/`).
+- **Faz 4 bitti:**
+  - Ana sayfa yeniden yazıldı (ne, kimin için, nereden başlanmalı, bölümler, KOÜ kutusu).
+  - Yeni bileşenler: `IlkDonemListesi` (`checklist.ts`'teki bütün tavsiye maddeleri, sayfalarla aynı `localStorage` anahtarı) ve `ToolTable` (kategori filtresi, `tools.ts`'ten).
+  - SEO: `metadataBase` yalnız alan adı (`https://ensarakbas77.github.io`); Next `basePath`'i görsel yollarına kendisi ekliyor, tam adres verilince önek iki kez yazılıyordu. `site.url` tam adres; `sitemap.ts` ve `robots.ts` ondan üretiliyor. Open Graph görseli `src/app/opengraph-image.png` (Pillow ile, Segoe UI).
+  - Arama (Pagefind) eklenmedi (isteğe bağlıydı).
+- **Faz 5 (kontrol) yapıldı:** build, önekli build ve önek taraması, tsc, lint, iç link/çapa kontrolü (68 sayfa) temiz; yeni sayfalarda 375px'te taşma yok. Lighthouse (yerel, masaüstü değil varsayılan mobil): ana sayfa, Zotero ve Tüm araçlar için performans 99-100, erişilebilirlik 100, SEO 100, en iyi uygulamalar 96-100.
+  - Bilinen sorun: Next 16 statik dışa aktarmada sayfa önden yüklemesi `__next.<yol>.__PAGE__.txt` dosyasını istiyor, dosya ise iç içe klasörde (`__next.<bölüm>/<sayfa>/__PAGE__.txt`). İstek 404 veriyor ve konsola hata düşüyor; sayfa geçişi yine çalışıyor. Next güncellemesinde tekrar kontrol et.
+  - Açık ve koyu temanın göze dayalı kontrolü bu oturumda yapılamadı (önizleme paneli gizliydi); yalnız ham renk sınıfı taraması temiz.
+- **Bekleyen:** Ensar'ın çekeceği ekran görüntüleri (`docs/ekran-goruntuleri.md`).
 
 ## 9. Çalışma kuralları (Claude için)
 
