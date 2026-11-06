@@ -120,17 +120,26 @@ export const navigation: NavGroup[] = [
   {
     title: "Akademik yazım",
     pages: [
-      p("Literatür taraması adım adım", "/akademik-yazim/literatur-taramasi/"),
+      p(
+        "Literatür taraması adım adım",
+        "/akademik-yazim/literatur-taramasi/",
+        true,
+      ),
       p(
         "Özet ve karşılaştırmalı inceleme",
         "/akademik-yazim/ozet-ve-inceleme/",
+        true,
       ),
-      p("Makalenin yapısı", "/akademik-yazim/makalenin-yapisi/"),
-      p("Başlık, özet ve anahtar kelimeler", "/akademik-yazim/baslik-ve-ozet/"),
-      p("Dergi veya konferans seçimi", "/akademik-yazim/dergi-secimi/"),
-      p("Gönderim ve hakem süreci", "/akademik-yazim/hakem-sureci/"),
-      p("Hakem yorumlarına yanıt", "/akademik-yazim/hakeme-yanit/"),
-      p("Atıf ve akademik etik", "/akademik-yazim/akademik-etik/"),
+      p("Makalenin yapısı", "/akademik-yazim/makalenin-yapisi/", true),
+      p(
+        "Başlık, özet ve anahtar kelimeler",
+        "/akademik-yazim/baslik-ve-ozet/",
+        true,
+      ),
+      p("Dergi veya konferans seçimi", "/akademik-yazim/dergi-secimi/", true),
+      p("Gönderim ve hakem süreci", "/akademik-yazim/hakem-sureci/", true),
+      p("Hakem yorumlarına yanıt", "/akademik-yazim/hakeme-yanit/", true),
+      p("Atıf ve akademik etik", "/akademik-yazim/akademik-etik/", true),
     ],
   },
   {

@@ -1,0 +1,91 @@
+export const metadata = {
+  title: "Makalenin yapısı",
+  description:
+    "Araştırma makalesinin Giriş, Yöntem, Bulgular, Tartışma (IMRaD) düzeni ve her bölümün işlevi; mühendislik ve bilgisayar bilimlerindeki yaygın varyasyonlar.",
+};
+
+# Makalenin yapısı
+
+**Araştırma makalesi çoğunlukla dört ana bölümden oluşur: Giriş, Yöntem, Bulgular, Tartışma.**
+
+## Neden önemli?
+
+Hakemler ve okuyucular bir makalede neyi nerede bulacaklarını bilir. Yöntem ayrıntısı girişte, yorum bulgular arasında kalırsa okumak zorlaşır ve hakem bunu fark eder. Yapıyı baştan bilirsen hem yazman kolaylaşır hem de okuduğun makaleleri daha hızlı tararsın.
+
+## IMRaD düzeni
+
+Özgün araştırma makalelerinin metni genellikle **Giriş (Introduction), Yöntem (Methods), Bulgular (Results) ve Tartışma (Discussion)** bölümlerine ayrılır; baş harflerinden bu düzene **IMRaD** denir. Uluslararası Tıp Dergisi Editörleri Komitesi (ICMJE), bu yapının keyfî bir biçim olmadığını, bilimsel keşif sürecinin bir yansıması olduğunu belirtir.
+
+| Bölüm | Cevapladığı soru | İçinde ne olur? |
+| --- | --- | --- |
+| **Giriş** | Neden bu çalışma? | Bağlam, problem, literatürdeki boşluk, çalışmanın amacı ya da hipotezi |
+| **Yöntem** | Nasıl yapıldı? | Veri, malzeme, deney düzeni, analiz; başkasının tekrarlayabileceği ayrıntıda |
+| **Bulgular** | Ne bulundu? | Sonuçlar, en önemlisinden başlayarak; tablo ve şekiller |
+| **Tartışma** | Bu ne anlama geliyor? | Bulguların yorumu, literatürle karşılaştırma, sınırlılıklar |
+
+## Her bölümün işlevi
+
+<Steps>
+  <Step title="Giriş: problemi ve boşluğu göster">
+    Genelden özele ilerle: alanın neden önemli olduğu, çözülmemiş problem, bu problemle ilgili mevcut çalışmalar ve eksikleri, senin çalışmanın amacı. ICMJE, girişte yalnızca doğrudan ilgili kaynaklara yer verilmesini ve çalışmanın kendi bulgularının ya da sonuçlarının burada verilmemesini önerir.
+
+    Girişin son paragrafı çoğu zaman çalışmanın katkılarını kısaca sıralar.
+  </Step>
+  <Step title="Yöntem: tekrarlanabilir ayrıntı ver">
+    Yöntem bölümünün ilkesi açıklıktır: çalışmanın **nasıl ve neden** o şekilde yapıldığı anlaşılmalı. Veriye erişimi olan biri, yazdıklarınla sonuçları tekrar üretebilmeli.
+
+    Hangi veriyi, hangi araçları, hangi parametreleri kullandığını yaz. Tercihlerinin gerekçesini de ekle.
+  </Step>
+  <Step title="Bulgular: yorumlamadan sun">
+    Sonuçları mantıklı bir sırayla, en önemli bulgudan başlayarak ver. Yöntemde ölçeceğini söylediğin her şeyin sonucu burada olmalı. Aynı veriyi hem tabloda hem metinde ayrıntısıyla tekrarlama; metinde öne çıkan noktaları vurgula.
+  </Step>
+  <Step title="Tartışma: anlamını ve sınırını anlat">
+    Çalışmanın yeni ve önemli yanlarını vurgula, bulgularını mevcut literatürle karşılaştır. Bulgular bölümündeki verileri ayrıntısıyla tekrar etme.
+
+    Sınırlılıkları açıkça yaz. Hakem onları zaten görecek; senin yazman, onları fark ettiğini ve değerlendirdiğini gösterir.
+  </Step>
+</Steps>
+
+## Mühendislik ve bilgisayar bilimlerinde yaygın düzen
+
+Bu alanlardaki makaleler ve konferans bildirileri IMRaD'ın mantığını izler, ama bölüm adları ve sırası çoğu zaman farklıdır. Sık görülen bir düzen:
+
+1. **Giriş (Introduction):** problem, motivasyon, katkıların listesi
+2. **İlgili çalışmalar (Related Work):** literatürün karşılaştırmalı özeti. Bazı makalelerde girişten hemen sonra, bazılarında sonuçtan önce gelir.
+3. **Yöntem ya da önerilen yaklaşım (Method, Proposed Approach):** modelin, algoritmanın ya da sistemin tanımı
+4. **Deneyler (Experiments):** deney düzeni, veri setleri, karşılaştırma yöntemleri (baseline), değerlendirme ölçütleri
+5. **Bulgular ve tartışma (Results and Discussion):** sonuçlar, ablasyon çalışmaları, hata analizi
+6. **Sonuç (Conclusion):** katkıların özeti, sınırlılıklar, gelecek çalışmalar
+
+Hedef derginin ya da konferansın son sayılarından birkaç makaleye bak; bölüm düzenini oradan görürsün.
+
+<Callout type="tip" title="Yazma sırası, okuma sırasıyla aynı değil">
+Birçok yazar önce Yöntem ve Bulgular'ı, sonra Tartışma'yı, en son Giriş'i ve özeti yazar. Ne bulduğunu bilmeden girişin hangi soruya cevap vereceğini kesinleştirmek zordur.
+</Callout>
+
+<Callout title="Kocaeli Üniversitesi FBE'deysen">
+Tezin bölümleri makaleden farklı olarak enstitünün kılavuzunda tanımlı: [Tez yazım kuralları, Tezin bölümleri](/kou-fbe/tez-yazim-kurallari/#tezin-bolumleri). Makale ile tez arasındaki farklar için: [Makale ve tez farkı](/yapilmasi-gerekenler/makale-ve-tez-farki/).
+</Callout>
+
+## Hangi araçlarla?
+
+<ToolLinks slugs={["overleaf", "word-zotero", "zotero"]} />
+
+## Kontrol listesi
+
+<Checklist
+  id="yazim-yapi"
+  items={[
+    { id: "ornek", text: "Hedef dergiden ya da konferanstan birkaç makalenin bölüm düzenine baktım." },
+    { id: "giris", text: "Giriş problemi, boşluğu ve çalışmanın amacını söylüyor; sonuçları vermiyor." },
+    { id: "yontem", text: "Yöntem, başka birinin sonuçları tekrar üretebileceği ayrıntıda." },
+    { id: "bulgular", text: "Yöntemde söylediğim her ölçümün sonucu Bulgular'da var." },
+    { id: "tartisma", text: "Tartışmada bulguları literatürle karşılaştırdım ve sınırlılıkları yazdım." },
+  ]}
+/>
+
+## Kaynaklar
+
+- [ICMJE: Preparing a Manuscript for Submission to a Medical Journal](https://www.icmje.org/recommendations/browse/manuscript-preparation/preparing-for-submission.html) (IMRaD düzeni ve bölümlerin işlevi)
+
+<LastChecked date="2026-11" />

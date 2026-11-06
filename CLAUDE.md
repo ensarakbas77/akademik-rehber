@@ -416,7 +416,8 @@ akademik-rehber/
 - **Faz 3 (içerik) başladı:**
   - "Yüksek lisansta yapılması gerekenler" bölümünün 9 sayfasının hepsi yazıldı (kaynak: `docs/kaynak-README.md` Gönderi 2 ve 4, Bölüm 6 ve 8). Maddeleri `checklist.ts`'te, sayfa sonunda `DerlemeNotu`.
   - `tools.ts`'e ORCID, Scopus/WoS, TÜBİTAK ARBİS, YÖK Tez Merkezi eklendi (yalnız ad, açıklama, resmî site; ücret bilgisi yok).
-- **Sıradaki:** Faz 3 devam: Akademik yazım bölümü, sonra araç sayfaları. Zotero ekran görüntüleri Ensar'dan bekleniyor. *(Claude Code: her faz bitince bu satırı güncelle.)*
+  - "Akademik yazım" bölümünün 8 sayfası yazıldı (`src/app/akademik-yazim/`). Literatür taraması sayfaları README Bölüm 10'dan (BTM535 örneği olmadan); makale sayfaları web'de doğrulanan kaynaklarla (ICMJE, COPE, YÖK Bilimsel Araştırma ve Yayın Etiği Yönergesi, Think. Check. Submit., Taylor & Francis, Elsevier, Springer Nature, Frontiers), sayfa sonunda "Kaynaklar" ve `LastChecked`. Bu sayfaların kontrol listeleri ilk dönem listesine katılmaz: her sayfa kendi `Checklist` kimliğini (`yazim-*`) kullanır. `tools.ts`'e IEEE Xplore ve Grammarly eklendi.
+- **Sıradaki:** Faz 3 devam: araç sayfaları. Zotero ekran görüntüleri Ensar'dan bekleniyor. *(Claude Code: her faz bitince bu satırı güncelle.)*
 
 ## 9. Çalışma kuralları (Claude için)
 

@@ -131,6 +131,23 @@ export const tools: Tool[] = [
     href: "/yazim/overleaf-ve-latex/",
   },
   {
+    slug: "ieee-xplore",
+    name: "IEEE Xplore",
+    category: "Kaynak bulma",
+    short:
+      "IEEE'nin dergi ve konferans yayınlarının veri tabanı; mühendislik ve bilgisayar bilimleri için.",
+    url: "https://ieeexplore.ieee.org",
+    href: "/kaynak-bulma/ieee-xplore/",
+  },
+  {
+    slug: "grammarly",
+    name: "Grammarly",
+    category: "Yazım",
+    short: "İngilizce metinlerde dil bilgisi ve yazım denetimi.",
+    url: "https://www.grammarly.com",
+    href: "/yazim/grammarly/",
+  },
+  {
     slug: "orcid",
     name: "ORCID",
     category: "Akademik kimlik",

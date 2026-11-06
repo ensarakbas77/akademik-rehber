@@ -1,0 +1,101 @@
+export const metadata = {
+  title: "Hakem yorumlarına yanıt",
+  description:
+    "Düzeltme kararından sonra: her yorumu madde madde yanıtla, değişikliği nerede yaptığını göster, katılmadığın noktada gerekçeni kibarca açıkla.",
+};
+
+# Hakem yorumlarına yanıt
+
+**Her yoruma tek tek yanıt ver ve makalede neyi nerede değiştirdiğini göster.**
+
+## Neden önemli?
+
+Düzeltme kararı ("minor" ya da "major revision") iyi bir haberdir: editör makaleyle ilgilenmeye devam ediyor. Bundan sonraki kararı büyük ölçüde yanıt mektubun ve yaptığın değişiklikler belirler. Hakem, yorumunun karşılık bulup bulmadığını hızlıca görebilmeli. Güçlü bir mektup ama yüzeysel düzeltmeler ya da cevapsız kalan yorumlar, makaleyi yeniden geri gönderilme veya ret riskine sokar.
+
+## Ne yapmalısın?
+
+<Steps>
+  <Step title="Önce oku, sonra bekle">
+    Hakem yorumlarını ilk okuyuşta savunmaya geçmek doğaldır. Bir iki gün bekle, sonra yeniden oku. Hakemleri alanın uzmanı olarak düşün; yorumların amacı çalışmanı güçlendirmek.
+  </Step>
+  <Step title="Yorumları listele ve sınıflandır">
+    Bütün yorumları bir tabloya aktar ve her birine bir numara ver. Hangileri büyük, yapısal değişiklik istiyor, hangileri küçük düzeltme? Danışmanınla ve diğer yazarlarla hangisine nasıl yanıt vereceğinizi konuşun.
+
+    Frontiers'ın önerisi: önce büyük, yapısal değişiklikleri yap, çünkü diğer bölümleri de etkileyebilirler. Yazım ve biçim düzeltmelerini sona bırak.
+  </Step>
+  <Step title="Her yorumu yanıtla">
+    Editör aksini söylemedikçe her yoruma yanıt ver; ret öneren bir hakemin yorumlarına bile. Yapmadığın bir değişikliğin de gerekçesini yaz.
+  </Step>
+  <Step title="Değişiklikleri görünür kıl">
+    Makalede değişiklikleri izlenen değişiklikler (track changes) ya da renkli metinle göster. Yanıt mektubunda değişikliğin yerini (bölüm, sayfa, satır) belirt ve düzeltilmiş metni alıntıla. Derginin değişiklikli ve temiz iki ayrı dosya isteyip istemediğine bak.
+  </Step>
+  <Step title="Katılmadığında gerekçeyle açıkla">
+    Bir öneriye katılmıyorsan bunu söyleyebilirsin, ama kanıta dayalı, açık bir gerekçeyle ve saygılı bir dille. Hakem bir şeyi yanlış anladıysa, sorunu yalnızca mektupta açıklamakla kalma: o kısmı makalede daha anlaşılır hâle getir. Sonraki okuyucular da aynı yerde takılabilir.
+
+    Bir öneri uygulanamıyorsa (örneğin yeni deneyler gerektiriyorsa) bunu açıkça ve kibarca belirt.
+  </Step>
+  <Step title="Süreye uy">
+    Düzeltme için verilen son tarihi takvimine yaz. Yetişmeyecekse süre dolmadan editöre yazıp ek süre iste.
+  </Step>
+</Steps>
+
+## Yanıt mektubunun düzeni
+
+Frontiers'ın önerdiği yapı: kısa bir teşekkürle başla, yanıtları kaynağına göre grupla (her hakem ayrı, editör ayrı), her yorumu aynen aktar ve yanıtını altına yaz.
+
+```text
+Sayın Editör,
+
+[Makale başlığı] başlıklı çalışmamızı değerlendirdiğiniz ve hakemlerin
+yorumlarını ilettiğiniz için teşekkür ederiz. Tüm yorumları aşağıda madde
+madde yanıtladık. Makaledeki değişiklikler izlenen değişikliklerle
+gösterilmiştir.
+
+HAKEM 1
+
+Yorum 1.1: [Hakemin yorumu, aynen]
+Yanıt: [Ne yaptığın ve neden]. Bölüm 3.2, s. 7, satır 120-128'e şu metni
+ekledik: "[düzeltilmiş metin]"
+
+Yorum 1.2: [Hakemin yorumu, aynen]
+Yanıt: [Katılmıyorsan gerekçen, kanıtınla birlikte]
+
+HAKEM 2
+...
+```
+
+Uluslararası bir dergide mektup derginin dilinde (çoğunlukla İngilizce) yazılır; düzen aynıdır.
+
+<Callout type="warning" title="Uygunsuz bir yorum varsa">
+Bir hakem yorumunda çıkar çatışması olduğunu düşünüyorsan ya da yorum uygunsuzsa bunu yanıt mektubunda tartışma. Editöre ayrıca ve kişisel olarak yaz.
+</Callout>
+
+<Callout type="tip" title="Ret aldıysan">
+Ret kararıyla birlikte hakem raporu geldiyse boşa gitmesin. Yorumları aynı yöntemle listele, makaleyi düzelt, sonra başka bir dergiye gönder. Ayrıntı: [Dergi veya konferans seçimi](/akademik-yazim/dergi-secimi/).
+</Callout>
+
+## Hangi araçlarla?
+
+<ToolLinks slugs={["word-zotero", "overleaf", "grammarly"]} />
+
+## Kontrol listesi
+
+<Checklist
+  id="yazim-yanit"
+  items={[
+    { id: "liste", text: "Bütün yorumları numaralandırıp bir tabloya aktardım." },
+    { id: "hepsi", text: "Her yoruma bir yanıt yazdım; yapmadığım değişikliklerin gerekçesini verdim." },
+    { id: "yer", text: "Her yanıtta değişikliğin yerini (bölüm, sayfa, satır) belirttim." },
+    { id: "izlenen", text: "Değişiklikleri makalede izlenen değişikliklerle gösterdim." },
+    { id: "ton", text: "Mektubun dili kibar ve gerekçelerim kanıta dayalı." },
+    { id: "uyum", text: "Mektupta söylediğim her değişiklik makalede gerçekten var." },
+    { id: "sure", text: "Düzeltme son tarihini takvimime yazdım." },
+  ]}
+/>
+
+## Kaynaklar
+
+- [Frontiers: How to respond to reviewer comments](https://www.frontiersin.org/for-authors/submitting-research/how-to-respond-reviewer-comments)
+- [Taylor & Francis Author Services: Peer review](https://authorservices.taylorandfrancis.com/publishing-your-research/peer-review/)
+
+<LastChecked date="2026-11" />

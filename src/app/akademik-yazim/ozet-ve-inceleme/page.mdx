@@ -1,0 +1,77 @@
+export const metadata = {
+  title: "Özet ve karşılaştırmalı inceleme",
+  description:
+    "Özet makale makale ilerler, karşılaştırmalı inceleme boyut boyut. Karşılaştırma boyutlarını seç, tabloyu kur, eleştirel değerlendirmeyi yaz.",
+};
+
+# Özet ve karşılaştırmalı inceleme
+
+**"A şunu yaptı, B bunu yaptı" bir özettir. Literatür taramasından beklenen ise makaleleri birbiriyle karşılaştırman.**
+
+## Neden önemli?
+
+Literatür taramasında en sık yapılan hata, makaleleri sırayla özetleyip bırakmaktır. Okuyucu her makalenin ne yaptığını öğrenir, ama alanın genel durumunu, yaklaşımların birbirine göre artısını eksisini ve neyin hâlâ çözülmediğini göremez. Hocalar ve hakemler çoğu zaman tam olarak bunu arar.
+
+## Farkı
+
+| Özet | Karşılaştırmalı ve eleştirel inceleme |
+| --- | --- |
+| "A makalesi şunu yaptı. B makalesi şunu yaptı." | "Merkezi yaklaşımlar (A, C) şu avantajı sağlarken dağıtık yaklaşımlar (B, D, E) şu sorunu çözüyor." |
+| Makale makale ilerler. | Boyut boyut ilerler: yaklaşım türü, yöntem, ölçeklenebilirlik, sınırlılık. |
+| Ne yapıldığını anlatır. | Ne yapıldığını, **neyin hâlâ çözülmediğini** ve **hangisinin hangi durumda neden daha iyi olduğunu** anlatır. |
+
+## Ne yapmalısın?
+
+<Steps>
+  <Step title="Karşılaştırma boyutlarını seç">
+    Her başlık için okumaya başlamadan önce 3-5 boyut belirle. Boyutlar, o başlıktaki makalelerin **birbirinden farklılaştığı** noktalar olmalı. Genel tur için okuduğun derleme makaleleri bu boyutları bulmanın en kolay yolu.
+
+    Birçok alanda işe yarayan boyutlar: yaklaşım ya da yöntem türü, kullanılan veri ya da ortam, değerlendirme ölçütü, ölçek, temel sınırlılık.
+  </Step>
+  <Step title="Makaleleri bu boyutlara göre oku">
+    Her makaleyi okurken kendine aynı soruları sor: bu makale her boyutta nerede duruyor? Cevapları takip tablona ya da doğrudan karşılaştırma tablosuna yaz. Bu, okumayı da hızlandırır: her makalede neye bakacağını önceden bilirsin.
+  </Step>
+  <Step title="Karşılaştırma tablosunu kur">
+    Satırlar makaleler, sütunlar boyutlar olsun. Tablo hem senin çalışma aracın hem de bölümün içinde okuyucuya sunacağın özet olur.
+
+    | Çalışma | Yaklaşım | Veri / ortam | Değerlendirme | Sınırlılık |
+    | --- | --- | --- | --- | --- |
+    | Yazar A (yıl) | ... | ... | ... | ... |
+    | Yazar B (yıl) | ... | ... | ... | ... |
+
+    Tablo dolunca boş ya da hep aynı olan sütunlara bak: hep aynıysa o boyut ayırt edici değildir, çıkar; boş hücreler ise çoğu zaman makalelerin değinmediği bir konuyu gösterir.
+  </Step>
+  <Step title="Tablodan metne geç">
+    Metni tablonun satırlarına göre değil **sütunlarına göre** yaz. Her paragraf bir boyutu ele alsın: makaleleri o boyutta gruplara ayır, gruplar arasındaki farkı anlat, kendi değerlendirmeni ekle.
+
+    Yardımcı kalıplar:
+    - "...aksine..."
+    - "Her iki çalışma da ... ancak ..."
+    - "Bu çalışmaların ortak sınırlılığı ..."
+    - "... konusunda ise henüz bir çalışma bulunamadı."
+  </Step>
+  <Step title="Eleştirel değerlendirmeyle bitir">
+    Her başlık bölümünü kısa bir değerlendirmeyle kapat: ortak eğilimler neler, hangi sorunlar çözülmemiş, hangi yaklaşım hangi koşulda daha uygun? Tezdeki literatür bölümünde bu kısım, kendi çalışmanın neden gerekli olduğunu gösterdiğin yerdir.
+  </Step>
+</Steps>
+
+<Callout type="tip" title="Boş hücreler tez konusu olabilir">
+Karşılaştırma tablosundaki boşluklar, literatürün eksik bıraktığı yerleri gösterir. Bunları takip tablondaki "Eksik / Fırsat" notlarıyla birlikte sakla. Ayrıntı: [Konu seçimi](/yapilmasi-gerekenler/konu-secimi/).
+</Callout>
+
+## Hangi araçlarla?
+
+<ToolLinks slugs={["notion", "zotero", "word-zotero"]} />
+
+## Kontrol listesi
+
+<Checklist
+  id="yazim-inceleme"
+  items={[
+    { id: "boyutlar", text: "Her başlık için 3-5 ayırt edici karşılaştırma boyutu seçtim." },
+    { id: "tablo", text: "Makaleleri satır, boyutları sütun olarak bir tabloya işledim." },
+    { id: "sutun", text: "Metni makale makale değil, boyut boyut yazdım." },
+    { id: "karsilastirma", text: "Her paragrafta en az bir karşılaştırma cümlesi var." },
+    { id: "degerlendirme", text: "Her bölümü ortak eğilimler ve çözülmemiş sorunlarla bitirdim." },
+  ]}
+/>
