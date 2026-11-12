@@ -171,7 +171,7 @@ Skill'deki temel bileşenlere ek olarak:
 | Bölüm | Sayfalar |
 |---|---|
 | **Başlangıç** | Ana sayfa (ne, kimin için, nereden başlanmalı) · Kurulum yol haritası (hangi araç hangi sırayla) |
-| **Yüksek lisansta yapılması gerekenler** | Okumaya erken başla · Kaynaklarını ve notlarını düzenli tut · Danışmanınla çalışmak · Konu seçimi · Kaliteli kaynak ve eleştirel okuma · Makale ve tez farkı · Yazma alışkanlığı · Takvimi önceden planla (sınavlar, başvurular) · Kendini kıyaslama |
+| **Yüksek lisansta yapılması gerekenler** | Okumaya erken başla · Makale nasıl okunur? · Kaynaklarını ve notlarını düzenli tut · Danışmanınla çalışmak · Konu seçimi · Kaliteli kaynak ve eleştirel okuma · Makale ve tez farkı · Yazma alışkanlığı · Takvimi önceden planla (sınavlar, başvurular) · Kendini kıyaslama |
 | **Akademik kimlik** | ORCID · Google Scholar profili · DergiPark · Semantic Scholar · IEEE hesabı · ResearchGate · TÜBİTAK ARBİS · YÖK Ulusal Tez Merkezi |
 | **Kaynak bulma** | Google Scholar ile arama · Semantic Scholar · IEEE Xplore · ResearchRabbit · Connected Papers · Unpaywall · Scopus ve Web of Science · Bir derginin Q değerini bulma |
 | **Kaynak yönetimi** | **Zotero** (kurulum, Connector, koleksiyonlar, DOI ile ekleme, künye kontrolü, cümle düzeni, Word eklentisi ve APA, Better BibTeX ile Overleaf) · Zotero mu Mendeley mi? |
@@ -426,6 +426,7 @@ akademik-rehber/
   - Tam genişlik düzen, bölüm renkleri ve ikonları, belirgin sol menü başlıkları (Bölüm 3.1). Ana sayfa yeniden düzenlendi: "İlk hafta" kutusu ve renkli bölüm kartları.
   - Rehber sayfaları tek ortak düzene taşındı: `src/app/(rehber)/` rota grubu, tek `layout.tsx` (adresler değişmedi). Eskiden her bölümün kendi `layout.tsx`'i vardı; bölümler arasında geçince sol menü yeniden çiziliyor ve en üste kayıyordu. Yeni bölüm klasörü `(rehber)` içine açılır, kendi `layout.tsx`'i olmaz. `SidebarScroll`, sayfa ilk açıldığında menüyü geçerli sayfaya kaydırır.
 - **Seminer sayfası (12 Kasım 2026):** `/akademik-yazim/seminer/`. Kaynak: bir Instagram gönderisi (kendi cümlelerimizle, `DerlemeNotu`) + sunum rehberleri (UNSW, Southampton, UCSD) + KOÜ kuralları (Yön. md. 21/1, UE md. 15). KOÜ seminer metni başlıkları (Başlık, Özet, Giriş, Kaynak Araştırması, Sonuç/Değerlendirme) genel önerilen yapıdan ayrı bir kutuda. Konu seçimi, literatür taraması ve etik ayrıntıları tekrar edilmedi, ilgili sayfalara bağlandı.
+- **Makale okuma sayfası (12 Kasım 2026):** `/yapilmasi-gerekenler/makale-nasil-okunur/`. Kaynak: Ensar'ın "Okuma ve YDS" notlarının Bölüm A'sı (ödeve özel örnekler ve YDS bölümü alınmadı) + Keshav (2007) ve Coxhead (2000), ikisi de Crossref'ten doğrulandı. Üçüncü geçiş süresi Keshav'ın metnine göre düzeltildi (yeni başlayan 4-5 saat, deneyimli 1 saat). Instagram kaynaklı olmadığı için `DerlemeNotu` yok, sonunda Kaynaklar listesi var. "Okumaya erken başla"daki katman katman okuma adımı kısaltılıp bu sayfaya bağlandı.
 - **Bekleyen:** Yok.
 
 ## 9. Çalışma kuralları (Claude için)

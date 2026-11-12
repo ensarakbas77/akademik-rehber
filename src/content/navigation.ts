@@ -53,6 +53,11 @@ export const navigation: NavGroup[] = [
         true,
       ),
       p(
+        "Makale nasıl okunur?",
+        "/yapilmasi-gerekenler/makale-nasil-okunur/",
+        true,
+      ),
+      p(
         "Kaynaklarını ve notlarını düzenli tut",
         "/yapilmasi-gerekenler/duzenli-tut/",
         true,
