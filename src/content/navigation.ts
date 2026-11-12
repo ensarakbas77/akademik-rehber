@@ -175,6 +175,7 @@ export const navigation: NavGroup[] = [
         "/akademik-yazim/ozet-ve-inceleme/",
         true,
       ),
+      p("Seminer dersi: hazırlık ve sunum", "/akademik-yazim/seminer/", true),
       p("Makalenin yapısı", "/akademik-yazim/makalenin-yapisi/", true),
       p(
         "Başlık, özet ve anahtar kelimeler",

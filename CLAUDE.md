@@ -178,7 +178,7 @@ Skill'deki temel bileşenlere ek olarak:
 | **Not alma ve takip** | Notion'da literatür takip veritabanı (sütunlar, makale notu şablonu, görünümler) · Obsidian ile bağlantılı notlar |
 | **Yazım** | Word + Zotero ile atıf · Overleaf ve LaTeX'e giriş (temel komutlar, AI ile LaTeX'e doğru yaklaşım) · Grammarly · QuillBot (doğru ve yanlış kullanım) |
 | **Yapay zekâ araçları** | Elicit · Consensus · NotebookLM · AI ile tez/makale yazmak (YÖK etik rehberi, beyan, trafik ışığı modeli, iyi ve kötü prompt örnekleri) |
-| **Akademik yazım** | Literatür taraması adım adım (10 adım) · Özet ile karşılaştırmalı inceleme farkı · Makalenin yapısı · Başlık, özet ve anahtar kelimeler · Dergi veya konferans seçimi · Gönderim ve hakem süreci · Hakem yorumlarına yanıt · Atıf ve akademik etik |
+| **Akademik yazım** | Literatür taraması adım adım (10 adım) · Özet ile karşılaştırmalı inceleme farkı · Seminer dersi: hazırlık ve sunum · Makalenin yapısı · Başlık, özet ve anahtar kelimeler · Dergi veya konferans seçimi · Gönderim ve hakem süreci · Hakem yorumlarına yanıt · Atıf ve akademik etik |
 | **Kocaeli Üniversitesi FBE** | Ayrıntısı Bölüm 4.1'de. Kayıttan mezuniyete süreç, süreler, kayıt ve muafiyet, dersler ve not sistemi, danışman, tez konusu, yayın şartı, tez yazım kuralları, intihal ve teslim, savunma, mezuniyet, izin ve ilişik kesme, teslim öncesi kontrol listesi, SSS |
 | **Ek** | Tüm araçlar (filtrelenebilir tablo) · Kaynaklar · Hakkında |
 
@@ -425,6 +425,7 @@ akademik-rehber/
   - Alt bilgideki "Kaynak kodu GitHub'da" kaldırıldı; üst çubuktaki GitHub bağlantısına logo eklendi (`src/components/icons/github.tsx`, lucide marka ikonlarını kaldırdığı için SVG).
   - Tam genişlik düzen, bölüm renkleri ve ikonları, belirgin sol menü başlıkları (Bölüm 3.1). Ana sayfa yeniden düzenlendi: "İlk hafta" kutusu ve renkli bölüm kartları.
   - Rehber sayfaları tek ortak düzene taşındı: `src/app/(rehber)/` rota grubu, tek `layout.tsx` (adresler değişmedi). Eskiden her bölümün kendi `layout.tsx`'i vardı; bölümler arasında geçince sol menü yeniden çiziliyor ve en üste kayıyordu. Yeni bölüm klasörü `(rehber)` içine açılır, kendi `layout.tsx`'i olmaz. `SidebarScroll`, sayfa ilk açıldığında menüyü geçerli sayfaya kaydırır.
+- **Seminer sayfası (12 Kasım 2026):** `/akademik-yazim/seminer/`. Kaynak: bir Instagram gönderisi (kendi cümlelerimizle, `DerlemeNotu`) + sunum rehberleri (UNSW, Southampton, UCSD) + KOÜ kuralları (Yön. md. 21/1, UE md. 15). KOÜ seminer metni başlıkları (Başlık, Özet, Giriş, Kaynak Araştırması, Sonuç/Değerlendirme) genel önerilen yapıdan ayrı bir kutuda. Konu seçimi, literatür taraması ve etik ayrıntıları tekrar edilmedi, ilgili sayfalara bağlandı.
 - **Bekleyen:** Yok.
 
 ## 9. Çalışma kuralları (Claude için)
