@@ -118,7 +118,11 @@ export const navigation: NavGroup[] = [
       p("Connected Papers", "/kaynak-bulma/connected-papers/", true),
       p("Unpaywall", "/kaynak-bulma/unpaywall/", true),
       p("Scopus ve Web of Science", "/kaynak-bulma/scopus-ve-wos/", true),
-      p("Bir derginin Q değerini bulma", "/kaynak-bulma/q-degeri/", true),
+      p(
+        "Dergi indeksi, etki faktörü ve Q değeri",
+        "/kaynak-bulma/q-degeri/",
+        true,
+      ),
     ],
   },
   {

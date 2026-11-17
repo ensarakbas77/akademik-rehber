@@ -12,7 +12,7 @@ const bolumAciklamalari: Record<string, string> = {
   "Akademik kimlik":
     "ORCID, Google Scholar profili, DergiPark ve diğer akademik hesapları açmak.",
   "Kaynak bulma":
-    "Google Scholar, Semantic Scholar, IEEE Xplore, ResearchRabbit ve bir derginin Q değerini bulmak.",
+    "Google Scholar, Semantic Scholar, IEEE Xplore, ResearchRabbit; bir derginin indeksini, etki faktörünü ve Q değerini bulmak.",
   "Kaynak yönetimi":
     "Zotero ile kaynakları kaydetmek, düzenlemek ve Word'de atıf yapmak.",
   "Not alma ve takip": "Notion ve Obsidian ile literatür takip sistemi kurmak.",

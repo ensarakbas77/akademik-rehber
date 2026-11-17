@@ -1,18 +1,86 @@
 export const metadata = {
-  title: "Bir derginin Q değerini bulma",
+  title: "Dergi indeksi, etki faktörü ve Q değeri",
   description:
-    "Bir derginin Q1-Q4 çeyreğini SCImago (SJR) ve Journal Citation Reports (JCR) üzerinden bulma; kategori farkları ve iki listenin farklı sonuç vermesi.",
+    "Bir derginin SCI-E'de olup olmadığını Master Journal List'te, etki faktörünü ve Q değerini Journal Citation Reports (JCR) ve SCImago'da adım adım bulma.",
 };
 
-# Bir derginin Q değerini bulma
+# Dergi indeksi, etki faktörü ve Q değeri
 
-**Q değeri, bir derginin kendi konu kategorisindeki dergiler arasında hangi çeyrekte olduğunu gösterir: Q1 en üst %25, Q4 en alt %25.**
+**Bir dergiyi üç soruyla kontrol edersin: Hangi indekste taranıyor (SCI-E mi)? Etki faktörü kaç? Kendi kategorisinde hangi çeyrekte (Q1-Q4)?**
 
 ## Neden önemli?
 
-Dergi seçerken, bir kaynağın güvenilirliğini değerlendirirken ve bazı başvurularda derginin Q değeri sorulur. Ama "bu dergi Q1" demek tek başına yetmez: hangi listeye göre, hangi kategoride ve hangi yılda Q1 olduğu da önemlidir.
+Dergi seçerken, bir kaynağın güvenilirliğini değerlendirirken, yayın şartında ve burs ya da kadro başvurularında bu üç bilgi sorulur. Ama "bu dergi Q1" ya da "SCI'lı" demek tek başına yetmez: hangi listeye göre, hangi kategoride ve hangi yılda olduğu da önemlidir. Bunları derginin kendi sitesinden değil, aşağıdaki kaynaklardan kendin kontrol et.
 
-## İki ana liste
+| Soru | Nereye bakılır? | Erişim |
+| --- | --- | --- |
+| Dergi SCI-E'de mi? | [Master Journal List](https://mjl.clarivate.com) | Ücretsiz, giriş gerekmez |
+| Etki faktörü kaç? | Journal Citation Reports (JCR) | Üniversite aboneliğiyle |
+| Q değeri ne? | JCR ya da [SCImago](https://www.scimagojr.com) | JCR abonelikle, SCImago ücretsiz |
+
+## Dergi SCI-E'de mi?
+
+Günlük konuşmada "SCI dergisi" denince Web of Science'ın **Science Citation Index Expanded (SCIE)** indeksi kastedilir. Bunu Clarivate'in ücretsiz Master Journal List'inde görürsün.
+
+<Steps>
+  <Step title="Derginin ISSN'ini bul">
+    Makalenin sayfasında dergi adına tıkla; derginin sayfasında ISSN numarası yazar (çoğu yayıncıda sayfanın altında). İsimle de arayabilirsin, ama ISSN benzer adlı dergilerle karışmayı önler.
+  </Step>
+  <Step title="Master Journal List'te ara">
+    [mjl.clarivate.com](https://mjl.clarivate.com) arama kutusuna ISSN'i ya da derginin tam adını yaz ve **Search**'e bas.
+  </Step>
+  <Step title="Web of Science Core Collection satırına bak">
+    Sonuç kartında bu satır derginin hangi indekste olduğunu söyler:
+
+    | Yazan | Anlamı |
+    | --- | --- |
+    | Science Citation Index Expanded | Dergi SCI-E'de (fen ve mühendislik) |
+    | Social Sciences Citation Index | Dergi SSCI'da (sosyal bilimler) |
+    | Arts & Humanities Citation Index | Dergi AHCI'da (sanat ve beşerî bilimler) |
+    | Emerging Sources Citation Index | Dergi Web of Science'ta, ama SCI-E'de değil (ESCI) |
+
+    Dergi hiç çıkmıyorsa Web of Science Core Collection'da değildir. Kartın altındaki profil sayfası ücretsiz bir Clarivate hesabı ister, ama indeksi görmek için ona gerek yok.
+  </Step>
+</Steps>
+
+## Etki faktörü ve JCR'da Q değeri
+
+Etki faktörünü (Journal Impact Factor, JIF) Clarivate hesaplar ve Journal Citation Reports'ta (JCR) yayımlar. Bir yılın etki faktörü, o yıl içinde derginin önceki iki yılda yayımladığı makalelere yapılan atıfların, o iki yıldaki makale sayısına bölünmesiyle bulunur. Değerler her yıl haziranda güncellenir.
+
+<Steps>
+  <Step title="JCR'a üniversite üzerinden gir">
+    Kütüphanenin veri tabanları listesinden Journal Citation Reports'a gir. Kampüs dışındaysan kütüphanenin uzaktan erişim (proxy) hizmetini kullan.
+  </Step>
+  <Step title="Dergiyi ara">
+    Üstteki arama kutusuna derginin ISSN'ini ya da adını yaz ve sonuçlardan dergiyi seç. Derginin profil sayfası açılır.
+  </Step>
+  <Step title="Profilin üst kısmını oku">
+    - **JCR Year:** Sol üstteki kutuda en son yıl seçili gelir; önceki yıllara buradan bakarsın.
+    - **Edition:** Derginin indeksi, örneğin *Science Citation Index Expanded (SCIE)*.
+    - **Category:** Derginin konu kategorisi. Q değeri bu kategoriye göre hesaplanır.
+  </Step>
+  <Step title="Etki faktörüne in">
+    Sayfayı aşağı kaydır. **Journal Impact Factor** bölümünde seçili yılın etki faktörü ve nasıl hesaplandığı yazar.
+  </Step>
+  <Step title="Kategorideki sırasına ve çeyreğine bak">
+    Daha aşağıdaki **Rank by Journal Impact Factor** bölümünde derginin kategorisindeki sırası ve çeyreği (**JIF Quartile**) yazar. Dergi birden fazla kategorideyse her birini ayrı kontrol et.
+  </Step>
+</Steps>
+
+JCR'da çeyrek, derginin kategorisindeki sırasının o kategorideki toplam dergi sayısına bölünmesiyle bulunur. 2024'ten beri ESCI'daki dergiler de (sanat ve beşerî bilimler kategorileri dışında) etki faktörü ve çeyrek alıyor. Bu yüzden **Q değeri tek başına derginin SCI-E'de olduğunu göstermez**; indeksi Master Journal List'ten ya da profildeki Edition satırından kontrol et.
+
+<Callout type="tip" title="Hızlı bakış: yayıncının sayfası">
+Birçok yayıncı derginin sayfasında güncel etki faktörünü gösterir. Örneğin ScienceDirect'te derginin adının hemen altında **CiteScore** ve **Impact Factor** yan yana yazar. Hızlı bir fikir için yeter; başvuruda yıl ve çeyrek gerekiyorsa JCR'dan kontrol et. Sayfanın aşağısındaki başka dergilerin kartlarındaki sayılarla karıştırma.
+</Callout>
+
+<Callout type="warning" title="Etki faktörüyle karışanlar">
+- **CiteScore** etki faktörü değildir: Elsevier'in Scopus verisiyle hesapladığı ayrı bir ölçüdür.
+- "Global Impact Factor", "Universal Impact Factor", "SJIF" gibi adlarla verilen sayılar Clarivate'in etki faktörü değildir. Bir dergi sitesinde bunlarla öne çıkıyorsa dikkatli ol.
+</Callout>
+
+## SCImago'da Q değeri
+
+SCImago, Scopus verisine dayanır ve ücretsizdir. JCR ile farklı veriyle ve farklı ölçütle hesaplandığı için **aynı dergi iki listede farklı çeyrekte olabilir**. Başvuracağın yer hangi listeyi istiyorsa ona bak.
 
 | | SCImago (SJR) | Journal Citation Reports (JCR) |
 | --- | --- | --- |
@@ -20,13 +88,9 @@ Dergi seçerken, bir kaynağın güvenilirliğini değerlendirirken ve bazı ba�
 | **Sıralama ölçütü** | SJR göstergesi | Journal Impact Factor (etki faktörü) |
 | **Erişim** | Ücretsiz, [scimagojr.com](https://www.scimagojr.com) | Ücretli, üniversite aboneliğiyle |
 
-İki liste farklı veriyle ve farklı ölçütle hesaplandığı için **aynı dergi iki listede farklı çeyrekte olabilir**. Başvuracağın yer hangi listeyi istiyorsa ona bak.
-
-## SCImago'da Q değeri
-
 <Steps>
   <Step title="Dergiyi ara">
-    [scimagojr.com](https://www.scimagojr.com) arama kutusuna derginin adını ya da ISSN'sini yaz ve sonuçlardan dergiyi seç.
+    [scimagojr.com](https://www.scimagojr.com) arama kutusuna derginin adını ya da ISSN'ini yaz ve sonuçlardan dergiyi seç.
   </Step>
   <Step title="Quartiles bölümüne in">
     Derginin sayfasında aşağıdaki **Quartiles** grafiğine kadar in. Her renkli kutu bir yıl ve bir kategori için çeyreği gösterir; kutunun üzerine gelince Q değeri görünür.
@@ -35,22 +99,6 @@ Dergi seçerken, bir kaynağın güvenilirliğini değerlendirirken ve bazı ba�
     Dergi birden çok konu kategorisinde listelenebilir ve her birinde farklı çeyrekte olabilir. Kendi alanına en yakın kategoriye ve en son yıla bak.
   </Step>
 </Steps>
-
-## JCR'da Q değeri
-
-<Steps>
-  <Step title="JCR'a üniversite üzerinden gir">
-    Kütüphanenin veri tabanları listesinden Journal Citation Reports'a gir. Kampüs dışındaysan uzaktan erişim hizmetini kullan.
-  </Step>
-  <Step title="Dergiyi ara ve yılı seç">
-    Dergiyi adıyla ya da ISSN'siyle ara, profil sayfasını aç ve bakmak istediğin yılı seç.
-  </Step>
-  <Step title="Kategorideki sırasına bak">
-    Profil sayfasında derginin kategorisindeki sırası ve çeyreği (JIF Quartile) yazar. Birden fazla kategorideyse her birini ayrı kontrol et.
-  </Step>
-</Steps>
-
-JCR'da çeyrek, derginin kategorisindeki sırasının o kategorideki toplam dergi sayısına bölünmesiyle bulunur. Bir derginin hangi Web of Science indeksinde (SCIE, SSCI, ESCI gibi) olduğunu ücretsiz [Master Journal List](https://mjl.clarivate.com) ile görebilirsin.
 
 <Callout type="warning" title="Q değeri her şeyi söylemez">
 - Q değeri, kategori içinde göreli bir sıralamadır. Küçük bir kategorideki Q1 dergi ile büyük ve rekabetçi bir kategorideki Q3 dergi doğrudan karşılaştırılamaz.
@@ -67,12 +115,15 @@ KOÜ'nün yayın şartı Q değerinden değil, derginin hangi indekste tarandı�
 
 <ToolLinks slugs={["scopus-wos", "google-scholar"]} />
 
-Sonraki adım: Q değeri, dergi seçiminin yalnızca bir parçası: [Dergi veya konferans seçimi](/akademik-yazim/dergi-secimi/).
+Sonraki adım: İndeks ve Q değeri, dergi seçiminin yalnızca bir parçası: [Dergi veya konferans seçimi](/akademik-yazim/dergi-secimi/).
 
 ## Kaynaklar
 
-- [Southern Cross University Library: Journal quartiles](https://libguides.scu.edu.au/researcheressentials/journalquartile) (SCImago ve JCR'da adım adım)
+- [Clarivate: Master Journal List](https://mjl.clarivate.com)
 - [Clarivate: JCR Reference Guide 2024](https://clarivate.com/wp-content/uploads/dlm_uploads/2024/06/JCR-Reference-Guide-2024.pdf) (JIF Quartile'ın hesaplanması)
+- [Clarivate: Journal Citation Reports 2024, simplifying journal evaluation](https://clarivate.com/academia-government/blog/journal-citation-reports-2024-simplifying-journal-evaluation/) (ESCI ve AHCI dergilerinin sıralamaya girmesi)
+- [Southern Cross University Library: Journal quartiles](https://libguides.scu.edu.au/researcheressentials/journalquartile) (SCImago ve JCR'da adım adım)
 - [Xi'an Jiaotong-Liverpool University Library: Journal impact](https://libguides.lib.xjtlu.edu.cn/sch_commun/journal_impact)
 - [SCImago Journal & Country Rank](https://www.scimagojr.com)
-- [Clarivate: Master Journal List](https://mjl.clarivate.com)
+
+<LastChecked date="2026-11" />
