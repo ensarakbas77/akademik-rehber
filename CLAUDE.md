@@ -170,7 +170,7 @@ Skill'deki temel bileşenlere ek olarak:
 
 | Bölüm | Sayfalar |
 |---|---|
-| **Başlangıç** | Ana sayfa (ne, kimin için, nereden başlanmalı) · Kurulum yol haritası (hangi araç hangi sırayla) |
+| **Başlangıç** | Giriş (rehber nedir, kimin için, nasıl okunur, bölümler) · Kurulum yol haritası (hangi araç hangi sırayla) |
 | **Yüksek lisansta yapılması gerekenler** | Okumaya erken başla · Makale nasıl okunur? · Kaynaklarını ve notlarını düzenli tut · Danışmanınla çalışmak · Konu seçimi · Kaliteli kaynak ve eleştirel okuma · Makale ve tez farkı · Yazma alışkanlığı · Takvimi önceden planla (sınavlar, başvurular) · Kendini kıyaslama |
 | **Akademik kimlik** | ORCID · Google Scholar profili · DergiPark · Semantic Scholar · IEEE hesabı · ResearchGate · TÜBİTAK ARBİS · YÖK Ulusal Tez Merkezi |
 | **Kaynak bulma** | Google Scholar ile arama · Semantic Scholar · IEEE Xplore · ResearchRabbit · Connected Papers · Unpaywall · Scopus ve Web of Science · Dergi indeksi, etki faktörü ve Q değeri |
@@ -428,6 +428,7 @@ akademik-rehber/
 - **Seminer sayfası (12 Kasım 2026):** `/akademik-yazim/seminer/`. Kaynak: bir Instagram gönderisi (kendi cümlelerimizle, `DerlemeNotu`) + sunum rehberleri (UNSW, Southampton, UCSD) + KOÜ kuralları (Yön. md. 21/1, UE md. 15). KOÜ seminer metni başlıkları (Başlık, Özet, Giriş, Kaynak Araştırması, Sonuç/Değerlendirme) genel önerilen yapıdan ayrı bir kutuda. Konu seçimi, literatür taraması ve etik ayrıntıları tekrar edilmedi, ilgili sayfalara bağlandı.
 - **Makale okuma sayfası (12 Kasım 2026):** `/yapilmasi-gerekenler/makale-nasil-okunur/`. Kaynak: Ensar'ın "Okuma ve YDS" notlarının Bölüm A'sı (ödeve özel örnekler ve YDS bölümü alınmadı) + Keshav (2007) ve Coxhead (2000), ikisi de Crossref'ten doğrulandı. Üçüncü geçiş süresi Keshav'ın metnine göre düzeltildi (yeni başlayan 4-5 saat, deneyimli 1 saat). Instagram kaynaklı olmadığı için `DerlemeNotu` yok, sonunda Kaynaklar listesi var. "Okumaya erken başla"daki katman katman okuma adımı kısaltılıp bu sayfaya bağlandı.
 - **Dergi indeksi ve etki faktörü (17 Kasım 2026):** `/kaynak-bulma/q-degeri/` genişletildi ve adı "Dergi indeksi, etki faktörü ve Q değeri" oldu (URL aynı). Eklenenler: Master Journal List ile SCI-E kontrolü, JCR profilinde Edition, Category, Journal Impact Factor ve JIF Quartile adımları, yayıncı sayfasında hızlı bakış, CiteScore ve sahte etki faktörü uyarısı. 2024'ten beri ESCI dergilerinin de JIF ve çeyrek aldığı not edildi. Adımlar MJL'de ve Ensar'ın JCR ekranında doğrulandı.
+- **Ana sayfa ve Giriş (17 Kasım 2026):** Ensar haftalık plan dilini istemiyor ("1. hafta şunu, 2. hafta bunu"). Ana sayfadaki "İlk hafta" kutusu kalktı; ana sayfa kısa bir giriş, "Rehbere başla" ve "Tüm araçlar" butonları ve altında bölüm kartları. "Rehbere başla" yeni `/baslangic/giris/` sayfasına gider; menüde "Ana sayfa" yerine "Giriş" var, okuma oradan Sonraki bağlantılarıyla sürer. Kurulum yol haritasında hafta başlıkları "En başta" ve "Ardından" oldu. Alışkanlık önerileri ("haftada 2 makale", "her gün 20-30 dakika yaz") Ensar'ın isteğiyle kaldı.
 - **Bekleyen:** Yok.
 
 ## 9. Çalışma kuralları (Claude için)

@@ -38,7 +38,7 @@ export const navigation: NavGroup[] = [
     key: "baslangic",
     icon: Compass,
     pages: [
-      p("Ana sayfa", "/", true),
+      p("Giriş", "/baslangic/giris/", true),
       p("Kurulum yol haritası", "/baslangic/kurulum-yol-haritasi/", true),
     ],
   },

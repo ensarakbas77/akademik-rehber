@@ -4,7 +4,7 @@ import { Container } from "@/components/layout/container";
 import { navigation, type NavGroup } from "@/content/navigation";
 import { site } from "@/content/site";
 
-// Ana sayfa: ne, kimin için, nereden başlanmalı (CLAUDE.md Bölüm 4).
+// Ana sayfa: kısa giriş ve "Rehbere başla" (Giriş sayfasına), altında bölümler.
 
 const bolumAciklamalari: Record<string, string> = {
   "Yüksek lisansta yapılması gerekenler":
@@ -25,17 +25,6 @@ const bolumAciklamalari: Record<string, string> = {
     "Yönetmelik, uygulama esasları ve tez yazım kılavuzu; her kural kaynağıyla.",
 };
 
-// Kurulum yol haritasının ilk haftası (sayfadaki sırayla).
-const ilkAdimlar = [
-  { title: "ORCID numarası al", href: "/akademik-kimlik/orcid/" },
-  { title: "Google Scholar'ı kur", href: "/kaynak-bulma/google-scholar/" },
-  { title: "Zotero, Connector ve Unpaywall", href: "/kaynak-yonetimi/zotero/" },
-  {
-    title: "Kütüphanenin uzaktan erişimini öğren",
-    href: "/kaynak-bulma/scopus-ve-wos/",
-  },
-];
-
 const bolumler = navigation.filter((g) => g.title in bolumAciklamalari);
 
 const sec = (g: NavGroup) =>
@@ -44,71 +33,43 @@ const sec = (g: NavGroup) =>
 export default function Home() {
   return (
     <Container>
-      <section className="grid gap-10 py-14 sm:py-20 lg:grid-cols-[minmax(0,3fr)_minmax(24rem,2fr)] lg:items-center xl:gap-16">
-        <div>
-          <p className="text-sm font-medium text-accent">
-            Yüksek lisans ve doktora öğrencileri için
-          </p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-6xl xl:text-7xl">
-            {site.name}
-          </h1>
-          <p className="mt-5 max-w-4xl text-lg leading-8 text-pretty text-muted sm:text-xl">
-            Akademik araçların ne işe yaradığını ve adım adım nasıl
-            kullanıldığını, yüksek lisansta nelere dikkat etmek gerektiğini ve
-            literatür taramasından hakem sürecine kadar akademik yazımı Türkçe
-            ve uygulamalı olarak anlatan bir rehber.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/baslangic/kurulum-yol-haritasi/"
-              className="inline-flex h-11 items-center gap-2 rounded-lg bg-accent px-5 text-sm font-medium text-accent-fg transition-colors hover:bg-accent/90 motion-reduce:transition-none"
-            >
-              Nereden başlamalıyım?
-              <ArrowRight className="size-4" aria-hidden />
-            </Link>
-            <Link
-              href="/araclar/"
-              className="inline-flex h-11 items-center gap-2 rounded-lg border border-border bg-surface px-5 text-sm font-medium transition-colors hover:bg-border/40 motion-reduce:transition-none"
-            >
-              Tüm araçlar
-            </Link>
-          </div>
-        </div>
-
-        <div className="rounded-2xl border border-accent/25 bg-accent/5 p-6">
-          <p className="text-sm font-semibold text-accent">İlk hafta</p>
-          <p className="mt-1 text-sm leading-6 text-muted">
-            Henüz hiçbir aracı kurmadıysan ilk hafta bu dört adım yeterli.
-          </p>
-          <ol className="mt-5 space-y-2">
-            {ilkAdimlar.map((a, i) => (
-              <li key={a.href}>
-                <Link
-                  href={a.href}
-                  className="group flex items-center gap-3 rounded-lg border border-border bg-bg px-3 py-2.5 text-sm font-medium transition-colors hover:border-accent/60 motion-reduce:transition-none"
-                >
-                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-semibold text-accent-fg">
-                    {i + 1}
-                  </span>
-                  {a.title}
-                  <ArrowRight
-                    className="ml-auto size-4 text-muted transition-colors group-hover:text-accent motion-reduce:transition-none"
-                    aria-hidden
-                  />
-                </Link>
-              </li>
-            ))}
-          </ol>
+      <section className="py-16 sm:py-24">
+        <p className="text-sm font-medium text-accent">
+          Yüksek lisans ve doktora öğrencileri için
+        </p>
+        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-6xl xl:text-7xl">
+          {site.name}
+        </h1>
+        <p className="mt-6 max-w-3xl text-lg leading-8 text-pretty text-muted sm:text-xl sm:leading-9">
+          Akademik araçların ne işe yaradığını ve adım adım nasıl
+          kullanıldığını, yüksek lisansta nelere dikkat etmek gerektiğini ve
+          literatür taramasından hakem sürecine kadar akademik yazımı Türkçe ve
+          uygulamalı olarak anlatan bir rehber.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
           <Link
-            href="/baslangic/kurulum-yol-haritasi/"
-            className="mt-4 inline-block text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+            href="/baslangic/giris/"
+            className="inline-flex h-11 items-center gap-2 rounded-lg bg-accent px-5 text-sm font-medium text-accent-fg transition-colors hover:bg-accent/90 motion-reduce:transition-none"
           >
-            Kurulum yol haritasının tamamı
+            Rehbere başla
+            <ArrowRight className="size-4" aria-hidden />
+          </Link>
+          <Link
+            href="/araclar/"
+            className="inline-flex h-11 items-center gap-2 rounded-lg border border-border bg-surface px-5 text-sm font-medium transition-colors hover:bg-border/40 motion-reduce:transition-none"
+          >
+            Tüm araçlar
           </Link>
         </div>
+        <p className="mt-6 text-sm text-muted">
+          Sırayla okuyabilir ya da aşağıdan doğrudan bir bölüme geçebilirsin.
+        </p>
       </section>
 
-      <section aria-labelledby="bolumler" className="pb-16 sm:pb-24">
+      <section
+        aria-labelledby="bolumler"
+        className="border-t border-border pt-12 pb-16 sm:pt-16 sm:pb-24"
+      >
         <h2
           id="bolumler"
           className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl"
